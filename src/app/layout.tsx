@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -57,9 +58,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.className} antialiased`}
+        className={`${spaceGrotesk.className} bg-black/80 antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
