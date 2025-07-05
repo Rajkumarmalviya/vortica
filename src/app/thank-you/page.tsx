@@ -1,6 +1,15 @@
+"use client"
+
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { trackEvent, AnalyticsEvents } from '../analytics';
 
 export default function ThankYou() {
+  useEffect(() => {
+    // Track successful form submission
+    trackEvent(AnalyticsEvents.FORM_SUCCESS);
+  }, []);
+
   return (
     <main className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="relative z-10 text-center max-w-2xl mx-auto">
@@ -8,9 +17,10 @@ export default function ThankYou() {
         <p className="text-gray-300 text-lg mb-8">
           We&apos;ve received your message and will get back to you shortly.
         </p>
-        <Link 
+        <Link
           href="/"
           className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200"
+          onClick={() => trackEvent('return_home_click')}
         >
           Return Home
         </Link>

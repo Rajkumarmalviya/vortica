@@ -15,15 +15,32 @@ const structuredData = {
 };
 
 import { useState, useEffect } from "react";
+import { trackEvent, AnalyticsEvents } from "./analytics";
 
 export default function Home() {
+  // Track initial page view
+  useEffect(() => {
+    trackEvent(AnalyticsEvents.VIEW_HOME);
+  }, []);
+
   const [showScroll, setShowScroll] = useState(true);
 
   useEffect(() => {
+    let lastTrackedDepth = 0;
     const handleScroll = () => {
       // Hide scroll indicator when user scrolls past 30% of first screen
       const scrollThreshold = window.innerHeight * 0.3;
+      const scrollPercent = Math.floor((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
       setShowScroll(window.scrollY < scrollThreshold);
+      
+      // Track scroll depth at 25%, 50%, 75%, 100%
+      const depths = [25, 50, 75, 100];
+      for (const depth of depths) {
+        if (scrollPercent >= depth && lastTrackedDepth < depth) {
+          trackEvent(AnalyticsEvents.SCROLL_DEPTH, { depth: `${depth}%` });
+          lastTrackedDepth = depth;
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -127,7 +144,15 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Core Custom Software Development */}
-            <div className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden">
+            <div
+              className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden"
+              onClick={() => trackEvent(AnalyticsEvents.SERVICE_CLICK, {
+                category: 'Core Custom Software Development',
+                section: 'services'
+              })}
+              role="button"
+              tabIndex={0}
+            >
               <div className="text-cyan-400 text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🔧</div>
               <h3 className="text-xl font-bold text-white mb-4">Core Custom Software Development</h3>
               <ul className="space-y-3 text-gray-300">
@@ -152,7 +177,15 @@ export default function Home() {
             </div>
 
             {/* AI & Automation */}
-            <div className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden">
+            <div
+              className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden"
+              onClick={() => trackEvent(AnalyticsEvents.SERVICE_CLICK, {
+                category: 'AI & Automation Services',
+                section: 'services'
+              })}
+              role="button"
+              tabIndex={0}
+            >
               <div className="text-cyan-400 text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🧠</div>
               <h3 className="text-xl font-bold text-white mb-4">AI & Automation Services</h3>
               <ul className="space-y-3 text-gray-300">
@@ -177,7 +210,15 @@ export default function Home() {
             </div>
 
             {/* Enterprise & Cloud */}
-            <div className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden">
+            <div
+              className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden"
+              onClick={() => trackEvent(AnalyticsEvents.SERVICE_CLICK, {
+                category: 'Enterprise & Cloud Solutions',
+                section: 'services'
+              })}
+              role="button"
+              tabIndex={0}
+            >
               <div className="text-cyan-400 text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🏗️</div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise & Cloud Solutions</h3>
               <ul className="space-y-3 text-gray-300">
@@ -202,7 +243,15 @@ export default function Home() {
             </div>
 
             {/* E-Commerce & CMS */}
-            <div className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden">
+            <div
+              className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden"
+              onClick={() => trackEvent(AnalyticsEvents.SERVICE_CLICK, {
+                category: 'E-Commerce & CMS Solutions',
+                section: 'services'
+              })}
+              role="button"
+              tabIndex={0}
+            >
               <div className="text-cyan-400 text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🛒</div>
               <h3 className="text-xl font-bold text-white mb-4">E-Commerce & CMS Solutions</h3>
               <ul className="space-y-3 text-gray-300">
@@ -223,7 +272,15 @@ export default function Home() {
             </div>
 
             {/* UI/UX & Product Design */}
-            <div className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden">
+            <div
+              className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden"
+              onClick={() => trackEvent(AnalyticsEvents.SERVICE_CLICK, {
+                category: 'UI/UX & Product Design',
+                section: 'services'
+              })}
+              role="button"
+              tabIndex={0}
+            >
               <div className="text-cyan-400 text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🧩</div>
               <h3 className="text-xl font-bold text-white mb-4">UI/UX & Product Design</h3>
               <ul className="space-y-3 text-gray-300">
@@ -244,7 +301,15 @@ export default function Home() {
             </div>
 
             {/* DevOps & Security */}
-            <div className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden">
+            <div
+              className="group bg-gray-900/50 hover:bg-gray-900/70 p-6 rounded-xl border border-gray-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm hover:-translate-y-2 relative overflow-hidden"
+              onClick={() => trackEvent(AnalyticsEvents.SERVICE_CLICK, {
+                category: 'DevOps & Security',
+                section: 'services'
+              })}
+              role="button"
+              tabIndex={0}
+            >
               <div className="text-cyan-400 text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🔐</div>
               <h3 className="text-xl font-bold text-white mb-4">DevOps & Security</h3>
               <ul className="space-y-3 text-gray-300">
@@ -266,7 +331,15 @@ export default function Home() {
           </div>
 
           {/* Technology Consulting Section */}
-          <div className="mt-16 bg-gradient-to-br from-gray-900/80 to-gray-900/20 p-8 rounded-xl border border-gray-800 shadow-xl backdrop-blur-sm hover:shadow-cyan-400/10 transition-all duration-300 hover:scale-[1.01] relative overflow-hidden group">
+          <div
+            className="mt-16 bg-gradient-to-br from-gray-900/80 to-gray-900/20 p-8 rounded-xl border border-gray-800 shadow-xl backdrop-blur-sm hover:shadow-cyan-400/10 transition-all duration-300 hover:scale-[1.01] relative overflow-hidden group"
+            onClick={() => trackEvent(AnalyticsEvents.SERVICE_CLICK, {
+              category: 'Technology Consulting',
+              section: 'consulting'
+            })}
+            role="button"
+            tabIndex={0}
+          >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-400/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="text-cyan-400 text-4xl mb-6">🧠</div>
             <h3 className="text-2xl font-bold text-white mb-6">Technology Consulting & Team Extension</h3>
@@ -345,6 +418,12 @@ export default function Home() {
               action="https://formsubmit.co/rajmalvi789@gmail.com"
               method="POST"
               className="space-y-6 bg-gray-900/50 hover:bg-gray-900/70 p-8 rounded-xl border border-gray-800 hover:border-cyan-400/30 shadow-xl hover:shadow-cyan-400/10 backdrop-blur-sm transition-all duration-300 relative overflow-hidden group"
+              onSubmit={() => {
+                trackEvent(AnalyticsEvents.FORM_SUBMIT, {
+                  form_name: 'contact_form',
+                  location: 'homepage'
+                });
+              }}
             >
               {/* Hidden Fields */}
               <input type="hidden" name="_next" value="https://vortica.in/thank-you" />
@@ -363,6 +442,11 @@ export default function Home() {
                   required
                   className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent text-white placeholder-gray-500 transition-all duration-300 hover:border-gray-600"
                   placeholder="Enter your name"
+                  onFocus={() => trackEvent(AnalyticsEvents.START_FORM, {
+                    form_name: 'contact_form',
+                    field: 'name',
+                    location: 'homepage'
+                  })}
                 />
               </div>
 
@@ -378,6 +462,11 @@ export default function Home() {
                   required
                   className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent text-white placeholder-gray-500 transition-all duration-300 hover:border-gray-600"
                   placeholder="Enter your email"
+                  onFocus={() => trackEvent(AnalyticsEvents.START_FORM, {
+                    form_name: 'contact_form',
+                    field: 'email',
+                    location: 'homepage'
+                  })}
                 />
               </div>
 
@@ -393,6 +482,11 @@ export default function Home() {
                   rows={4}
                   className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent text-white placeholder-gray-500 transition-all duration-300 hover:border-gray-600"
                   placeholder="Tell us about your project"
+                  onFocus={() => trackEvent(AnalyticsEvents.START_FORM, {
+                    form_name: 'contact_form',
+                    field: 'message',
+                    location: 'homepage'
+                  })}
                 />
               </div>
 
@@ -401,6 +495,10 @@ export default function Home() {
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-cyan-400/20 hover:scale-[1.02] active:scale-[0.98]"
+                  onClick={() => trackEvent('submit_button_click', {
+                    form_name: 'contact_form',
+                    location: 'homepage'
+                  })}
                 >
                   <span>Send Message</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
