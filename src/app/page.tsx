@@ -1,65 +1,98 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vortica.in - Innovating for Tomorrow",
+  description: "Welcome to Vortica.in - Where innovation meets the future. Discover our cutting-edge technology solutions and services.",
+};
+
+// Structured data for better SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vortica.in",
+  "description": "Innovation technology solutions provider",
+  "url": "https://vortica.in",
+  "logo": "https://vortica.in/logo.png",
+  "sameAs": [
+    "https://linkedin.com/company/vortica",
+    "https://twitter.com/vortica"
+  ]
+};
+
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen bg-black" role="main">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-            Vortica Innovations
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8">
-            Empowering your business with innovative solutions
-          </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
-        </div>
-      </section>
+      <section 
+        className="relative h-screen flex items-center justify-center overflow-hidden"
+        aria-label="Welcome to Vortica"
+      >
+        {/* Background Image */}
+        {/* Multi-layered innovative background */}
+        <div className="absolute inset-0 bg-black overflow-hidden">
+          {/* Abstract digital pattern */}
+          <div
+            className="absolute inset-0 bg-[url('/world-map.jpg')]
+            bg-cover bg-center bg-no-repeat opacity-70"
+          />
 
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Our Services
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Service 1</h3>
-              <p className="text-gray-600">Description of your first service offering goes here.</p>
-            </div>
-            <div className="text-center p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Service 2</h3>
-              <p className="text-gray-600">Description of your second service offering goes here.</p>
-            </div>
-            <div className="text-center p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Service 3</h3>
-              <p className="text-gray-600">Description of your third service offering goes here.</p>
-            </div>
+          {/* Vibrant gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black-900/50 via-black-900/60 to-black-900/50" />
+
+          {/* Animated particles effect */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '40px 40px',
+              backgroundPosition: '0 0, 20px 20px',
+              opacity: 0.3
+            }}
+          />
+
+          {/* Additional glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-indigo-900/15 to-black/60" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center px-4 animate-fade-in">
+          <h1
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-white tracking-tight"
+            style={{
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+              letterSpacing: '-0.02em'
+            }}
+          >
+            Vortica.in
+          </h1>
+          <p
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-right text-gray-300 font-light tracking-[0.25em]"
+            aria-label="Company tagline"
+          >
+            Innovation is the future
+          </p>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div 
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+          aria-hidden="true"
+          role="presentation"
+        >
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
+            <div className="w-1 h-3 bg-white/50 rounded-full" />
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section className="bg-gray-50 py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">
-            Contact Us
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Ready to get started? Get in touch with us today.
-          </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Contact Now
-          </button>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <p>&copy; 2024 Your Vortica Innovations. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
+    </main>
   );
 }
