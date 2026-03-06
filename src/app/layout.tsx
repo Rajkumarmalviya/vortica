@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/layout/Navbar";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Vortica.in - Innovation & Technology Solutions",
@@ -95,7 +91,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${spaceGrotesk.className} bg-black/80 antialiased`}
+        className="bg-black/80 antialiased font-sans"
       >
         <noscript>
           <img
@@ -106,6 +102,7 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
+        <Navbar />
         {children}
         <Footer />
       </body>
