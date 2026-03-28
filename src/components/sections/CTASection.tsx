@@ -14,7 +14,6 @@ import {
   Sparkles,
   Mail,
   Phone,
-  ChevronRight,
   Star,
 } from "lucide-react";
 import AnimatedButton from "@/components/ui/AnimatedButton";
@@ -317,7 +316,7 @@ export default function CTASection() {
                           <Star key={i} className="size-3 fill-[#F3DB3F] text-[#F3DB3F]" />
                         ))}
                       </div>
-                      <p className="text-sm text-[#ECD8D5]/80">"{testimonial.quote}"</p>
+                      <p className="text-sm text-[#ECD8D5]/80">&ldquo;{testimonial.quote}&rdquo;</p>
                       <p className="mt-1 text-xs text-[#ECD8D5]/50">
                         {testimonial.name}, {testimonial.role}
                       </p>

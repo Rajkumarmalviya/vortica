@@ -3,7 +3,6 @@
 import { ArrowRight, Sparkles, CheckCircle2, Zap, Shield, Cloud, Cpu, TrendingUp } from "lucide-react";
 import { motion, easeInOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
 import AnimatedButton from "@/components/ui/AnimatedButton";
 import { homeStats } from "@/content/home";
 import { siteCopy } from "@/content/site-copy";
@@ -26,15 +25,6 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.6, ease: easeInOut },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.5, ease: easeInOut },
   },
 };
 

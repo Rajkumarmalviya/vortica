@@ -10,13 +10,11 @@ import {
   Users, 
   Star,
   TrendingUp,
-  Zap,
   Target,
   Eye,
   Code2,
   Rocket,
   Heart,
-  MessageSquare,
   ArrowRight
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -362,7 +360,7 @@ export default function TrustSection() {
                 </p>
               </div>
               <p className="mt-2 text-xs text-[#ECD8D5]/60">
-                "Best technology partner we've ever worked with" - Enterprise Client
+                &ldquo;Best technology partner we&apos;ve ever worked with&rdquo; - Enterprise Client
               </p>
             </motion.div>
           </motion.div>

@@ -376,7 +376,7 @@ export default function ContactPage() {
                 {formStatus === "success" && (
                   <div className="flex items-center gap-2 rounded-lg bg-green-500/10 p-3 text-green-400">
                     <CheckCircle2 className="size-4" />
-                    <span className="text-sm">Message sent successfully! We'll get back to you soon.</span>
+                    <span className="text-sm">Message sent successfully! We&apos;ll get back to you soon.</span>
                   </div>
                 )}
 
@@ -399,7 +399,7 @@ export default function ContactPage() {
             className="space-y-6"
           >
             {/* Contact Info Cards */}
-            {contactInfo.map((info, index) => {
+            {contactInfo.map((info) => {
               const Icon = info.icon;
               return (
                 <motion.div

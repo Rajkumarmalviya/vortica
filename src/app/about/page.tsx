@@ -497,7 +497,7 @@ export default function AboutPage() {
             Ready to build something great together?
           </h3>
           <p className="mt-2 text-[#ECD8D5]/70">
-            Let's discuss how we can help you achieve your goals
+            Let&apos;s discuss how we can help you achieve your goals
           </p>
           <Link
             href="/contact"

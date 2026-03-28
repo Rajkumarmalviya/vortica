@@ -1,12 +1,10 @@
 "use client";
 
-import { motion, useAnimation, easeInOut } from "framer-motion";
+import { motion, easeInOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { 
-  ArrowRight, 
   TrendingUp, 
   Clock, 
   Users, 
@@ -15,8 +13,6 @@ import {
   Sparkles,
   Filter,
   X,
-  Star,
-  CheckCircle2,
   ArrowUpRight
 } from "lucide-react";
 import PageShell from "@/components/ui/page-shell";
@@ -51,15 +47,6 @@ const containerVariants = {
       staggerChildren: 0.1,
       delayChildren: 0.2,
     },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
@@ -151,8 +138,6 @@ function PageHero({ eyebrow, title, description }: { eyebrow?: string; title: st
 
 // Enhanced Case Study Card Component
 function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: number; isFeatured: boolean }) {
-  const [isHovered, setIsHovered] = useState(false);
-  
   // Get metric icon
   const getMetricIcon = (type?: string) => {
     switch (type) {
@@ -173,8 +158,6 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
       initial="hidden"
       animate="visible"
       whileHover={{ y: -8 }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
       className={`group relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur transition-all duration-300 hover:border-[#F3DB3F]/30 hover:shadow-2xl ${
         isFeatured
           ? "bg-gradient-to-br from-[#F3DB3F]/10 via-white/[0.03] to-transparent"
@@ -400,7 +383,7 @@ export default function WorkPage() {
           Ready to create your success story?
         </h3>
         <p className="mt-2 text-[#ECD8D5]/70">
-          Let's discuss how we can help you achieve similar results
+          Let&apos;s discuss how we can help you achieve similar results
         </p>
         <Link
           href="/contact"

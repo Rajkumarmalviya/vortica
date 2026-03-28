@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { MenuToggle } from "@/components/ui/menu-toggle";
 import { cn } from "@/lib/utils";
 import { 

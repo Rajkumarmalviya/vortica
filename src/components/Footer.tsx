@@ -137,7 +137,7 @@ export default function Footer() {
             
             {/* Trust Badges */}
             <div className="flex flex-wrap gap-3 pt-2">
-              {badges.map((badge, index) => {
+              {badges.map((badge) => {
                 const Icon = badge.icon;
                 return (
                   <div

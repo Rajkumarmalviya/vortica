@@ -4,17 +4,11 @@ import { motion, easeOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { 
   ArrowRight, 
-  Cpu, 
   Cloud, 
-  Shield, 
-  Smartphone, 
   Database, 
-  LineChart,
   Sparkles,
   CheckCircle2,
-  Zap,
   Globe,
-  Lock,
   Code2,
   Brain,
   Rocket
@@ -206,7 +200,7 @@ export default function ServicesSection() {
               End-to-end technology services
             </h3>
             <p className="mt-2 text-[#ECD8D5]/60">
-              From strategy to execution, we've got you covered
+              From strategy to execution, we&apos;ve got you covered
             </p>
           </motion.div>
 
@@ -275,7 +269,7 @@ export default function ServicesSection() {
                 Ready to transform your business?
               </h4>
               <p className="mt-2 text-[#ECD8D5]/70">
-                Let's discuss how our services can help you achieve your goals
+                Let&apos;s discuss how our services can help you achieve your goals
               </p>
             </div>
             <AnimatedButton
