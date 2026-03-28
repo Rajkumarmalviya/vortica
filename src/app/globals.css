@@ -1,15 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root {
-  --background: #f5f5f5;
-  --foreground: #1E3D59;
-  --primary: #17A2B8;
-  --primary-light: #4FB3BF;
-  --primary-dark: #0E7C8C;
-  --accent-blue: #1E3D59;
-  --accent-turquoise: #17A2B8;
-  --accent-light: #4FB3BF;
+  --background: #160014;
+  --foreground: #ecd8d5;
+  --primary: #f3db3f;
+  --primary-light: #f5e7cf;
+  --primary-dark: #7b5066;
+  --accent-blue: #26103f;
+  --accent-turquoise: #4b2553;
+  --accent-light: #8e5f74;
+  --surface: rgba(33, 14, 46, 0.72);
+  --surface-strong: rgba(28, 11, 38, 0.9);
+  --surface-soft: rgba(255, 255, 255, 0.05);
+  --border-soft: rgba(236, 216, 213, 0.12);
+  --border-strong: rgba(142, 95, 116, 0.48);
+  --glow-gold: rgba(243, 219, 63, 0.16);
+  --glow-plum: rgba(75, 37, 83, 0.42);
 }
 
 @theme inline {
@@ -21,17 +30,17 @@
   --color-accent-blue: var(--accent-blue);
   --color-accent-turquoise: var(--accent-turquoise);
   --color-accent-light: var(--accent-light);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Poppins", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1E3D59;
-    --foreground: #f5f5f5;
-    --primary: #17A2B8;
-    --primary-light: #4FB3BF;
-    --primary-dark: #0E7C8C;
+    --background: #160014;
+    --foreground: #ecd8d5;
+    --primary: #f3db3f;
+    --primary-light: #f5e7cf;
+    --primary-dark: #7b5066;
   }
 }
 
@@ -128,7 +137,85 @@
   animation: slideUp 0.8s ease-out forwards;
 }
 
+html,
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 12% 10%, rgba(243, 219, 63, 0.09), transparent 20%),
+    radial-gradient(circle at 82% 14%, rgba(142, 95, 116, 0.16), transparent 26%),
+    radial-gradient(circle at 50% 100%, rgba(75, 37, 83, 0.24), transparent 32%),
+    linear-gradient(145deg, #160014 0%, #221034 34%, #2b124c 58%, #160014 100%);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  letter-spacing: -0.01em;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+a,
+button,
+input,
+textarea {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+::selection {
+  background: rgba(243, 219, 63, 0.24);
+  color: #fff7d0;
+}
+
+
+/* styles/globals.css */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.bg-gradient-radial {
+  background-image: radial-gradient(circle at center, var(--tw-gradient-stops));
 }

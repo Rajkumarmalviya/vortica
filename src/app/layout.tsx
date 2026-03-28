@@ -3,15 +3,20 @@ import Script from "next/script";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/layout/Navbar";
-
+import { BackToTop } from "@/components/ui/BackToTop";
 
 export const metadata: Metadata = {
-  title: "Vortica.in - Innovation & Technology Solutions",
-  description: "Vortica.in is at the forefront of innovation, delivering cutting-edge technology solutions for the future. Explore our innovative services and solutions.",
+  title: "Vortica - Innovation & Technology Solutions",
+  description: "Vortica is at the forefront of innovation, delivering cutting-edge technology solutions for the future. Explore our innovative services and solutions.",
   keywords: "innovation, technology, digital solutions, vortica, future technology",
+  icons: {
+    icon: "/fevicon.jpeg",
+    shortcut: "/fevicon.jpeg",
+    apple: "/fevicon.jpeg",
+  },
   openGraph: {
-    title: "Vortica.in - Innovation & Technology Solutions",
-    description: "Vortica.in is at the forefront of innovation, delivering cutting-edge technology solutions for the future.",
+    title: "Vortica - Innovation & Technology Solutions",
+    description: "Vortica is at the forefront of innovation, delivering cutting-edge technology solutions for the future.",
     url: "https://vortica.in",
     siteName: "Vortica.in",
     images: [
@@ -27,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vortica.in - Innovation & Technology Solutions",
-    description: "Vortica.in is at the forefront of innovation, delivering cutting-edge technology solutions for the future.",
+    title: "Vortica - Innovation & Technology Solutions",
+    description: "Vortica is at the forefront of innovation, delivering cutting-edge technology solutions for the future.",
     images: ["/world-map.jpg"],
   },
   robots: {
@@ -91,7 +96,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className="bg-black/80 antialiased font-sans"
+        className="antialiased"
       >
         <noscript>
           <img
@@ -104,6 +109,7 @@ export default function RootLayout({
         </noscript>
         <Navbar />
         {children}
+        <BackToTop />
         <Footer />
       </body>
     </html>

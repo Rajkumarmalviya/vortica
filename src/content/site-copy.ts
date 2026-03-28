@@ -1,5 +1,5 @@
 export const siteCopy = {
-  brand: "Vortica.in",
+  brand: "Vortica",
   tagline: "Innovation is the future",
   heroTitle: "Build digital products that create measurable business impact.",
   heroSubtitle:
