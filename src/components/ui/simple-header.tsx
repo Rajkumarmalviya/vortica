@@ -285,7 +285,7 @@ export const SimpleHeader = memo(function SimpleHeader({
   logoAlt = "Vortica logo",
   companyName = "Vortica",
   phoneNumber = "7354489974",
-  email = "rajmalvi789@gmail.com"
+  email = "connect.vortica@gmail.com"
 }: SimpleHeaderProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
