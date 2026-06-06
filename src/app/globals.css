@@ -1,24 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
-  --background: #160014;
-  --foreground: #ecd8d5;
-  --primary: #f3db3f;
-  --primary-light: #f5e7cf;
-  --primary-dark: #7b5066;
-  --accent-blue: #26103f;
-  --accent-turquoise: #4b2553;
-  --accent-light: #8e5f74;
-  --surface: rgba(33, 14, 46, 0.72);
-  --surface-strong: rgba(28, 11, 38, 0.9);
-  --surface-soft: rgba(255, 255, 255, 0.05);
-  --border-soft: rgba(236, 216, 213, 0.12);
-  --border-strong: rgba(142, 95, 116, 0.48);
-  --glow-gold: rgba(243, 219, 63, 0.16);
-  --glow-plum: rgba(75, 37, 83, 0.42);
+  --background: #0a0a0a;
+  --surface: #111111;
+  --surface-raised: #1a1a1a;
+  --surface-overlay: rgba(255, 255, 255, 0.04);
+  --foreground: #ffffff;
+  --foreground-muted: #a1a1aa;
+  --foreground-subtle: #52525b;
+  --primary: #8b5cf6;
+  --primary-light: #a78bfa;
+  --primary-dark: #7c3aed;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --glow-purple: rgba(139, 92, 246, 0.2);
+  --glow-blue: rgba(59, 130, 246, 0.2);
 }
 
 @theme inline {
@@ -28,194 +31,96 @@
   --color-primary-light: var(--primary-light);
   --color-primary-dark: var(--primary-dark);
   --color-accent-blue: var(--accent-blue);
-  --color-accent-turquoise: var(--accent-turquoise);
-  --color-accent-light: var(--accent-light);
-  --font-sans: "Poppins", sans-serif;
+  --color-accent-purple: var(--accent-purple);
+  --font-sans: "Inter", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #160014;
-    --foreground: #ecd8d5;
-    --primary: #f3db3f;
-    --primary-light: #f5e7cf;
-    --primary-dark: #7b5066;
-  }
-}
-
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
 }
 
 @keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
 }
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
 }
 
-.animate-pulse-slow {
-  animation: pulse 4s ease-in-out infinite;
-}
-
-.animate-gradient {
-  animation: gradientShift 8s ease infinite;
-  background-size: 200% 200%;
-}
-
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-pulse-slow { animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+.animate-gradient { animation: gradientShift 8s ease infinite; background-size: 200% 200%; }
 .animate-shimmer {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.05) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.04) 50%, rgba(255,255,255,0) 100%);
   background-size: 1000px 100%;
   animation: shimmer 2s linear infinite;
 }
+.animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+.animate-slide-up { animation: slideUp 0.8s ease-out forwards; }
 
-.animate-fade-in {
-  animation: fadeIn 1s ease-out forwards;
+.bg-gradient-radial {
+  background-image: radial-gradient(circle at center, var(--tw-gradient-stops));
 }
 
-.animate-slide-up {
-  animation: slideUp 0.8s ease-out forwards;
-}
-
-html,
-body {
+html, body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.011em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   min-height: 100vh;
+  background-color: #0a0a0a;
   background-image:
-    radial-gradient(circle at 12% 10%, rgba(243, 219, 63, 0.09), transparent 20%),
-    radial-gradient(circle at 82% 14%, rgba(142, 95, 116, 0.16), transparent 26%),
-    radial-gradient(circle at 50% 100%, rgba(75, 37, 83, 0.24), transparent 32%),
-    linear-gradient(145deg, #160014 0%, #221034 34%, #2b124c 58%, #160014 100%);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(59, 130, 246, 0.08), transparent);
   font-size: 16px;
   font-weight: 400;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.03em;
   line-height: 1.1;
   font-weight: 600;
 }
 
-p,
-li,
-label,
-input,
-textarea {
-  letter-spacing: -0.01em;
-}
+p, li, label, input, textarea { letter-spacing: -0.011em; }
+input, textarea, button { font: inherit; }
 
-input,
-textarea,
-button {
-  font: inherit;
-}
-
-a,
-button,
-input,
-textarea {
-  transition:
-    color 180ms ease,
-    background-color 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
+a, button, input, textarea {
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 ::selection {
-  background: rgba(243, 219, 63, 0.24);
-  color: #fff7d0;
-}
-
-
-/* styles/globals.css */
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.6;
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-.bg-gradient-radial {
-  background-image: radial-gradient(circle at center, var(--tw-gradient-stops));
+  background: rgba(139, 92, 246, 0.3);
+  color: #ffffff;
 }

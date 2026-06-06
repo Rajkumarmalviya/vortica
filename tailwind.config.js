@@ -8,35 +8,49 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        sans: ["Inter", "sans-serif"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
       colors: {
-        primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
+        background: "#0a0a0a",
+        surface: {
+          DEFAULT: "#111111",
+          raised: "#1a1a1a",
+          overlay: "rgba(255,255,255,0.04)",
         },
-        slate: {
-          850: '#1e1e2f',
-          950: '#0f0f1a',
+        foreground: {
+          DEFAULT: "#ffffff",
+          muted: "#a1a1aa",
+          subtle: "#52525b",
+        },
+        primary: {
+          DEFAULT: "#8b5cf6",
+          light: "#a78bfa",
+          dark: "#7c3aed",
+          50: "#f5f3ff",
+          100: "#ede9fe",
+          200: "#ddd6fe",
+          300: "#c4b5fd",
+          400: "#a78bfa",
+          500: "#8b5cf6",
+          600: "#7c3aed",
+          700: "#6d28d9",
+          800: "#5b21b6",
+          900: "#4c1d95",
         },
         accent: {
-          blue: '#2563eb',
-          indigo: '#4f46e5',
-          purple: '#7c3aed',
-        }
+          blue: "#3b82f6",
+          purple: "#8b5cf6",
+        },
+        border: {
+          DEFAULT: "rgba(255,255,255,0.08)",
+          strong: "rgba(255,255,255,0.16)",
+        },
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-world': 'linear-gradient(to right bottom, rgba(30, 30, 47, 0.8), rgba(15, 15, 26, 0.8))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "accent-gradient": "linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%)",
+        "hero-glow": "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139,92,246,0.12), transparent)",
       },
     },
   },
