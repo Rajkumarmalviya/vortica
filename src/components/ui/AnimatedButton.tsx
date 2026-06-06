@@ -10,13 +10,13 @@ type AnimatedButtonProps = {
 export default function AnimatedButton({ href, children, variant = "primary" }: AnimatedButtonProps) {
   const className =
     variant === "primary"
-      ? "border border-[#8b5cf6]/90 bg-[linear-gradient(135deg,#a78bfa_0%,#8b5cf6_55%,#7c3aed_100%)] text-white shadow-[0_16px_40px_rgba(139,92,246,0.18)] hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(139,92,246,0.22)]"
-      : "border border-[rgba(255,255,255,0.10)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] text-[#a1a1aa] hover:-translate-y-1 hover:border-[#6d28d9] hover:bg-[linear-gradient(180deg,rgba(88,28,135,0.52),rgba(30,10,50,0.4))]";
+      ? "border border-[#D4A017]/80 bg-[linear-gradient(135deg,#F5C518_0%,#D4A017_55%,#B8860B_100%)] text-[#0a0a0a] font-semibold shadow-[0_8px_32px_rgba(212,160,23,0.25)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(212,160,23,0.35)]"
+      : "border border-white/10 bg-[rgba(255,255,255,0.05)] text-white hover:-translate-y-1 hover:border-[#D4A017]/40 hover:bg-[rgba(212,160,23,0.08)]";
 
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full px-6 py-3.5 text-[0.78rem] font-medium uppercase tracking-[0.12em] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b5cf6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a] ${className}`}
+      className={`inline-flex items-center justify-center rounded-full px-6 py-3.5 text-[0.78rem] font-medium uppercase tracking-[0.12em] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a] ${className}`}
     >
       {children}
     </Link>

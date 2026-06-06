@@ -85,10 +85,10 @@ function PageHero({ eyebrow, title, description }: { eyebrow?: string; title: st
           initial={{ opacity: 0, x: -20 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-[#8b5cf6]/30 bg-[#8b5cf6]/10 px-4 py-2 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-[#D4A017]/30 bg-[#D4A017]/10 px-4 py-2 backdrop-blur-sm"
         >
-          <Sparkles className="size-4 text-[#8b5cf6]" />
-          <span className="text-xs font-medium uppercase tracking-wider text-[#8b5cf6]">
+          <Sparkles className="size-4 text-[#D4A017]" />
+          <span className="text-xs font-medium uppercase tracking-wider text-[#D4A017]">
             {eyebrow}
           </span>
         </motion.div>
@@ -120,15 +120,15 @@ function PageHero({ eyebrow, title, description }: { eyebrow?: string; title: st
         className="mt-8 flex flex-wrap gap-4"
       >
         <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-          <TrendingUp className="size-4 text-[#8b5cf6]" />
+          <TrendingUp className="size-4 text-[#D4A017]" />
           <span className="text-sm text-[#a1a1aa]/70">50+ Successful Projects</span>
         </div>
         <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-          <Users className="size-4 text-[#8b5cf6]" />
+          <Users className="size-4 text-[#D4A017]" />
           <span className="text-sm text-[#a1a1aa]/70">98% Client Satisfaction</span>
         </div>
         <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-          <Clock className="size-4 text-[#8b5cf6]" />
+          <Clock className="size-4 text-[#D4A017]" />
           <span className="text-sm text-[#a1a1aa]/70">5+ Years Experience</span>
         </div>
       </motion.div>
@@ -158,33 +158,33 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
       initial="hidden"
       animate="visible"
       whileHover={{ y: -8 }}
-      className={`group relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur transition-all duration-300 hover:border-[#8b5cf6]/30 hover:shadow-2xl ${
+      className={`group relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-2xl ${
         isFeatured
-          ? "bg-gradient-to-br from-[#8b5cf6]/10 via-white/[0.03] to-transparent"
+          ? "bg-gradient-to-br from-[#D4A017]/10 via-white/[0.03] to-transparent"
           : "bg-gradient-to-br from-white/[0.04] to-white/[0.02]"
       }`}
     >
       {/* Hover Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#8b5cf6]/0 via-[#8b5cf6]/5 to-[#8b5cf6]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#D4A017]/0 via-[#D4A017]/5 to-[#D4A017]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       
       {/* Featured Badge */}
       {isFeatured && (
-        <div className="absolute right-6 top-6 z-10 rounded-full bg-[#8b5cf6]/20 px-3 py-1 backdrop-blur">
-          <span className="text-xs font-medium text-[#8b5cf6]">Featured</span>
+        <div className="absolute right-6 top-6 z-10 rounded-full bg-[#D4A017]/20 px-3 py-1 backdrop-blur">
+          <span className="text-xs font-medium text-[#D4A017]">Featured</span>
         </div>
       )}
 
       <div className="relative p-7">
         {/* Category */}
         <div className="flex items-center gap-2">
-          <div className="h-px flex-1 bg-gradient-to-r from-[#8b5cf6]/50 to-transparent" />
-          <p className="text-xs font-semibold uppercase tracking-wider text-[#8b5cf6]">
+          <div className="h-px flex-1 bg-gradient-to-r from-[#D4A017]/50 to-transparent" />
+          <p className="text-xs font-semibold uppercase tracking-wider text-[#D4A017]">
             {study.category}
           </p>
         </div>
 
         {/* Title */}
-        <h2 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-[#8b5cf6] transition-colors">
+        <h2 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-[#D4A017] transition-colors">
           {study.title}
         </h2>
 
@@ -200,8 +200,8 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
             className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4"
           >
             <div className="flex items-center gap-3">
-              <div className="rounded-lg bg-[#8b5cf6]/10 p-2">
-                <MetricIcon className="size-5 text-[#8b5cf6]" />
+              <div className="rounded-lg bg-[#D4A017]/10 p-2">
+                <MetricIcon className="size-5 text-[#D4A017]" />
               </div>
               <div>
                 <p className="text-2xl font-bold text-white">
@@ -240,7 +240,7 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
         {/* Read More Link */}
         <Link
           href={`/work/${study.title.toLowerCase().replace(/\s+/g, '-')}`}
-          className="group/link mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#8b5cf6] transition-all hover:gap-3"
+          className="group/link mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#D4A017] transition-all hover:gap-3"
         >
           {study.result || "Read case study"}
           <ChevronRight className="size-4 transition-transform group-hover/link:translate-x-1" />
@@ -249,7 +249,7 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
 
       {/* Decorative Corner */}
       <div className="absolute bottom-0 right-0 h-20 w-20 overflow-hidden">
-        <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-[#8b5cf6]/5 blur-2xl" />
+        <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-[#D4A017]/5 blur-2xl" />
       </div>
     </motion.article>
   );
@@ -304,8 +304,8 @@ export default function WorkPage() {
             onClick={() => filterStudies(category)}
             className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
               selectedCategory === category
-                ? "bg-[#8b5cf6] text-white shadow-lg"
-                : "border border-white/10 bg-white/5 text-[#a1a1aa]/70 hover:border-[#8b5cf6]/30 hover:text-[#8b5cf6]"
+                ? "bg-[#D4A017] text-white shadow-lg"
+                : "border border-white/10 bg-white/5 text-[#a1a1aa]/70 hover:border-[#D4A017]/30 hover:text-[#D4A017]"
             }`}
           >
             {category}
@@ -314,7 +314,7 @@ export default function WorkPage() {
         {selectedCategory !== "All" && (
           <button
             onClick={() => filterStudies("All")}
-            className="flex items-center gap-1 rounded-full px-3 py-2 text-sm text-[#a1a1aa]/50 transition-all hover:text-[#8b5cf6]"
+            className="flex items-center gap-1 rounded-full px-3 py-2 text-sm text-[#a1a1aa]/50 transition-all hover:text-[#D4A017]"
           >
             <X className="size-3" />
             Clear
@@ -356,8 +356,8 @@ export default function WorkPage() {
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-transparent p-12 text-center"
         >
-          <div className="rounded-full bg-[#8b5cf6]/10 p-3">
-            <Sparkles className="size-8 text-[#8b5cf6]" />
+          <div className="rounded-full bg-[#D4A017]/10 p-3">
+            <Sparkles className="size-8 text-[#D4A017]" />
           </div>
           <h3 className="mt-4 text-xl font-semibold text-white">No projects found</h3>
           <p className="mt-2 text-[#a1a1aa]/70">
@@ -365,7 +365,7 @@ export default function WorkPage() {
           </p>
           <button
             onClick={() => filterStudies("All")}
-            className="mt-6 rounded-full bg-[#8b5cf6]/10 px-6 py-2 text-sm font-medium text-[#8b5cf6] transition-all hover:bg-[#8b5cf6]/20"
+            className="mt-6 rounded-full bg-[#D4A017]/10 px-6 py-2 text-sm font-medium text-[#D4A017] transition-all hover:bg-[#D4A017]/20"
           >
             View all projects
           </button>
@@ -377,7 +377,7 @@ export default function WorkPage() {
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.8, duration: 0.6 }}
-        className="mt-16 rounded-2xl bg-gradient-to-r from-[#8b5cf6]/10 via-[#6d28d9]/10 to-transparent p-8 text-center"
+        className="mt-16 rounded-2xl bg-gradient-to-r from-[#D4A017]/10 via-[#B8860B]/10 to-transparent p-8 text-center"
       >
         <h3 className="text-2xl font-bold text-white">
           Ready to create your success story?
@@ -387,7 +387,7 @@ export default function WorkPage() {
         </p>
         <Link
           href="/contact"
-          className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#9d70fa] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg hover:shadow-[#8b5cf6]/20"
+          className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#D4A017] to-[#D4A017] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg hover:shadow-[#D4A017]/20"
         >
           Start a Project
           <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />

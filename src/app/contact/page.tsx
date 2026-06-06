@@ -180,8 +180,8 @@ export default function ContactPage() {
     <PageShell className="relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#8b5cf6]/5 blur-3xl" />
-        <div className="absolute right-0 bottom-0 size-72 rounded-full bg-[#6d28d9]/10 blur-3xl" />
+        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#D4A017]/5 blur-3xl" />
+        <div className="absolute right-0 bottom-0 size-72 rounded-full bg-[#B8860B]/10 blur-3xl" />
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-5" />
       </div>
 
@@ -208,8 +208,8 @@ export default function ContactPage() {
               className="rounded-2xl border border-white/10 bg-gradient-to-br from-[rgba(36,14,48,0.72)] to-[rgba(20,4,24,0.82)] p-6 backdrop-blur sm:p-8"
             >
               <div className="mb-6 flex items-center gap-2">
-                <div className="h-px flex-1 bg-gradient-to-r from-[#8b5cf6]/50 to-transparent" />
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#8b5cf6]">
+                <div className="h-px flex-1 bg-gradient-to-r from-[#D4A017]/50 to-transparent" />
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#D4A017]">
                   Get in Touch
                 </p>
               </div>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     className={`w-full rounded-xl border ${
                       errors.name ? "border-red-500/50" : "border-white/10"
-                    } bg-white/[0.04] px-4 py-3 text-white placeholder:text-[#a1a1aa]/50 focus:border-[#8b5cf6] focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/20`}
+                    } bg-white/[0.04] px-4 py-3 text-white placeholder:text-[#a1a1aa]/50 focus:border-[#D4A017] focus:outline-none focus:ring-2 focus:ring-[#D4A017]/20`}
                     placeholder="John Doe"
                   />
                   {errors.name && (
@@ -262,7 +262,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     className={`w-full rounded-xl border ${
                       errors.email ? "border-red-500/50" : "border-white/10"
-                    } bg-white/[0.04] px-4 py-3 text-white placeholder:text-[#a1a1aa]/50 focus:border-[#8b5cf6] focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/20`}
+                    } bg-white/[0.04] px-4 py-3 text-white placeholder:text-[#a1a1aa]/50 focus:border-[#D4A017] focus:outline-none focus:ring-2 focus:ring-[#D4A017]/20`}
                     placeholder="john@company.com"
                   />
                   {errors.email && (
@@ -284,7 +284,7 @@ export default function ContactPage() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white placeholder:text-[#a1a1aa]/50 focus:border-[#8b5cf6] focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/20"
+                    className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white placeholder:text-[#a1a1aa]/50 focus:border-[#D4A017] focus:outline-none focus:ring-2 focus:ring-[#D4A017]/20"
                     placeholder="Your Company"
                   />
                 </div>
@@ -299,7 +299,7 @@ export default function ContactPage() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white focus:border-[#8b5cf6] focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/20"
+                      className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white focus:border-[#D4A017] focus:outline-none focus:ring-2 focus:ring-[#D4A017]/20"
                     >
                       {serviceOptions.map(option => (
                         <option key={option} value={option} className="bg-[#0a0a0a]">
@@ -316,7 +316,7 @@ export default function ContactPage() {
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white focus:border-[#8b5cf6] focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/20"
+                      className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white focus:border-[#D4A017] focus:outline-none focus:ring-2 focus:ring-[#D4A017]/20"
                     >
                       {budgetOptions.map(option => (
                         <option key={option} value={option} className="bg-[#0a0a0a]">
@@ -340,7 +340,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     className={`w-full rounded-xl border ${
                       errors.message ? "border-red-500/50" : "border-white/10"
-                    } bg-white/[0.04] px-4 py-3 text-white placeholder:text-[#a1a1aa]/50 focus:border-[#8b5cf6] focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/20`}
+                    } bg-white/[0.04] px-4 py-3 text-white placeholder:text-[#a1a1aa]/50 focus:border-[#D4A017] focus:outline-none focus:ring-2 focus:ring-[#D4A017]/20`}
                     placeholder="Tell us about your project, goals, and timeline..."
                   />
                   {errors.message && (
@@ -355,7 +355,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={formStatus === "submitting"}
-                  className="group relative w-full overflow-hidden rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#9d70fa] px-6 py-3.5 font-medium text-white transition-all hover:shadow-lg hover:shadow-[#8b5cf6]/20 disabled:opacity-50"
+                  className="group relative w-full overflow-hidden rounded-full bg-gradient-to-r from-[#D4A017] to-[#D4A017] px-6 py-3.5 font-medium text-white transition-all hover:shadow-lg hover:shadow-[#D4A017]/20 disabled:opacity-50"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     {formStatus === "submitting" ? (
@@ -406,11 +406,11 @@ export default function ContactPage() {
                   key={info.title}
                   variants={itemVariants}
                   whileHover={{ y: -2 }}
-                  className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 transition-all duration-300 hover:border-[#8b5cf6]/30 hover:shadow-xl"
+                  className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-[#8b5cf6]/10 p-2">
-                      <Icon className="size-5 text-[#8b5cf6]" />
+                    <div className="rounded-lg bg-[#D4A017]/10 p-2">
+                      <Icon className="size-5 text-[#D4A017]" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-white">{info.title}</h3>
@@ -422,7 +422,7 @@ export default function ContactPage() {
                       {info.action && (
                         <a
                           href={info.action.href}
-                          className="mt-2 inline-flex items-center gap-1 text-sm text-[#8b5cf6] transition-all hover:gap-2"
+                          className="mt-2 inline-flex items-center gap-1 text-sm text-[#D4A017] transition-all hover:gap-2"
                         >
                           {info.action.label}
                           <ArrowRight className="size-3" />
@@ -440,13 +440,13 @@ export default function ContactPage() {
               className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
             >
               <div className="flex items-center gap-2 mb-4">
-                <MessageSquare className="size-5 text-[#8b5cf6]" />
+                <MessageSquare className="size-5 text-[#D4A017]" />
                 <h3 className="font-semibold text-white">Frequently Asked Questions</h3>
               </div>
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
                   <details key={index} className="group">
-                    <summary className="cursor-pointer text-sm font-medium text-[#a1a1aa] transition-colors hover:text-[#8b5cf6]">
+                    <summary className="cursor-pointer text-sm font-medium text-[#a1a1aa] transition-colors hover:text-[#D4A017]">
                       {faq.question}
                     </summary>
                     <p className="mt-2 text-sm text-[#a1a1aa]/70 pl-4">
@@ -460,9 +460,9 @@ export default function ContactPage() {
             {/* Response Guarantee */}
             <motion.div
               variants={itemVariants}
-              className="rounded-xl border border-[#8b5cf6]/20 bg-gradient-to-r from-[#8b5cf6]/10 to-transparent p-6 text-center"
+              className="rounded-xl border border-[#D4A017]/20 bg-gradient-to-r from-[#D4A017]/10 to-transparent p-6 text-center"
             >
-              <Sparkles className="mx-auto mb-3 size-8 text-[#8b5cf6]" />
+              <Sparkles className="mx-auto mb-3 size-8 text-[#D4A017]" />
               <h3 className="text-lg font-semibold text-white">24-Hour Response Guarantee</h3>
               <p className="mt-2 text-sm text-[#a1a1aa]/70">
                 We respond to all inquiries within one business day. For urgent matters, please call us directly.
@@ -470,7 +470,7 @@ export default function ContactPage() {
               <div className="mt-4 flex justify-center gap-4">
                 <a
                   href="tel:+917354489974"
-                  className="flex items-center gap-2 text-sm text-[#8b5cf6] hover:underline"
+                  className="flex items-center gap-2 text-sm text-[#D4A017] hover:underline"
                 >
                   <Phone className="size-3" />
                   Call Now
@@ -479,7 +479,7 @@ export default function ContactPage() {
                   href="https://calendly.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-[#8b5cf6] hover:underline"
+                  className="flex items-center gap-2 text-sm text-[#D4A017] hover:underline"
                 >
                   <Calendar className="size-3" />
                   Schedule Call
