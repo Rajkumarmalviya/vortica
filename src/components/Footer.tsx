@@ -229,11 +229,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:rajmalvi789@gmail.com"
+                  href="mailto:connect.vortica@gmail.com"
                   className="group flex items-center gap-3 text-sm text-[#ECD8D5]/70 transition-all hover:text-[#F3DB3F]"
                 >
                   <Mail className="size-4 text-[#F3DB3F]" />
-                  <span className="group-hover:underline">rajmalvi789@gmail.com</span>
+                  <span className="group-hover:underline">connect.vortica@gmail.com</span>
                 </a>
               </li>
             </ul>

@@ -60,8 +60,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["rajmalvi789@gmail.com"],
-    action: { label: "Send email", href: "mailto:rajmalvi789@gmail.com" },
+    details: ["connect.vortica@gmail.com"],
+    action: { label: "Send email", href: "mailto:connect.vortica@gmail.com" },
   },
   {
     icon: Clock,
@@ -215,7 +215,7 @@ export default function ContactPage() {
               </div>
 
               <form
-                action="https://formsubmit.co/rajmalvi789@gmail.com"
+                action="https://formsubmit.co/connect.vortica@gmail.com"
                 method="POST"
                 onSubmit={handleSubmit}
                 className="space-y-5"
