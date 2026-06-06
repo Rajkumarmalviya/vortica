@@ -9,10 +9,19 @@ export const metadata: Metadata = {
   title: "Vortica - Innovation & Technology Solutions",
   description: "Vortica is at the forefront of innovation, delivering cutting-edge technology solutions for the future. Explore our innovative services and solutions.",
   keywords: "innovation, technology, digital solutions, vortica, future technology",
+  manifest: "/site.webmanifest",
   icons: {
-    icon: "/fevicon.jpeg",
-    shortcut: "/fevicon.jpeg",
-    apple: "/fevicon.jpeg",
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    other: [
+      { rel: "icon", url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { rel: "icon", url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
   },
   openGraph: {
     title: "Vortica - Innovation & Technology Solutions",
