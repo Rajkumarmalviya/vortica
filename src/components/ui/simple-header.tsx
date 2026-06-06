@@ -143,7 +143,7 @@ const MegaMenu = memo(({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className="absolute left-0 top-full mt-2 w-[720px] rounded-2xl border border-white/10 bg-gradient-to-b from-[rgba(17,4,18,0.98)] to-[rgba(29,10,34,0.98)] backdrop-blur-xl shadow-2xl"
+          className="absolute left-0 top-full mt-2 w-[720px] rounded-2xl border border-white/10 bg-gradient-to-b from-[rgba(10,10,10,0.98)] to-[rgba(15,15,15,0.98)] backdrop-blur-xl shadow-2xl"
         >
           <div className="grid grid-cols-2 gap-4 p-6">
             {items.map((item) => (
@@ -221,9 +221,9 @@ const DesktopNavLink = memo(({
           onClick={() => onMegaMenuOpen(isOpen ? null : link.label)}
           className={cn(
             "group flex items-center gap-1 rounded-full px-4 py-2 text-[0.9rem] font-medium tracking-[-0.01em] transition-all duration-200",
-            "hover:bg-gradient-to-b hover:from-[rgba(88,28,135,0.56)] hover:to-[rgba(30,10,50,0.36)]",
+            "hover:bg-[rgba(139,92,246,0.10)]",
             isActive || isOpen
-              ? "text-[#8b5cf6] bg-gradient-to-b from-[rgba(88,28,135,0.56)] to-[rgba(30,10,50,0.36)]"
+              ? "text-[#8b5cf6] bg-gradient-to-b from-[rgba(139,92,246,0.12)] to-[rgba(139,92,246,0.06)]"
               : "text-[#a1a1aa]/82 hover:text-[#8b5cf6]"
           )}
           aria-expanded={isOpen}
@@ -240,9 +240,9 @@ const DesktopNavLink = memo(({
           href={link.href}
           className={cn(
             "group flex items-center gap-1 rounded-full px-4 py-2 text-[0.9rem] font-medium tracking-[-0.01em] transition-all duration-200",
-            "hover:bg-gradient-to-b hover:from-[rgba(88,28,135,0.56)] hover:to-[rgba(30,10,50,0.36)]",
+            "hover:bg-[rgba(139,92,246,0.10)]",
             isActive
-              ? "text-[#8b5cf6] bg-gradient-to-b from-[rgba(88,28,135,0.56)] to-[rgba(30,10,50,0.36)]"
+              ? "text-[#8b5cf6] bg-gradient-to-b from-[rgba(139,92,246,0.12)] to-[rgba(139,92,246,0.06)]"
               : "text-[#a1a1aa]/82 hover:text-[#8b5cf6]"
           )}
         >
@@ -344,8 +344,8 @@ export const SimpleHeader = memo(function SimpleHeader({
         "sticky top-0 z-50 w-full transition-all duration-300",
         "border-b border-[rgba(236,216,213,0.08)]",
         scrolled 
-          ? "bg-gradient-to-b from-[rgba(17,4,18,0.95)] to-[rgba(29,10,34,0.92)] backdrop-blur-xl shadow-2xl"
-          : "bg-gradient-to-b from-[rgba(17,4,18,0.88)] to-[rgba(29,10,34,0.72)] backdrop-blur-lg",
+          ? "bg-gradient-to-b from-[rgba(10,10,10,0.95)] to-[rgba(15,15,15,0.92)] backdrop-blur-xl shadow-2xl"
+          : "bg-gradient-to-b from-[rgba(10,10,10,0.88)] to-[rgba(15,15,15,0.72)] backdrop-blur-lg",
         className
       )}
     >
@@ -412,7 +412,7 @@ export const SimpleHeader = memo(function SimpleHeader({
               className={cn(
                 "border-[rgba(255,255,255,0.10)] bg-white/5",
                 "text-[#a1a1aa]/82 hover:text-[#8b5cf6]",
-                "hover:bg-gradient-to-b hover:from-[rgba(88,28,135,0.56)] hover:to-[rgba(30,10,50,0.36)]",
+                "hover:bg-[rgba(139,92,246,0.10)]",
                 "transition-all duration-200 lg:hidden",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b5cf6]/50"
               )}
@@ -431,7 +431,7 @@ export const SimpleHeader = memo(function SimpleHeader({
             <SheetContent
               className={cn(
                 "gap-0 border-r border-[rgba(236,216,213,0.08)]",
-                "bg-gradient-to-b from-[rgba(17,4,18,0.98)] to-[rgba(29,10,34,0.98)]",
+                "bg-gradient-to-b from-[rgba(10,10,10,0.98)] to-[rgba(15,15,15,0.98)]",
                 "text-[#a1a1aa] backdrop-blur-xl",
                 "data-[state=open]:animate-in data-[state=closed]:animate-out",
                 "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",

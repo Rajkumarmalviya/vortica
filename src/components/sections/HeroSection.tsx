@@ -55,7 +55,7 @@ export default function HeroSection() {
       aria-label="Hero"
     >
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#12051C] to-[#1A0A24]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a] to-[#0d0d0d]" />
       
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-30">
@@ -68,19 +68,19 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={heroInView ? { opacity: 0.4, scale: 1 } : {}}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute -left-32 top-20 size-96 rounded-full bg-[#8b5cf6]/20 blur-[100px]"
+        className="absolute -left-32 top-20 size-96 rounded-full bg-[#8b5cf6]/10 blur-[120px]"
       />
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={heroInView ? { opacity: 0.3, scale: 1 } : {}}
         transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
-        className="absolute -right-32 bottom-20 size-[600px] rounded-full bg-[#6d28d9]/30 blur-[120px]"
+        className="absolute -right-32 bottom-20 size-[600px] rounded-full bg-[#8b5cf6]/8 blur-[140px]"
       />
       <motion.div
         initial={{ opacity: 0 }}
         animate={heroInView ? { opacity: 0.2 } : {}}
         transition={{ duration: 1, delay: 0.5 }}
-        className="absolute left-1/2 top-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#8b5cf6]/5 blur-[100px]"
+        className="absolute left-1/2 top-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#8b5cf6]/3 blur-[120px]"
       />
 
       {/* Top Border Accent */}
@@ -212,7 +212,7 @@ export default function HeroSection() {
             <div className="absolute -inset-4 rounded-[40px] bg-gradient-to-r from-[#8b5cf6]/20 via-[#6d28d9]/20 to-transparent blur-2xl" />
             
             {/* Main Card */}
-            <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[rgba(36,14,48,0.95)] to-[rgba(20,4,24,0.9)] p-6 shadow-2xl backdrop-blur-xl">
+            <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[rgba(18,18,18,0.95)] to-[rgba(10,10,10,0.9)] p-6 shadow-2xl backdrop-blur-xl">
               {/* Animated Gradient Border */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#8b5cf6]/0 via-[#8b5cf6]/30 to-[#8b5cf6]/0 opacity-0 transition-opacity group-hover:opacity-100" />
               
