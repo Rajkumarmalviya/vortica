@@ -106,7 +106,7 @@ export default function HeroSection() {
             {/* Main Heading */}
             <motion.h1
               variants={itemVariants}
-              className="mt-8 text-[2.5rem] font-bold tracking-[-0.03em] text-white sm:text-[2.5rem]"
+              className="mt-8 text-[2.5rem] font-light tracking-[-0.04em] text-white sm:text-[2.5rem]"
             >
               Transform Your Business With
               <span className="relative mt-2 block">
@@ -332,7 +332,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className="h-10 w-[2px] bg-gradient-to-b from-[#E8C96A] to-transparent"
+            className="h-10 w-[1px] bg-gradient-to-b from-[#E8C96A] via-[#E8C96A]/50 to-transparent"
           />
         </div>
       </motion.div>

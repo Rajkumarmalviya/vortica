@@ -342,7 +342,7 @@ export const SimpleHeader = memo(function SimpleHeader({
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
-        "border-b border-[rgba(236,216,213,0.08)]",
+        "border-b border-white/[0.08] after:absolute after:inset-x-0 after:top-0 after:h-px after:bg-[linear-gradient(to_right,transparent,rgba(232,201,106,0.4),transparent)] relative",
         scrolled 
           ? "bg-gradient-to-b from-[rgba(10,10,10,0.95)] to-[rgba(15,15,15,0.92)] backdrop-blur-xl shadow-2xl"
           : "bg-gradient-to-b from-[rgba(10,10,10,0.88)] to-[rgba(15,15,15,0.72)] backdrop-blur-lg",
@@ -357,7 +357,7 @@ export const SimpleHeader = memo(function SimpleHeader({
           onClick={handleLinkClick}
           aria-label={`${companyName} homepage`}
         >
-          <div className="relative size-10 overflow-hidden rounded-xl border border-[rgba(236,216,213,0.14)] bg-gradient-to-br from-white/10 to-white/5 shadow-[0_14px_30px_rgba(0,0,0,0.28)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+          <div className="relative size-10 overflow-hidden rounded-xl border border-[rgba(255,255,255,0.10)] bg-gradient-to-br from-white/10 to-white/5 shadow-[0_14px_30px_rgba(0,0,0,0.28)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
             <Image
               src={logoSrc}
               alt={logoAlt}
@@ -430,7 +430,7 @@ export const SimpleHeader = memo(function SimpleHeader({
             {/* Mobile Navigation Sheet */}
             <SheetContent
               className={cn(
-                "gap-0 border-r border-[rgba(236,216,213,0.08)]",
+                "gap-0 border-r border-[rgba(255,255,255,0.08)]",
                 "bg-gradient-to-b from-[rgba(10,10,10,0.98)] to-[rgba(15,15,15,0.98)]",
                 "text-[#a1a1aa] backdrop-blur-xl",
                 "data-[state=open]:animate-in data-[state=closed]:animate-out",
@@ -442,7 +442,7 @@ export const SimpleHeader = memo(function SimpleHeader({
             >
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}
-                <div className="border-b border-[rgba(236,216,213,0.08)] px-6 py-5">
+                <div className="border-b border-[rgba(255,255,255,0.08)] px-6 py-5">
                   <Link 
                     href="/" 
                     className="flex items-center gap-3"
@@ -518,7 +518,7 @@ export const SimpleHeader = memo(function SimpleHeader({
                 </div>
 
                 {/* Mobile Contact & CTA */}
-                <div className="border-t border-[rgba(236,216,213,0.08)] p-6 space-y-4">
+                <div className="border-t border-[rgba(255,255,255,0.08)] p-6 space-y-4">
                   <div className="space-y-3">
                     <a
                       href={`tel:${phoneNumber}`}

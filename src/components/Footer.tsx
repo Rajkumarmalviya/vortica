@@ -91,7 +91,7 @@ export default function Footer() {
   return (
     <footer
       ref={ref}
-      className="relative overflow-hidden border-t border-[rgba(236,216,213,0.08)] bg-gradient-to-b from-[rgba(17,4,18,0.96)] to-[rgba(10,2,12,0.98)]"
+      className="relative overflow-hidden border-t border-white/[0.06] bg-[#0a0a0a]"
       aria-label="Footer"
     >
       {/* Background Elements */}
@@ -306,7 +306,7 @@ export default function Footer() {
           variants={itemVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row"
+          className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[linear-gradient(to_right,transparent,rgba(232,201,106,0.2),transparent)] pt-8 md:flex-row"
         >
           <p className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/40">
             © {new Date().getFullYear()} Vortica.in. All rights reserved.
