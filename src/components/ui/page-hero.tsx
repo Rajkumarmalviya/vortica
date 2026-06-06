@@ -8,7 +8,7 @@ export default function PageHero({ eyebrow, title, description }: PageHeroProps)
   return (
     <div className="max-w-3xl">
       {eyebrow ? (
-        <p className="text-[0.74rem] font-medium uppercase tracking-[0.18em] text-[#D4A017]">
+        <p className="text-[0.74rem] font-medium uppercase tracking-[0.18em] text-[#E8C96A]">
           {eyebrow}
         </p>
       ) : null}

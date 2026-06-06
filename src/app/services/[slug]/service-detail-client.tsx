@@ -86,8 +86,8 @@ export default function ServiceDetailClient({
   return (
     <PageShell className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#D4A017]/5 blur-3xl" />
-        <div className="absolute right-0 bottom-0 size-72 rounded-full bg-[#B8860B]/10 blur-3xl" />
+        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#E8C96A]/5 blur-3xl" />
+        <div className="absolute right-0 bottom-0 size-72 rounded-full bg-[#C9A84C]/10 blur-3xl" />
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-5" />
       </div>
 
@@ -99,16 +99,16 @@ export default function ServiceDetailClient({
           className="mb-12"
         >
           <div className="flex flex-col items-center text-center">
-            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border border-[#D4A017]/30 bg-gradient-to-br from-[#D4A017]/20 to-[#D4A017]/5">
-              <IconComponent className="size-10 text-[#D4A017]" />
+            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border border-[#E8C96A]/30 bg-gradient-to-br from-[#E8C96A]/20 to-[#E8C96A]/5">
+              <IconComponent className="size-10 text-[#E8C96A]" />
             </div>
 
             <div className="mb-4 flex items-center gap-2 text-sm text-[#a1a1aa]/60">
-              <Link href="/services" className="transition-colors hover:text-[#D4A017]">
+              <Link href="/services" className="transition-colors hover:text-[#E8C96A]">
                 Services
               </Link>
               <ChevronRight className="size-3" />
-              <span className="text-[#D4A017]">{service.title}</span>
+              <span className="text-[#E8C96A]">{service.title}</span>
             </div>
 
             <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -119,7 +119,7 @@ export default function ServiceDetailClient({
             </p>
 
             <div className="mt-6 flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <Star className="size-4 text-[#D4A017]" />
+              <Star className="size-4 text-[#E8C96A]" />
               <span className="text-sm text-[#a1a1aa]/70">Trusted by 50+ innovative companies</span>
             </div>
           </div>
@@ -138,11 +138,11 @@ export default function ServiceDetailClient({
                 key={metric.label}
                 variants={itemVariants}
                 whileHover={{ y: -4 }}
-                className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl"
+                className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
               >
                 <div className="mb-3 flex justify-center">
-                  <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                    <MetricIcon className="size-6 text-[#D4A017]" />
+                  <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                    <MetricIcon className="size-6 text-[#E8C96A]" />
                   </div>
                 </div>
                 <p className="text-2xl font-bold text-white sm:text-3xl">{metric.value}</p>
@@ -161,8 +161,8 @@ export default function ServiceDetailClient({
           >
             <motion.div variants={itemVariants} className="mb-6">
               <div className="mb-2 flex items-center gap-2">
-                <div className="h-px flex-1 bg-gradient-to-r from-[#D4A017]/50 to-transparent" />
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#D4A017]">
+                <div className="h-px flex-1 bg-gradient-to-r from-[#E8C96A]/50 to-transparent" />
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#E8C96A]">
                   Key Outcomes
                 </p>
               </div>
@@ -180,11 +180,11 @@ export default function ServiceDetailClient({
                   key={outcome}
                   variants={itemVariants}
                   whileHover={{ y: -4 }}
-                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl"
+                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#D4A017]/0 via-[#D4A017]/5 to-[#D4A017]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#E8C96A]/0 via-[#E8C96A]/5 to-[#E8C96A]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <div className="relative flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 size-5 text-[#D4A017]" />
+                    <CheckCircle2 className="mt-0.5 size-5 text-[#E8C96A]" />
                     <p className="text-sm leading-relaxed text-[#FFF7EF]">{outcome}</p>
                   </div>
                 </motion.div>
@@ -202,8 +202,8 @@ export default function ServiceDetailClient({
           >
             <motion.div variants={itemVariants} className="mb-6">
               <div className="mb-2 flex items-center gap-2">
-                <div className="h-px flex-1 bg-gradient-to-r from-[#D4A017]/50 to-transparent" />
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#D4A017]">
+                <div className="h-px flex-1 bg-gradient-to-r from-[#E8C96A]/50 to-transparent" />
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#E8C96A]">
                   Capabilities
                 </p>
               </div>
@@ -221,10 +221,10 @@ export default function ServiceDetailClient({
                   key={capability}
                   variants={itemVariants}
                   whileHover={{ x: 4 }}
-                  className="group rounded-xl border border-white/10 bg-gradient-to-br from-[rgba(36,14,48,0.72)] to-[rgba(20,4,24,0.82)] px-4 py-3.5 transition-all duration-300 hover:border-[#D4A017]/30"
+                  className="group rounded-xl border border-white/10 bg-gradient-to-br from-[rgba(36,14,48,0.72)] to-[rgba(20,4,24,0.82)] px-4 py-3.5 transition-all duration-300 hover:border-[#E8C96A]/30"
                 >
                   <div className="flex items-center gap-2">
-                    <Sparkles className="size-4 text-[#D4A017]" />
+                    <Sparkles className="size-4 text-[#E8C96A]" />
                     <span className="text-sm text-[#a1a1aa]/80">{capability}</span>
                   </div>
                 </motion.div>
@@ -241,7 +241,7 @@ export default function ServiceDetailClient({
         >
           <motion.div variants={itemVariants} className="mb-6 text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <Rocket className="size-4 text-[#D4A017]" />
+              <Rocket className="size-4 text-[#E8C96A]" />
               <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
                 Our Process
               </span>
@@ -287,14 +287,14 @@ export default function ServiceDetailClient({
                   key={step.title}
                   variants={itemVariants}
                   whileHover={{ y: -4 }}
-                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl"
+                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
                 >
                   <div className="absolute right-4 top-4 text-4xl font-bold text-white/5">
                     {step.step}
                   </div>
                   <div className="relative">
-                    <div className="w-fit rounded-lg bg-[#D4A017]/10 p-2">
-                      <StepIcon className="size-5 text-[#D4A017]" />
+                    <div className="w-fit rounded-lg bg-[#E8C96A]/10 p-2">
+                      <StepIcon className="size-5 text-[#E8C96A]" />
                     </div>
                     <h3 className="mt-4 text-lg font-semibold text-white">
                       {step.title}
@@ -317,8 +317,8 @@ export default function ServiceDetailClient({
         >
           <motion.div variants={itemVariants} className="mb-6">
             <div className="mb-2 flex items-center gap-2">
-              <div className="h-px flex-1 bg-gradient-to-r from-[#D4A017]/50 to-transparent" />
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#D4A017]">
+              <div className="h-px flex-1 bg-gradient-to-r from-[#E8C96A]/50 to-transparent" />
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#E8C96A]">
                 Why Choose This Service
               </p>
             </div>
@@ -333,8 +333,8 @@ export default function ServiceDetailClient({
               className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                  <Users className="size-5 text-[#D4A017]" />
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                  <Users className="size-5 text-[#E8C96A]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Expert Team</h3>
@@ -350,8 +350,8 @@ export default function ServiceDetailClient({
               className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                  <Clock className="size-5 text-[#D4A017]" />
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                  <Clock className="size-5 text-[#E8C96A]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Fast Delivery</h3>
@@ -367,8 +367,8 @@ export default function ServiceDetailClient({
               className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                  <Shield className="size-5 text-[#D4A017]" />
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                  <Shield className="size-5 text-[#E8C96A]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Enterprise Security</h3>
@@ -384,8 +384,8 @@ export default function ServiceDetailClient({
               className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                  <BarChart3 className="size-5 text-[#D4A017]" />
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                  <BarChart3 className="size-5 text-[#E8C96A]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Measurable Results</h3>
@@ -407,7 +407,7 @@ export default function ServiceDetailClient({
           >
             <motion.div variants={itemVariants} className="mb-6 text-center">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-                <Sparkles className="size-4 text-[#D4A017]" />
+                <Sparkles className="size-4 text-[#E8C96A]" />
                 <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
                   Explore More
                 </span>
@@ -428,12 +428,12 @@ export default function ServiceDetailClient({
                     key={relatedService.slug}
                     variants={itemVariants}
                     whileHover={{ y: -4 }}
-                    className="group rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl"
+                    className="group rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
                   >
-                    <div className="w-fit rounded-lg bg-[#D4A017]/10 p-2">
-                      <RelatedIcon className="size-5 text-[#D4A017]" />
+                    <div className="w-fit rounded-lg bg-[#E8C96A]/10 p-2">
+                      <RelatedIcon className="size-5 text-[#E8C96A]" />
                     </div>
-                    <h3 className="mt-4 text-lg font-semibold text-white transition-colors group-hover:text-[#D4A017]">
+                    <h3 className="mt-4 text-lg font-semibold text-white transition-colors group-hover:text-[#E8C96A]">
                       {relatedService.title}
                     </h3>
                     <p className="mt-2 line-clamp-2 text-sm text-[#a1a1aa]/70">
@@ -441,7 +441,7 @@ export default function ServiceDetailClient({
                     </p>
                     <Link
                       href={`/services/${relatedService.slug}`}
-                      className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#D4A017] transition-all hover:gap-3"
+                      className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#E8C96A] transition-all hover:gap-3"
                     >
                       Learn More
                       <ArrowRight className="size-4" />
@@ -457,7 +457,7 @@ export default function ServiceDetailClient({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-12 rounded-2xl bg-gradient-to-r from-[#D4A017]/10 via-[#B8860B]/10 to-transparent p-8 text-center"
+          className="mt-12 rounded-2xl bg-gradient-to-r from-[#E8C96A]/10 via-[#C9A84C]/10 to-transparent p-8 text-center"
         >
           <h3 className="text-2xl font-bold text-white">
             Ready to discuss this service?

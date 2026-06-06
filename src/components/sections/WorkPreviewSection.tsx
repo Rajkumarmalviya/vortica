@@ -122,13 +122,13 @@ export default function WorkPreviewSection() {
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 0.3 } : {}}
         transition={{ duration: 1 }}
-        className="absolute -left-32 bottom-0 size-96 rounded-full bg-[#B8860B]/20 blur-[100px]"
+        className="absolute -left-32 bottom-0 size-96 rounded-full bg-[#C9A84C]/20 blur-[100px]"
       />
       <motion.div
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 0.2 } : {}}
         transition={{ duration: 1, delay: 0.3 }}
-        className="absolute -right-32 top-0 size-96 rounded-full bg-[#D4A017]/10 blur-[100px]"
+        className="absolute -right-32 top-0 size-96 rounded-full bg-[#E8C96A]/10 blur-[100px]"
       />
 
       {/* Grid Pattern Overlay */}
@@ -144,7 +144,7 @@ export default function WorkPreviewSection() {
         >
           <motion.div variants={itemVariants} className="flex-1">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 mb-6">
-              <Sparkles className="size-4 text-[#D4A017]" />
+              <Sparkles className="size-4 text-[#E8C96A]" />
               <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
                 Success Stories
               </span>
@@ -160,7 +160,7 @@ export default function WorkPreviewSection() {
           <motion.div variants={itemVariants}>
             <Link
               href="/work"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3 text-sm font-medium uppercase tracking-wider text-[#a1a1aa]/86 backdrop-blur transition-all duration-300 hover:border-[#D4A017]/50 hover:bg-[#D4A017]/10 hover:text-[#D4A017]"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3 text-sm font-medium uppercase tracking-wider text-[#a1a1aa]/86 backdrop-blur transition-all duration-300 hover:border-[#E8C96A]/50 hover:bg-[#E8C96A]/10 hover:text-[#E8C96A]"
             >
               View all work
               <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -184,33 +184,33 @@ export default function WorkPreviewSection() {
                 custom={index}
                 variants={cardVariants}
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                className={`group relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-2xl ${
+                className={`group relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-2xl ${
                   index === 0
-                    ? "bg-gradient-to-br from-[#D4A017]/10 via-white/[0.03] to-transparent"
+                    ? "bg-gradient-to-br from-[#E8C96A]/10 via-white/[0.03] to-transparent"
                     : "bg-gradient-to-br from-white/[0.04] to-white/[0.02]"
                 }`}
               >
                 {/* Hover Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#D4A017]/0 via-[#D4A017]/5 to-[#D4A017]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#E8C96A]/0 via-[#E8C96A]/5 to-[#E8C96A]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 
                 {/* Featured Badge for First Item */}
                 {index === 0 && (
-                  <div className="absolute right-6 top-6 rounded-full bg-[#D4A017]/20 px-3 py-1 backdrop-blur">
-                    <span className="text-xs font-medium text-[#D4A017]">Featured</span>
+                  <div className="absolute right-6 top-6 rounded-full bg-[#E8C96A]/20 px-3 py-1 backdrop-blur">
+                    <span className="text-xs font-medium text-[#E8C96A]">Featured</span>
                   </div>
                 )}
 
                 <div className="relative p-7">
                   {/* Category */}
                   <div className="flex items-center gap-2">
-                    <div className="h-px flex-1 bg-gradient-to-r from-[#D4A017]/50 to-transparent" />
-                    <p className="text-xs font-semibold uppercase tracking-wider text-[#D4A017]">
+                    <div className="h-px flex-1 bg-gradient-to-r from-[#E8C96A]/50 to-transparent" />
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#E8C96A]">
                       {item.category}
                     </p>
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-[#D4A017] transition-colors">
+                  <h3 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-[#E8C96A] transition-colors">
                     {item.title}
                   </h3>
 
@@ -226,8 +226,8 @@ export default function WorkPreviewSection() {
                       className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                          <MetricIcon className="size-5 text-[#D4A017]" />
+                        <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                          <MetricIcon className="size-5 text-[#E8C96A]" />
                         </div>
                         <div>
                           <p className="text-2xl font-bold text-white">
@@ -258,7 +258,7 @@ export default function WorkPreviewSection() {
                   {/* Result Link */}
                   <Link
                     href={`/work/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="group/link mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#D4A017] transition-all hover:gap-3"
+                    className="group/link mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#E8C96A] transition-all hover:gap-3"
                   >
                     {item.result || "Read case study"}
                     <ChevronRight className="size-4 transition-transform group-hover/link:translate-x-1" />
@@ -267,7 +267,7 @@ export default function WorkPreviewSection() {
 
                 {/* Decorative Corner */}
                 <div className="absolute bottom-0 right-0 h-20 w-20 overflow-hidden">
-                  <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-[#D4A017]/5 blur-2xl" />
+                  <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-[#E8C96A]/5 blur-2xl" />
                 </div>
               </motion.article>
             );
@@ -284,7 +284,7 @@ export default function WorkPreviewSection() {
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="size-4 fill-[#D4A017] text-[#D4A017]" />
+                <Star key={i} className="size-4 fill-[#E8C96A] text-[#E8C96A]" />
               ))}
             </div>
             <span className="text-sm text-[#a1a1aa]/70">4.9/5 from 500+ reviews</span>
@@ -293,14 +293,14 @@ export default function WorkPreviewSection() {
           <div className="h-8 w-px bg-white/10" />
           
           <div className="flex items-center gap-2">
-            <TrendingUp className="size-5 text-[#D4A017]" />
+            <TrendingUp className="size-5 text-[#E8C96A]" />
             <span className="text-sm text-[#a1a1aa]/70">98% client retention rate</span>
           </div>
           
           <div className="h-8 w-px bg-white/10" />
           
           <div className="flex items-center gap-2">
-            <Clock className="size-5 text-[#D4A017]" />
+            <Clock className="size-5 text-[#E8C96A]" />
             <span className="text-sm text-[#a1a1aa]/70">50+ successful deliveries in 2024</span>
           </div>
         </motion.div>

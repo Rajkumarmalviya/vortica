@@ -101,7 +101,7 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 0.3 } : {}}
           transition={{ duration: 1 }}
-          className="absolute -left-32 bottom-0 size-96 rounded-full bg-[#D4A017]/5 blur-[100px]"
+          className="absolute -left-32 bottom-0 size-96 rounded-full bg-[#E8C96A]/5 blur-[100px]"
         />
       </div>
 
@@ -125,7 +125,7 @@ export default function Footer() {
                   className="size-7 object-cover"
                 />
               </div>
-              <span className="text-xl font-bold tracking-[-0.02em] text-white transition-colors group-hover:text-[#D4A017]">
+              <span className="text-xl font-bold tracking-[-0.02em] text-white transition-colors group-hover:text-[#E8C96A]">
                 Vortica
               </span>
             </Link>
@@ -144,7 +144,7 @@ export default function Footer() {
                     key={badge.label}
                     className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5"
                   >
-                    <Icon className="size-3 text-[#D4A017]" />
+                    <Icon className="size-3 text-[#E8C96A]" />
                     <div>
                       <p className="text-[10px] font-semibold uppercase tracking-wider text-white">
                         {badge.label}
@@ -159,7 +159,7 @@ export default function Footer() {
 
           {/* Quick Links Column */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#D4A017]">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#E8C96A]">
               Quick Links
             </h3>
             <ul className="mt-4 space-y-3">
@@ -167,7 +167,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group inline-flex items-center gap-1 text-sm text-[#a1a1aa]/70 transition-all hover:text-[#D4A017]"
+                    className="group inline-flex items-center gap-1 text-sm text-[#a1a1aa]/70 transition-all hover:text-[#E8C96A]"
                   >
                     <ChevronRight className="size-3 transition-transform group-hover:translate-x-1" />
                     {link.label}
@@ -179,7 +179,7 @@ export default function Footer() {
 
           {/* Services Column */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#D4A017]">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#E8C96A]">
               Our Services
             </h3>
             <ul className="mt-4 space-y-3">
@@ -187,7 +187,7 @@ export default function Footer() {
                 <li key={service.label}>
                   <Link
                     href={service.href}
-                    className="group inline-flex items-center gap-1 text-sm text-[#a1a1aa]/70 transition-all hover:text-[#D4A017]"
+                    className="group inline-flex items-center gap-1 text-sm text-[#a1a1aa]/70 transition-all hover:text-[#E8C96A]"
                   >
                     <ChevronRight className="size-3 transition-transform group-hover:translate-x-1" />
                     {service.label}
@@ -197,7 +197,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-[#D4A017] transition-all hover:gap-2"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-[#E8C96A] transition-all hover:gap-2"
                 >
                   View all services
                   <ArrowUpRight className="size-3" />
@@ -208,12 +208,12 @@ export default function Footer() {
 
           {/* Contact Column */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#D4A017]">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#E8C96A]">
               Get in Touch
             </h3>
             <ul className="mt-4 space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 size-4 text-[#D4A017]" />
+                <MapPin className="mt-0.5 size-4 text-[#E8C96A]" />
                 <span className="text-sm text-[#a1a1aa]/70">
                   Indore, Madhya Pradesh, India
                 </span>
@@ -221,18 +221,18 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+917354489974"
-                  className="group flex items-center gap-3 text-sm text-[#a1a1aa]/70 transition-all hover:text-[#D4A017]"
+                  className="group flex items-center gap-3 text-sm text-[#a1a1aa]/70 transition-all hover:text-[#E8C96A]"
                 >
-                  <Phone className="size-4 text-[#D4A017]" />
+                  <Phone className="size-4 text-[#E8C96A]" />
                   <span className="group-hover:underline">+91 7354489974</span>
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:connect.vortica@gmail.com"
-                  className="group flex items-center gap-3 text-sm text-[#a1a1aa]/70 transition-all hover:text-[#D4A017]"
+                  className="group flex items-center gap-3 text-sm text-[#a1a1aa]/70 transition-all hover:text-[#E8C96A]"
                 >
-                  <Mail className="size-4 text-[#D4A017]" />
+                  <Mail className="size-4 text-[#E8C96A]" />
                   <span className="group-hover:underline">connect.vortica@gmail.com</span>
                 </a>
               </li>
@@ -252,7 +252,7 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="rounded-lg border border-white/10 bg-white/5 p-2 text-[#a1a1aa]/70 transition-all hover:border-[#D4A017]/30 hover:bg-[#D4A017]/10 hover:text-[#D4A017]"
+                      className="rounded-lg border border-white/10 bg-white/5 p-2 text-[#a1a1aa]/70 transition-all hover:border-[#E8C96A]/30 hover:bg-[#E8C96A]/10 hover:text-[#E8C96A]"
                       aria-label={social.label}
                     >
                       <Icon className="size-4" />
@@ -273,8 +273,8 @@ export default function Footer() {
         >
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="flex flex-col items-start gap-3 text-left sm:flex-row sm:items-center">
-              <div className="rounded-full bg-[#D4A017]/10 p-2">
-                <Send className="size-5 text-[#D4A017]" />
+              <div className="rounded-full bg-[#E8C96A]/10 p-2">
+                <Send className="size-5 text-[#E8C96A]" />
               </div>
               <div>
                 <h4 className="text-sm font-semibold text-white">
@@ -289,11 +289,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-[#a1a1aa]/50 focus:border-[#D4A017]/50 focus:outline-none focus:ring-1 focus:ring-[#D4A017]/50"
+                className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-[#a1a1aa]/50 focus:border-[#E8C96A]/50 focus:outline-none focus:ring-1 focus:ring-[#E8C96A]/50"
               />
               <button
                 type="submit"
-                className="w-full rounded-lg bg-gradient-to-r from-[#F5C518] to-[#B8860B] px-4 py-2.5 text-sm font-medium text-[#0a0a0a] transition-all hover:shadow-lg hover:shadow-[#D4A017]/20 sm:w-auto sm:shrink-0 transition-all hover:shadow-lg hover:shadow-[#D4A017]/20 sm:w-auto sm:shrink-0"
+                className="w-full rounded-lg bg-gradient-to-r from-[#EDD97A] to-[#C9A84C] px-4 py-2.5 text-sm font-medium text-[#0a0a0a] transition-all hover:shadow-lg hover:shadow-[#E8C96A]/20 sm:w-auto sm:shrink-0 transition-all hover:shadow-lg hover:shadow-[#E8C96A]/20 sm:w-auto sm:shrink-0"
               >
                 Subscribe
               </button>
@@ -317,7 +317,7 @@ export default function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-xs text-[#a1a1aa]/50 transition-colors hover:text-[#D4A017]"
+                className="text-xs text-[#a1a1aa]/50 transition-colors hover:text-[#E8C96A]"
               >
                 {link.label}
               </Link>

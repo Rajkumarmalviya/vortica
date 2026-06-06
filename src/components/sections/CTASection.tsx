@@ -127,13 +127,13 @@ export default function CTASection() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={inView ? { opacity: 0.6, scale: 1 } : {}}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute -left-32 -top-32 size-96 rounded-full bg-[#D4A017]/20 blur-[100px]"
+        className="absolute -left-32 -top-32 size-96 rounded-full bg-[#E8C96A]/20 blur-[100px]"
       />
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={inView ? { opacity: 0.4, scale: 1 } : {}}
         transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-        className="absolute -right-32 -bottom-32 size-96 rounded-full bg-[#B8860B]/20 blur-[100px]"
+        className="absolute -right-32 -bottom-32 size-96 rounded-full bg-[#C9A84C]/20 blur-[100px]"
       />
 
       {/* Grid Pattern */}
@@ -144,10 +144,10 @@ export default function CTASection() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="relative overflow-hidden rounded-3xl border border-[#D4A017]/20 bg-gradient-to-br from-[rgba(15,10,25,0.96)] via-[rgba(10,8,18,0.94)] to-[rgba(5,3,10,0.98)] shadow-2xl backdrop-blur"
+          className="relative overflow-hidden rounded-3xl border border-[#E8C96A]/20 bg-gradient-to-br from-[rgba(15,10,25,0.96)] via-[rgba(10,8,18,0.94)] to-[rgba(5,3,10,0.98)] shadow-2xl backdrop-blur"
         >
           {/* Animated Gradient Border */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#D4A017]/0 via-[#D4A017]/10 to-[#D4A017]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#E8C96A]/0 via-[#E8C96A]/10 to-[#E8C96A]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
           {/* Content Container */}
           <div className="relative p-8 sm:p-12 lg:p-16">
@@ -155,9 +155,9 @@ export default function CTASection() {
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
               <motion.div variants={itemVariants}>
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#D4A017]/30 bg-[#D4A017]/10 px-4 py-2 backdrop-blur-sm">
-                  <Sparkles className="size-4 text-[#D4A017] animate-pulse" />
-                  <span className="text-xs font-medium uppercase tracking-wider text-[#D4A017]">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#E8C96A]/30 bg-[#E8C96A]/10 px-4 py-2 backdrop-blur-sm">
+                  <Sparkles className="size-4 text-[#E8C96A] animate-pulse" />
+                  <span className="text-xs font-medium uppercase tracking-wider text-[#E8C96A]">
                     Limited Availability
                   </span>
                 </div>
@@ -166,14 +166,14 @@ export default function CTASection() {
                 <h2 className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Ready to turn product ambition into
                   <span className="relative mt-2 block">
-                    <span className="bg-gradient-to-r from-[#D4A017] to-[#D4A017] bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#E8C96A] to-[#E8C96A] bg-clip-text text-transparent">
                       clearer roadmap & stronger execution?
                     </span>
                     <motion.div
                       initial={{ width: 0 }}
                       animate={inView ? { width: "100%" } : {}}
                       transition={{ delay: 0.5, duration: 0.8 }}
-                      className="absolute -bottom-2 left-0 h-[3px] w-full bg-gradient-to-r from-[#D4A017] to-transparent"
+                      className="absolute -bottom-2 left-0 h-[3px] w-full bg-gradient-to-r from-[#E8C96A] to-transparent"
                     />
                   </span>
                 </h2>
@@ -187,15 +187,15 @@ export default function CTASection() {
                 {/* Trust Indicators */}
                 <div className="mt-6 flex flex-wrap gap-4">
                   <div className="flex items-center gap-2">
-                    <Shield className="size-4 text-[#D4A017]" />
+                    <Shield className="size-4 text-[#E8C96A]" />
                     <span className="text-sm text-[#a1a1aa]/70">No obligation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock className="size-4 text-[#D4A017]" />
+                    <Clock className="size-4 text-[#E8C96A]" />
                     <span className="text-sm text-[#a1a1aa]/70">30-min consultation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="size-4 text-[#D4A017]" />
+                    <CheckCircle2 className="size-4 text-[#E8C96A]" />
                     <span className="text-sm text-[#a1a1aa]/70">Free strategy session</span>
                   </div>
                 </div>
@@ -205,13 +205,13 @@ export default function CTASection() {
               <motion.div variants={itemVariants} className="flex lg:justify-end">
                 <AnimatedButton
                   href="/contact"
-                  // className="group relative overflow-hidden bg-gradient-to-r from-[#D4A017] to-[#D4A017] px-8 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-[#D4A017]/25"
+                  // className="group relative overflow-hidden bg-gradient-to-r from-[#E8C96A] to-[#E8C96A] px-8 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-[#E8C96A]/25"
                 >
                   <span className="relative z-10 flex items-center">
                     Talk to an expert
                     <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#D4A017] to-[#D4A017] opacity-0 transition-opacity group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#E8C96A] to-[#E8C96A] opacity-0 transition-opacity group-hover:opacity-100" />
                 </AnimatedButton>
               </motion.div>
             </div>
@@ -231,26 +231,26 @@ export default function CTASection() {
                     custom={index}
                     variants={cardVariants}
                     whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                    className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl"
+                    className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
                   >
                     {/* Hover Glow */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#D4A017]/0 via-[#D4A017]/5 to-[#D4A017]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#E8C96A]/0 via-[#E8C96A]/5 to-[#E8C96A]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                     <div className="relative">
                       <div className="flex items-center justify-between">
-                        <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                          <Icon className="size-5 text-[#D4A017]" />
+                        <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                          <Icon className="size-5 text-[#E8C96A]" />
                         </div>
                         {benefit.metric && (
                           <div className="text-right">
-                            <p className="text-lg font-bold text-[#D4A017]">{benefit.metric}</p>
+                            <p className="text-lg font-bold text-[#E8C96A]">{benefit.metric}</p>
                             <p className="text-[10px] uppercase tracking-wider text-[#a1a1aa]/50">
                               {benefit.metricLabel}
                             </p>
                           </div>
                         )}
                       </div>
-                      <p className="mt-3 text-sm font-semibold uppercase tracking-wider text-[#D4A017]">
+                      <p className="mt-3 text-sm font-semibold uppercase tracking-wider text-[#E8C96A]">
                         {benefit.title}
                       </p>
                       <p className="mt-2 text-sm leading-relaxed text-[#a1a1aa]/80">
@@ -275,7 +275,7 @@ export default function CTASection() {
                 className="rounded-xl border border-white/10 bg-white/[0.02] p-5"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <Mail className="size-4 text-[#D4A017]" />
+                  <Mail className="size-4 text-[#E8C96A]" />
                   <p className="text-sm font-medium text-white">Quick contact</p>
                 </div>
                 <form onSubmit={handleQuickContact} className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -284,12 +284,12 @@ export default function CTASection() {
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-[#a1a1aa]/50 focus:border-[#D4A017]/50 focus:outline-none focus:ring-1 focus:ring-[#D4A017]/50"
+                    className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-[#a1a1aa]/50 focus:border-[#E8C96A]/50 focus:outline-none focus:ring-1 focus:ring-[#E8C96A]/50"
                     required
                   />
                   <button
                     type="submit"
-                    className="w-full rounded-lg bg-[#D4A017]/10 px-4 py-2.5 text-sm font-medium text-[#D4A017] transition-all hover:bg-[#D4A017]/20 sm:w-auto sm:shrink-0"
+                    className="w-full rounded-lg bg-[#E8C96A]/10 px-4 py-2.5 text-sm font-medium text-[#E8C96A] transition-all hover:bg-[#E8C96A]/20 sm:w-auto sm:shrink-0"
                   >
                     {submitted ? "Sent!" : "Send"}
                   </button>
@@ -305,15 +305,15 @@ export default function CTASection() {
                 className="rounded-xl border border-white/10 bg-white/[0.02] p-5"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <MessageSquare className="size-4 text-[#D4A017]" />
+                  <MessageSquare className="size-4 text-[#E8C96A]" />
                   <p className="text-sm font-medium text-white">What clients say</p>
                 </div>
                 <div className="space-y-3">
                   {testimonials.map((testimonial, idx) => (
-                    <div key={idx} className="border-l-2 border-[#D4A017] pl-3">
+                    <div key={idx} className="border-l-2 border-[#E8C96A] pl-3">
                       <div className="flex items-center gap-1 mb-1">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="size-3 fill-[#D4A017] text-[#D4A017]" />
+                          <Star key={i} className="size-3 fill-[#E8C96A] text-[#E8C96A]" />
                         ))}
                       </div>
                       <p className="text-sm text-[#a1a1aa]/80">&ldquo;{testimonial.quote}&rdquo;</p>
@@ -333,22 +333,22 @@ export default function CTASection() {
             >
               <div className="flex flex-col items-start gap-2 rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left sm:items-center sm:text-center">
                 <div className="flex items-center gap-2 text-sm text-[#a1a1aa]/60">
-                  <Phone className="size-4 text-[#D4A017]" />
+                  <Phone className="size-4 text-[#E8C96A]" />
                   <span>Or call us directly</span>
                 </div>
                 <a
                   href="tel:+917354489974"
-                  className="break-all text-base font-medium text-[#D4A017] hover:underline sm:break-normal"
+                  className="break-all text-base font-medium text-[#E8C96A] hover:underline sm:break-normal"
                 >
                   7354489974
                 </a>
               </div>
               <div className="flex flex-col items-start gap-2 rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left sm:items-center sm:text-center">
                 <div className="flex items-center gap-2 text-sm text-[#a1a1aa]/60">
-                  <Clock className="size-4 text-[#D4A017]" />
+                  <Clock className="size-4 text-[#E8C96A]" />
                   <span>Response time</span>
                 </div>
-                <p className="text-base font-medium text-[#D4A017]">
+                <p className="text-base font-medium text-[#E8C96A]">
                   Within 24 hours
                 </p>
               </div>

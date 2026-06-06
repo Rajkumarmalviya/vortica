@@ -75,7 +75,7 @@ function getStepIcon(index: number) {
 }
 
 function getStepColor(index: number) {
-  const colors = ["#D4A017", "#D4A017", "#D6B520", "#C7A212"];
+  const colors = ["#E8C96A", "#E8C96A", "#D6B520", "#C7A212"];
   return colors[index % colors.length];
 }
 
@@ -87,7 +87,7 @@ const enhancedTrustPoints = [
     icon: Heart,
     metric: "98%",
     metricLabel: "Retention Rate",
-    color: "#D4A017",
+    color: "#E8C96A",
   },
   {
     title: "50+ Successful Deliveries",
@@ -95,7 +95,7 @@ const enhancedTrustPoints = [
     icon: Rocket,
     metric: "50+",
     metricLabel: "Projects Delivered",
-    color: "#D4A017",
+    color: "#E8C96A",
   },
   {
     title: "24/7 Expert Support",
@@ -103,7 +103,7 @@ const enhancedTrustPoints = [
     icon: Clock,
     metric: "24/7",
     metricLabel: "Support Available",
-    color: "#D4A017",
+    color: "#E8C96A",
   },
   {
     title: "Enterprise Security",
@@ -111,7 +111,7 @@ const enhancedTrustPoints = [
     icon: Shield,
     metric: "ISO 27001",
     metricLabel: "Certified",
-    color: "#D4A017",
+    color: "#E8C96A",
   },
   ...trustPoints.map((point, index) => ({
     title: point,
@@ -119,7 +119,7 @@ const enhancedTrustPoints = [
     icon: getTrustIcon(index),
     metric: getTrustMetric(index),
     metricLabel: getTrustMetricLabel(index),
-    color: "#D4A017",
+    color: "#E8C96A",
   })),
 ];
 
@@ -182,13 +182,13 @@ export default function TrustSection() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 0.4 } : {}}
           transition={{ duration: 1 }}
-          className="absolute left-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-[#D4A017]/5 blur-[100px]"
+          className="absolute left-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-[#E8C96A]/5 blur-[100px]"
         />
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 0.3 } : {}}
           transition={{ duration: 1, delay: 0.3 }}
-          className="absolute right-0 bottom-0 h-[400px] w-[400px] rounded-full bg-[#B8860B]/10 blur-[100px]"
+          className="absolute right-0 bottom-0 h-[400px] w-[400px] rounded-full bg-[#C9A84C]/10 blur-[100px]"
         />
       </div>
 
@@ -201,7 +201,7 @@ export default function TrustSection() {
           className="mb-12 text-center lg:mb-16"
         >
           <motion.div variants={itemVariants} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 mb-6">
-            <Shield className="size-4 text-[#D4A017]" />
+            <Shield className="size-4 text-[#E8C96A]" />
             <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
               Why Choose Us
             </span>
@@ -228,13 +228,13 @@ export default function TrustSection() {
             className="relative"
           >
             {/* Glow Effect */}
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-[#D4A017]/5 via-transparent to-transparent blur-2xl" />
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-[#E8C96A]/5 via-transparent to-transparent blur-2xl" />
             
             <div className="relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 backdrop-blur sm:p-8">
               {/* Section Label */}
               <div className="mb-6 flex items-center gap-2">
-                <div className="h-px flex-1 bg-gradient-to-r from-[#D4A017]/50 to-transparent" />
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#D4A017]">
+                <div className="h-px flex-1 bg-gradient-to-r from-[#E8C96A]/50 to-transparent" />
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#E8C96A]">
                   Our Process
                 </p>
               </div>
@@ -248,7 +248,7 @@ export default function TrustSection() {
                       custom={index}
                       variants={stepVariants}
                       whileHover={{ x: 8, transition: { duration: 0.2 } }}
-                      className="group relative rounded-xl border border-white/10 bg-gradient-to-br from-[rgba(36,14,48,0.72)] to-[rgba(20,4,24,0.78)] p-5 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl"
+                      className="group relative rounded-xl border border-white/10 bg-gradient-to-br from-[rgba(36,14,48,0.72)] to-[rgba(20,4,24,0.78)] p-5 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
                     >
                       {/* Step Number Background */}
                       <div className="absolute right-4 top-4 text-6xl font-bold text-white/5">
@@ -256,15 +256,15 @@ export default function TrustSection() {
                       </div>
                       
                       <div className="relative flex gap-4">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#D4A017]/30 bg-[#D4A017]/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#D4A017]/20">
-                          <Icon className="size-6 text-[#D4A017]" />
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#E8C96A]/30 bg-[#E8C96A]/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#E8C96A]/20">
+                          <Icon className="size-6 text-[#E8C96A]" />
                         </div>
                         
                         <div className="flex-1">
-                          <p className="text-xs font-medium uppercase tracking-wider text-[#D4A017]">
+                          <p className="text-xs font-medium uppercase tracking-wider text-[#E8C96A]">
                             {step.eyebrow}
                           </p>
-                          <h3 className="mt-2 text-xl font-bold text-white group-hover:text-[#D4A017] transition-colors">
+                          <h3 className="mt-2 text-xl font-bold text-white group-hover:text-[#E8C96A] transition-colors">
                             {step.title}
                           </h3>
                           <p className="mt-2 text-sm leading-relaxed text-[#a1a1aa]/80">
@@ -273,7 +273,7 @@ export default function TrustSection() {
                           
                           {/* Progress Indicator */}
                           {index < enhancedProcessSteps.length - 1 && (
-                            <div className="absolute -bottom-4 left-6 hidden h-8 w-px bg-gradient-to-b from-[#D4A017]/30 to-transparent lg:block" />
+                            <div className="absolute -bottom-4 left-6 hidden h-8 w-px bg-gradient-to-b from-[#E8C96A]/30 to-transparent lg:block" />
                           )}
                         </div>
                       </div>
@@ -294,8 +294,8 @@ export default function TrustSection() {
           >
             {/* Section Label */}
             <div className="mb-6 flex items-center gap-2">
-              <div className="h-px flex-1 bg-gradient-to-r from-[#D4A017]/50 to-transparent" />
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#D4A017]">
+              <div className="h-px flex-1 bg-gradient-to-r from-[#E8C96A]/50 to-transparent" />
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#E8C96A]">
                 Trust Signals
               </p>
             </div>
@@ -308,24 +308,24 @@ export default function TrustSection() {
                   custom={index}
                   variants={trustPointVariants}
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl"
+                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
                 >
                   {/* Hover Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#D4A017]/0 via-[#D4A017]/5 to-[#D4A017]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#E8C96A]/0 via-[#E8C96A]/5 to-[#E8C96A]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   
                   <div className="relative flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#D4A017]/10 transition-all duration-300 group-hover:scale-110">
-                      <Icon className="size-6 text-[#D4A017]" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#E8C96A]/10 transition-all duration-300 group-hover:scale-110">
+                      <Icon className="size-6 text-[#E8C96A]" />
                     </div>
                     
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
-                        <h3 className="text-base font-bold text-white group-hover:text-[#D4A017] transition-colors">
+                        <h3 className="text-base font-bold text-white group-hover:text-[#E8C96A] transition-colors">
                           {point.title}
                         </h3>
                         {point.metric && (
                           <div className="text-right">
-                            <p className="text-lg font-bold text-[#D4A017]">
+                            <p className="text-lg font-bold text-[#E8C96A]">
                               {point.metric}
                             </p>
                             <p className="text-[10px] uppercase tracking-wider text-[#a1a1aa]/50">
@@ -347,12 +347,12 @@ export default function TrustSection() {
             <motion.div
               variants={trustPointVariants}
               custom={enhancedTrustPoints.length}
-              className="mt-6 rounded-xl border border-[#D4A017]/20 bg-gradient-to-r from-[#D4A017]/10 to-transparent p-5"
+              className="mt-6 rounded-xl border border-[#E8C96A]/20 bg-gradient-to-r from-[#E8C96A]/10 to-transparent p-5"
             >
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="size-4 fill-[#D4A017] text-[#D4A017]" />
+                    <Star key={i} className="size-4 fill-[#E8C96A] text-[#E8C96A]" />
                   ))}
                 </div>
                 <p className="text-sm font-medium text-white">
@@ -375,14 +375,14 @@ export default function TrustSection() {
         >
           <div className="inline-flex flex-col items-center gap-4 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-transparent p-8 backdrop-blur sm:flex-row sm:gap-8">
             <div className="flex items-center gap-3">
-              <CheckCircle2 className="size-6 text-[#D4A017]" />
+              <CheckCircle2 className="size-6 text-[#E8C96A]" />
               <span className="text-sm text-[#a1a1aa]/80">
                 Ready to start your transformation?
               </span>
             </div>
             <AnimatedButton
               href="/contact"
-              // className="bg-gradient-to-r from-[#D4A017] to-[#D4A017] text-white"
+              // className="bg-gradient-to-r from-[#E8C96A] to-[#E8C96A] text-white"
             >
               Start a Conversation
               <ArrowRight className="ml-2 size-4" />

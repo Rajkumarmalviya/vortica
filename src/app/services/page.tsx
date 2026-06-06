@@ -111,25 +111,25 @@ const deliveryApproach = [
     icon: Target,
     title: "Discovery & Strategy",
     description: "Deep dive into your goals, challenges, and opportunities to create a tailored roadmap.",
-    color: "#D4A017",
+    color: "#E8C96A",
   },
   {
     icon: Code2,
     title: "Agile Development",
     description: "Iterative development with continuous feedback and transparent progress tracking.",
-    color: "#D4A017",
+    color: "#E8C96A",
   },
   {
     icon: Rocket,
     title: "Launch & Scale",
     description: "Enterprise-grade deployment with comprehensive monitoring and support.",
-    color: "#D4A017",
+    color: "#E8C96A",
   },
   {
     icon: BarChart3,
     title: "Optimize & Grow",
     description: "Continuous improvement and optimization for sustainable growth.",
-    color: "#D4A017",
+    color: "#E8C96A",
   },
 ];
 
@@ -159,8 +159,8 @@ export default function ServicesPage() {
     <PageShell className="relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#D4A017]/5 blur-3xl" />
-        <div className="absolute right-0 bottom-0 size-72 rounded-full bg-[#B8860B]/10 blur-3xl" />
+        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#E8C96A]/5 blur-3xl" />
+        <div className="absolute right-0 bottom-0 size-72 rounded-full bg-[#C9A84C]/10 blur-3xl" />
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-5" />
       </div>
 
@@ -192,8 +192,8 @@ export default function ServicesPage() {
                 className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center"
               >
                 <div className="flex justify-center mb-3">
-                  <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                    <Icon className="size-6 text-[#D4A017]" />
+                  <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                    <Icon className="size-6 text-[#E8C96A]" />
                   </div>
                 </div>
                 <p className="text-2xl font-bold text-white sm:text-3xl">{metric.value}</p>
@@ -224,11 +224,11 @@ export default function ServicesPage() {
               variants={itemVariants}
               className="grid gap-4 sm:grid-cols-3"
             >
-              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2 w-fit">
-                  <Code2 className="size-5 text-[#D4A017]" />
+              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl">
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2 w-fit">
+                  <Code2 className="size-5 text-[#E8C96A]" />
                 </div>
-                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#D4A017]">
+                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#E8C96A]">
                   Build
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-[#a1a1aa]/80">
@@ -236,11 +236,11 @@ export default function ServicesPage() {
                 </p>
               </div>
               
-              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2 w-fit">
-                  <Brain className="size-5 text-[#D4A017]" />
+              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl">
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2 w-fit">
+                  <Brain className="size-5 text-[#E8C96A]" />
                 </div>
-                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#D4A017]">
+                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#E8C96A]">
                   Automate
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-[#a1a1aa]/80">
@@ -248,11 +248,11 @@ export default function ServicesPage() {
                 </p>
               </div>
               
-              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2 w-fit">
-                  <Rocket className="size-5 text-[#D4A017]" />
+              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl">
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2 w-fit">
+                  <Rocket className="size-5 text-[#E8C96A]" />
                 </div>
-                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#D4A017]">
+                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#E8C96A]">
                   Scale
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-[#a1a1aa]/80">
@@ -279,8 +279,8 @@ export default function ServicesPage() {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category.id
-                      ? "bg-[#D4A017] text-white shadow-lg"
-                      : "border border-white/10 bg-white/5 text-[#a1a1aa]/70 hover:border-[#D4A017]/30 hover:text-[#D4A017]"
+                      ? "bg-[#E8C96A] text-white shadow-lg"
+                      : "border border-white/10 bg-white/5 text-[#a1a1aa]/70 hover:border-[#E8C96A]/30 hover:text-[#E8C96A]"
                   }`}
                 >
                   <Icon className="size-4" />
@@ -318,8 +318,8 @@ export default function ServicesPage() {
               variants={itemVariants}
               className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-transparent p-12 text-center"
             >
-              <div className="rounded-full bg-[#D4A017]/10 p-3">
-                <Sparkles className="size-8 text-[#D4A017]" />
+              <div className="rounded-full bg-[#E8C96A]/10 p-3">
+                <Sparkles className="size-8 text-[#E8C96A]" />
               </div>
               <h3 className="mt-4 text-xl font-semibold text-white">No services found</h3>
               <p className="mt-2 text-[#a1a1aa]/70">
@@ -327,7 +327,7 @@ export default function ServicesPage() {
               </p>
               <button
                 onClick={() => setSelectedCategory("all")}
-                className="mt-6 rounded-full bg-[#D4A017]/10 px-6 py-2 text-sm font-medium text-[#D4A017] transition-all hover:bg-[#D4A017]/20"
+                className="mt-6 rounded-full bg-[#E8C96A]/10 px-6 py-2 text-sm font-medium text-[#E8C96A] transition-all hover:bg-[#E8C96A]/20"
               >
                 View all services
               </button>
@@ -345,7 +345,7 @@ export default function ServicesPage() {
         >
           <motion.div variants={itemVariants} className="mb-8 text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <Zap className="size-4 text-[#D4A017]" />
+              <Zap className="size-4 text-[#E8C96A]" />
               <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
                 Our Approach
               </span>
@@ -367,11 +367,11 @@ export default function ServicesPage() {
                   custom={index}
                   variants={cardVariants}
                   whileHover={{ y: -4 }}
-                  className="group rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center transition-all duration-300 hover:border-[#D4A017]/30 hover:shadow-xl"
+                  className="group rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
                 >
                   <div className="flex justify-center">
-                    <div className="rounded-lg bg-[#D4A017]/10 p-3 transition-all duration-300 group-hover:scale-110">
-                      <Icon className="size-6 text-[#D4A017]" />
+                    <div className="rounded-lg bg-[#E8C96A]/10 p-3 transition-all duration-300 group-hover:scale-110">
+                      <Icon className="size-6 text-[#E8C96A]" />
                     </div>
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-white">
@@ -395,7 +395,7 @@ export default function ServicesPage() {
         >
           <motion.div variants={itemVariants} className="mb-8 text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <Award className="size-4 text-[#D4A017]" />
+              <Award className="size-4 text-[#E8C96A]" />
               <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
                 Why Choose Us
               </span>
@@ -411,8 +411,8 @@ export default function ServicesPage() {
               className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                  <Users className="size-5 text-[#D4A017]" />
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                  <Users className="size-5 text-[#E8C96A]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Expert Team</h3>
@@ -428,8 +428,8 @@ export default function ServicesPage() {
               className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                  <Target className="size-5 text-[#D4A017]" />
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                  <Target className="size-5 text-[#E8C96A]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Results-Driven</h3>
@@ -445,8 +445,8 @@ export default function ServicesPage() {
               className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                  <Lock className="size-5 text-[#D4A017]" />
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                  <Lock className="size-5 text-[#E8C96A]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Enterprise Security</h3>
@@ -462,8 +462,8 @@ export default function ServicesPage() {
               className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#D4A017]/10 p-2">
-                  <Globe className="size-5 text-[#D4A017]" />
+                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
+                  <Globe className="size-5 text-[#E8C96A]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Global Expertise</h3>
@@ -481,7 +481,7 @@ export default function ServicesPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="rounded-2xl bg-gradient-to-r from-[#D4A017]/10 via-[#B8860B]/10 to-transparent p-8 text-center"
+          className="rounded-2xl bg-gradient-to-r from-[#E8C96A]/10 via-[#C9A84C]/10 to-transparent p-8 text-center"
         >
           <h3 className="text-2xl font-bold text-white">
             Ready to transform your business?
@@ -491,7 +491,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#D4A017] to-[#D4A017] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg hover:shadow-[#D4A017]/20"
+            className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#E8C96A] to-[#E8C96A] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg hover:shadow-[#E8C96A]/20"
           >
             Get Started
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
