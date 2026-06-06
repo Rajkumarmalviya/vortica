@@ -1,0 +1,56 @@
+# Vortica Project Context
+
+## Overview
+Vortica is a marketing website built with Next.js 15 and React 19. It uses TypeScript, Tailwind CSS, Radix UI primitives, Framer Motion, and utility-first styling.
+
+## Key Features
+- Multi-page marketing site with home, about, services, contact, work, and thank-you pages
+- Dynamic service detail page under `app/services/[slug]/page.tsx`
+- Reusable UI components and sections for consistent layout and styling
+- Analytics integration and utility helpers in `src/lib`
+
+## Project Structure
+- `app/`
+  - `page.tsx` — homepage
+  - `about/page.tsx`
+  - `contact/page.tsx`
+  - `services/page.tsx`
+  - `services/[slug]/page.tsx` — service detail pages
+  - `thank-you/page.tsx`
+  - `work/page.tsx`
+  - `globals.css` — global styling
+  - `layout.tsx` — root layout for metadata and wrappers
+  - `analytics.ts` — analytics initialization
+- `components/`
+  - `Footer.tsx`
+  - `Header/` — header animations
+  - `layout/Navbar.tsx`
+  - `sections/` — page sections like Hero, Services, Trust, WorkPreview, CTA
+  - `ui/` — buttons, inputs, labels, page shell, animated controls, service cards, and a sheet component
+- `content/`
+  - `home.ts`
+  - `services.ts`
+  - `site-copy.ts`
+- `lib/`
+  - `analytics.ts`
+  - `utils.ts`
+- `docs/` — design or project scope notes
+- `public/` — static assets
+
+## Tooling and Dependencies
+- `next` for server-rendered React pages
+- `react` / `react-dom`
+- `typescript`
+- `tailwindcss`, `postcss`, `autoprefixer`
+- `eslint`, `eslint-config-next`
+- `@radix-ui/react-dialog`, `@radix-ui/react-label`, `@radix-ui/react-slot`
+- `framer-motion`, `lucide-react`, `react-intersection-observer`
+
+## Useful Commands
+- `npm run dev` — start development server
+- `npm run build` — production build
+- `npm run start` — start production server
+- `npm run lint` — run linter
+
+## Notes
+This repository appears to be a polished front-end marketing site with a service-focused structure and animated, component-driven UI.

@@ -154,14 +154,14 @@ const MegaMenu = memo(({
                 onClick={onClose}
               >
                 <div className="flex items-start gap-3">
-                  <div className="rounded-lg bg-[#F3DB3F]/10 p-2 text-[#F3DB3F] transition-all duration-200 group-hover:bg-[#F3DB3F]/20">
+                  <div className="rounded-lg bg-[#8b5cf6]/10 p-2 text-[#8b5cf6] transition-all duration-200 group-hover:bg-[#8b5cf6]/20">
                     {item.icon}
                   </div>
                   <div className="flex-1">
-                    <p className="font-semibold text-white group-hover:text-[#F3DB3F] transition-colors">
+                    <p className="font-semibold text-white group-hover:text-[#8b5cf6] transition-colors">
                       {item.label}
                     </p>
-                    <p className="mt-1 text-sm text-[#ECD8D5]/60">
+                    <p className="mt-1 text-sm text-[#a1a1aa]/60">
                       {item.description}
                     </p>
                     {item.tags && (
@@ -169,7 +169,7 @@ const MegaMenu = memo(({
                         {item.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 text-[#ECD8D5]/50"
+                            className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 text-[#a1a1aa]/50"
                           >
                             {tag}
                           </span>
@@ -184,7 +184,7 @@ const MegaMenu = memo(({
           <div className="border-t border-white/10 p-4">
             <Link
               href="/services"
-              className="group flex items-center justify-between text-sm text-[#F3DB3F] hover:text-[#F3DB3F]/80"
+              className="group flex items-center justify-between text-sm text-[#8b5cf6] hover:text-[#8b5cf6]/80"
               onClick={onClose}
             >
               <span>View all services</span>
@@ -221,10 +221,10 @@ const DesktopNavLink = memo(({
           onClick={() => onMegaMenuOpen(isOpen ? null : link.label)}
           className={cn(
             "group flex items-center gap-1 rounded-full px-4 py-2 text-[0.9rem] font-medium tracking-[-0.01em] transition-all duration-200",
-            "hover:bg-gradient-to-b hover:from-[rgba(75,37,83,0.56)] hover:to-[rgba(38,16,63,0.36)]",
+            "hover:bg-gradient-to-b hover:from-[rgba(88,28,135,0.56)] hover:to-[rgba(30,10,50,0.36)]",
             isActive || isOpen
-              ? "text-[#F3DB3F] bg-gradient-to-b from-[rgba(75,37,83,0.56)] to-[rgba(38,16,63,0.36)]"
-              : "text-[#ECD8D5]/82 hover:text-[#F3DB3F]"
+              ? "text-[#8b5cf6] bg-gradient-to-b from-[rgba(88,28,135,0.56)] to-[rgba(30,10,50,0.36)]"
+              : "text-[#a1a1aa]/82 hover:text-[#8b5cf6]"
           )}
           aria-expanded={isOpen}
           aria-haspopup="menu"
@@ -240,10 +240,10 @@ const DesktopNavLink = memo(({
           href={link.href}
           className={cn(
             "group flex items-center gap-1 rounded-full px-4 py-2 text-[0.9rem] font-medium tracking-[-0.01em] transition-all duration-200",
-            "hover:bg-gradient-to-b hover:from-[rgba(75,37,83,0.56)] hover:to-[rgba(38,16,63,0.36)]",
+            "hover:bg-gradient-to-b hover:from-[rgba(88,28,135,0.56)] hover:to-[rgba(30,10,50,0.36)]",
             isActive
-              ? "text-[#F3DB3F] bg-gradient-to-b from-[rgba(75,37,83,0.56)] to-[rgba(38,16,63,0.36)]"
-              : "text-[#ECD8D5]/82 hover:text-[#F3DB3F]"
+              ? "text-[#8b5cf6] bg-gradient-to-b from-[rgba(88,28,135,0.56)] to-[rgba(30,10,50,0.36)]"
+              : "text-[#a1a1aa]/82 hover:text-[#8b5cf6]"
           )}
         >
           {link.label}
@@ -268,7 +268,7 @@ const ContactInfo = memo(() => (
   <div className="hidden lg:flex items-center gap-4 ml-4 pl-4 border-l border-white/10">
     <a
       href="tel:+917354489974"
-      className="flex items-center gap-2 text-sm text-[#ECD8D5]/70 hover:text-[#F3DB3F] transition-colors"
+      className="flex items-center gap-2 text-sm text-[#a1a1aa]/70 hover:text-[#8b5cf6] transition-colors"
     >
       <Phone className="size-4" />
       <span>7354489974</span>
@@ -353,7 +353,7 @@ export const SimpleHeader = memo(function SimpleHeader({
         {/* Logo Section */}
         <Link 
           href="/" 
-          className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3DB3F]/50 rounded-xl transition-all duration-200"
+          className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b5cf6]/50 rounded-xl transition-all duration-200"
           onClick={handleLinkClick}
           aria-label={`${companyName} homepage`}
         >
@@ -369,10 +369,10 @@ export const SimpleHeader = memo(function SimpleHeader({
             />
           </div>
           <div>
-            <p className="text-xl font-bold tracking-[-0.02em] text-white transition-colors duration-200 group-hover:text-[#F3DB3F]">
+            <p className="text-xl font-bold tracking-[-0.02em] text-white transition-colors duration-200 group-hover:text-[#8b5cf6]">
               {companyName}
             </p>
-            <p className="text-[10px] font-medium tracking-wide text-[#ECD8D5]/50">
+            <p className="text-[10px] font-medium tracking-wide text-[#a1a1aa]/50">
               TECHNOLOGY PARTNERS
             </p>
           </div>
@@ -397,7 +397,7 @@ export const SimpleHeader = memo(function SimpleHeader({
           
           {/* Desktop CTA Button */}
           <Button
-            className="hidden lg:flex bg-gradient-to-r from-[#F3DB3F] to-[#E5C82E] text-[#1A041F] font-semibold hover:shadow-lg hover:shadow-[#F3DB3F]/20 transition-all duration-300 hover:scale-105"
+            className="hidden lg:flex bg-gradient-to-r from-[#8b5cf6] to-[#9d70fa] text-white font-semibold hover:shadow-lg hover:shadow-[#8b5cf6]/20 transition-all duration-300 hover:scale-105"
             onClick={() => window.location.href = "/contact"}
           >
             Start a Project
@@ -410,11 +410,11 @@ export const SimpleHeader = memo(function SimpleHeader({
               size="icon"
               variant="outline"
               className={cn(
-                "border-[rgba(236,216,213,0.12)] bg-white/5",
-                "text-[#ECD8D5]/82 hover:text-[#F3DB3F]",
-                "hover:bg-gradient-to-b hover:from-[rgba(75,37,83,0.56)] hover:to-[rgba(38,16,63,0.36)]",
+                "border-[rgba(255,255,255,0.10)] bg-white/5",
+                "text-[#a1a1aa]/82 hover:text-[#8b5cf6]",
+                "hover:bg-gradient-to-b hover:from-[rgba(88,28,135,0.56)] hover:to-[rgba(30,10,50,0.36)]",
                 "transition-all duration-200 lg:hidden",
-                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3DB3F]/50"
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b5cf6]/50"
               )}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
@@ -432,7 +432,7 @@ export const SimpleHeader = memo(function SimpleHeader({
               className={cn(
                 "gap-0 border-r border-[rgba(236,216,213,0.08)]",
                 "bg-gradient-to-b from-[rgba(17,4,18,0.98)] to-[rgba(29,10,34,0.98)]",
-                "text-[#ECD8D5] backdrop-blur-xl",
+                "text-[#a1a1aa] backdrop-blur-xl",
                 "data-[state=open]:animate-in data-[state=closed]:animate-out",
                 "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
                 "data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left"
@@ -461,7 +461,7 @@ export const SimpleHeader = memo(function SimpleHeader({
                       <span className="text-lg font-bold text-white">
                         {companyName}
                       </span>
-                      <p className="text-[9px] text-[#ECD8D5]/50">
+                      <p className="text-[9px] text-[#a1a1aa]/50">
                         TECHNOLOGY PARTNERS
                       </p>
                     </div>
@@ -477,8 +477,8 @@ export const SimpleHeader = memo(function SimpleHeader({
                         className={cn(
                           "flex items-center justify-between rounded-xl px-4 py-3 text-[0.95rem] font-medium transition-all duration-200",
                           isActiveLink(link.href)
-                            ? "bg-gradient-to-r from-[#F3DB3F]/10 to-transparent text-[#F3DB3F]"
-                            : "text-[#ECD8D5]/82 hover:bg-white/5 hover:text-[#F3DB3F]"
+                            ? "bg-gradient-to-r from-[#8b5cf6]/10 to-transparent text-[#8b5cf6]"
+                            : "text-[#a1a1aa]/82 hover:bg-white/5 hover:text-[#8b5cf6]"
                         )}
                         onClick={handleLinkClick}
                       >
@@ -498,14 +498,14 @@ export const SimpleHeader = memo(function SimpleHeader({
                               className="flex items-start gap-3 rounded-lg p-3 transition-all duration-200 hover:bg-white/5"
                               onClick={handleLinkClick}
                             >
-                              <div className="mt-0.5 rounded-lg bg-[#F3DB3F]/10 p-1.5 text-[#F3DB3F]">
+                              <div className="mt-0.5 rounded-lg bg-[#8b5cf6]/10 p-1.5 text-[#8b5cf6]">
                                 {item.icon}
                               </div>
                               <div className="flex-1">
                                 <p className="text-sm font-medium text-white">
                                   {item.label}
                                 </p>
-                                <p className="text-xs text-[#ECD8D5]/60">
+                                <p className="text-xs text-[#a1a1aa]/60">
                                   {item.description}
                                 </p>
                               </div>
@@ -522,14 +522,14 @@ export const SimpleHeader = memo(function SimpleHeader({
                   <div className="space-y-3">
                     <a
                       href={`tel:${phoneNumber}`}
-                      className="flex items-center gap-3 text-sm text-[#ECD8D5]/70 hover:text-[#F3DB3F] transition-colors"
+                      className="flex items-center gap-3 text-sm text-[#a1a1aa]/70 hover:text-[#8b5cf6] transition-colors"
                     >
                       <Phone className="size-4" />
                       <span>{phoneNumber}</span>
                     </a>
                     <a
                       href={`mailto:${email}`}
-                      className="flex items-center gap-3 text-sm text-[#ECD8D5]/70 hover:text-[#F3DB3F] transition-colors"
+                      className="flex items-center gap-3 text-sm text-[#a1a1aa]/70 hover:text-[#8b5cf6] transition-colors"
                     >
                       <Mail className="size-4" />
                       <span>{email}</span>
@@ -537,7 +537,7 @@ export const SimpleHeader = memo(function SimpleHeader({
                   </div>
                   
                   <Button
-                    className="w-full bg-gradient-to-r from-[#F3DB3F] to-[#E5C82E] text-[#1A041F] font-semibold hover:shadow-lg"
+                    className="w-full bg-gradient-to-r from-[#8b5cf6] to-[#9d70fa] text-white font-semibold hover:shadow-lg"
                     onClick={() => {
                       handleLinkClick();
                       window.location.href = "/contact";

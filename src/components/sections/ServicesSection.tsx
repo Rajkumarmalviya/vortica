@@ -55,19 +55,19 @@ const capabilityItems = [
     icon: Code2,
     title: "Custom Build",
     description: "Systems tailored to workflows, operations, and business logic.",
-    color: "#F3DB3F",
+    color: "#8b5cf6",
   },
   {
     icon: Brain,
     title: "AI Enablement",
     description: "Automation, copilots, dashboards, and intelligent workflows.",
-    color: "#F3DB3F",
+    color: "#8b5cf6",
   },
   {
     icon: Rocket,
     title: "Platform Scale",
     description: "Architecture, performance, observability, and security maturity.",
-    color: "#F3DB3F",
+    color: "#8b5cf6",
   },
 ];
 
@@ -101,7 +101,7 @@ export default function ServicesSection() {
       aria-label="Services"
     >
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0210] via-transparent to-[#0A0210]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
       
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 opacity-30">
@@ -110,7 +110,7 @@ export default function ServicesSection() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 0.5 } : {}}
           transition={{ duration: 1 }}
-          className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F3DB3F]/5 blur-[100px]"
+          className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#8b5cf6]/5 blur-[100px]"
         />
       </div>
 
@@ -136,10 +136,10 @@ export default function ServicesSection() {
             >
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <CheckCircle2 key={i} className="size-4 text-[#F3DB3F]" />
+                  <CheckCircle2 key={i} className="size-4 text-[#8b5cf6]" />
                 ))}
               </div>
-              <span className="text-sm text-[#ECD8D5]/60">
+              <span className="text-sm text-[#a1a1aa]/60">
                 Trusted by 500+ innovative companies
               </span>
             </motion.div>
@@ -159,19 +159,19 @@ export default function ServicesSection() {
                 custom={index}
                 variants={cardVariants}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 backdrop-blur transition-all duration-300 hover:border-[#F3DB3F]/30 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 backdrop-blur transition-all duration-300 hover:border-[#8b5cf6]/30 hover:shadow-xl"
               >
                 {/* Hover Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#F3DB3F]/0 via-[#F3DB3F]/5 to-[#F3DB3F]/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#8b5cf6]/0 via-[#8b5cf6]/5 to-[#8b5cf6]/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 
                 <div className="relative">
-                  <div className="rounded-lg bg-[#F3DB3F]/10 p-2 w-fit">
-                    <item.icon className="size-5 text-[#F3DB3F]" />
+                  <div className="rounded-lg bg-[#8b5cf6]/10 p-2 w-fit">
+                    <item.icon className="size-5 text-[#8b5cf6]" />
                   </div>
-                  <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#F3DB3F]">
+                  <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#8b5cf6]">
                     {item.title}
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed text-[#ECD8D5]/80">
+                  <p className="mt-2 text-sm leading-relaxed text-[#a1a1aa]/80">
                     {item.description}
                   </p>
                 </div>
@@ -191,15 +191,15 @@ export default function ServicesSection() {
           {/* Section Label */}
           <motion.div variants={itemVariants} className="mb-10 text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <Sparkles className="size-4 text-[#F3DB3F]" />
-              <span className="text-xs font-medium uppercase tracking-wider text-[#ECD8D5]/70">
+              <Sparkles className="size-4 text-[#8b5cf6]" />
+              <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
                 Comprehensive Solutions
               </span>
             </div>
             <h3 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
               End-to-end technology services
             </h3>
-            <p className="mt-2 text-[#ECD8D5]/60">
+            <p className="mt-2 text-[#a1a1aa]/60">
               From strategy to execution, we&apos;ve got you covered
             </p>
           </motion.div>
@@ -228,7 +228,7 @@ export default function ServicesSection() {
         >
           <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
             <div className="text-center lg:text-left">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[#F3DB3F]">
+              <p className="text-sm font-semibold uppercase tracking-wider text-[#8b5cf6]">
                 Technology Partners
               </p>
               <h4 className="mt-2 text-xl font-bold text-white">
@@ -246,10 +246,10 @@ export default function ServicesSection() {
                   className="flex flex-col items-center gap-2"
                 >
                   <div className="rounded-xl border border-white/10 bg-white/5 p-3">
-                    <partner.icon className="size-8 text-[#F3DB3F]" />
+                    <partner.icon className="size-8 text-[#8b5cf6]" />
                   </div>
                   <p className="text-sm font-medium text-white">{partner.name}</p>
-                  <p className="text-xs text-[#ECD8D5]/50">{partner.level}</p>
+                  <p className="text-xs text-[#a1a1aa]/50">{partner.level}</p>
                 </motion.div>
               ))}
             </div>
@@ -261,14 +261,14 @@ export default function ServicesSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={servicesInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-16 overflow-hidden rounded-2xl bg-gradient-to-r from-[#F3DB3F]/10 via-[#8E5F74]/10 to-transparent p-8"
+          className="mt-16 overflow-hidden rounded-2xl bg-gradient-to-r from-[#8b5cf6]/10 via-[#6d28d9]/10 to-transparent p-8"
         >
           <div className="flex flex-col items-center justify-between gap-6 text-center lg:flex-row lg:text-left">
             <div>
               <h4 className="text-xl font-bold text-white">
                 Ready to transform your business?
               </h4>
-              <p className="mt-2 text-[#ECD8D5]/70">
+              <p className="mt-2 text-[#a1a1aa]/70">
                 Let&apos;s discuss how our services can help you achieve your goals
               </p>
             </div>

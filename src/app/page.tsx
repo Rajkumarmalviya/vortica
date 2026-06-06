@@ -14,7 +14,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen text-[#ECD8D5]">
+    <main className="min-h-screen text-[#a1a1aa]">
       <HeroSection />
       <ServicesSection />
       <WorkPreviewSection />

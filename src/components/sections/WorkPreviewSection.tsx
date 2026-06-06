@@ -115,20 +115,20 @@ export default function WorkPreviewSection() {
       aria-label="Selected work"
     >
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0210] via-transparent to-[#0A0210]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
       
       {/* Animated Gradient Orbs */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 0.3 } : {}}
         transition={{ duration: 1 }}
-        className="absolute -left-32 bottom-0 size-96 rounded-full bg-[#8E5F74]/20 blur-[100px]"
+        className="absolute -left-32 bottom-0 size-96 rounded-full bg-[#6d28d9]/20 blur-[100px]"
       />
       <motion.div
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 0.2 } : {}}
         transition={{ duration: 1, delay: 0.3 }}
-        className="absolute -right-32 top-0 size-96 rounded-full bg-[#F3DB3F]/10 blur-[100px]"
+        className="absolute -right-32 top-0 size-96 rounded-full bg-[#8b5cf6]/10 blur-[100px]"
       />
 
       {/* Grid Pattern Overlay */}
@@ -144,8 +144,8 @@ export default function WorkPreviewSection() {
         >
           <motion.div variants={itemVariants} className="flex-1">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 mb-6">
-              <Sparkles className="size-4 text-[#F3DB3F]" />
-              <span className="text-xs font-medium uppercase tracking-wider text-[#ECD8D5]/70">
+              <Sparkles className="size-4 text-[#8b5cf6]" />
+              <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
                 Success Stories
               </span>
             </div>
@@ -160,7 +160,7 @@ export default function WorkPreviewSection() {
           <motion.div variants={itemVariants}>
             <Link
               href="/work"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3 text-sm font-medium uppercase tracking-wider text-[#ECD8D5]/86 backdrop-blur transition-all duration-300 hover:border-[#F3DB3F]/50 hover:bg-[#F3DB3F]/10 hover:text-[#F3DB3F]"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3 text-sm font-medium uppercase tracking-wider text-[#a1a1aa]/86 backdrop-blur transition-all duration-300 hover:border-[#8b5cf6]/50 hover:bg-[#8b5cf6]/10 hover:text-[#8b5cf6]"
             >
               View all work
               <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -184,38 +184,38 @@ export default function WorkPreviewSection() {
                 custom={index}
                 variants={cardVariants}
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                className={`group relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur transition-all duration-300 hover:border-[#F3DB3F]/30 hover:shadow-2xl ${
+                className={`group relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur transition-all duration-300 hover:border-[#8b5cf6]/30 hover:shadow-2xl ${
                   index === 0
-                    ? "bg-gradient-to-br from-[#F3DB3F]/10 via-white/[0.03] to-transparent"
+                    ? "bg-gradient-to-br from-[#8b5cf6]/10 via-white/[0.03] to-transparent"
                     : "bg-gradient-to-br from-white/[0.04] to-white/[0.02]"
                 }`}
               >
                 {/* Hover Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#F3DB3F]/0 via-[#F3DB3F]/5 to-[#F3DB3F]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#8b5cf6]/0 via-[#8b5cf6]/5 to-[#8b5cf6]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 
                 {/* Featured Badge for First Item */}
                 {index === 0 && (
-                  <div className="absolute right-6 top-6 rounded-full bg-[#F3DB3F]/20 px-3 py-1 backdrop-blur">
-                    <span className="text-xs font-medium text-[#F3DB3F]">Featured</span>
+                  <div className="absolute right-6 top-6 rounded-full bg-[#8b5cf6]/20 px-3 py-1 backdrop-blur">
+                    <span className="text-xs font-medium text-[#8b5cf6]">Featured</span>
                   </div>
                 )}
 
                 <div className="relative p-7">
                   {/* Category */}
                   <div className="flex items-center gap-2">
-                    <div className="h-px flex-1 bg-gradient-to-r from-[#F3DB3F]/50 to-transparent" />
-                    <p className="text-xs font-semibold uppercase tracking-wider text-[#F3DB3F]">
+                    <div className="h-px flex-1 bg-gradient-to-r from-[#8b5cf6]/50 to-transparent" />
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#8b5cf6]">
                       {item.category}
                     </p>
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-[#F3DB3F] transition-colors">
+                  <h3 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-[#8b5cf6] transition-colors">
                     {item.title}
                   </h3>
 
                   {/* Summary */}
-                  <p className="mt-3 text-sm leading-relaxed text-[#ECD8D5]/80">
+                  <p className="mt-3 text-sm leading-relaxed text-[#a1a1aa]/80">
                     {item.summary}
                   </p>
 
@@ -226,14 +226,14 @@ export default function WorkPreviewSection() {
                       className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="rounded-lg bg-[#F3DB3F]/10 p-2">
-                          <MetricIcon className="size-5 text-[#F3DB3F]" />
+                        <div className="rounded-lg bg-[#8b5cf6]/10 p-2">
+                          <MetricIcon className="size-5 text-[#8b5cf6]" />
                         </div>
                         <div>
                           <p className="text-2xl font-bold text-white">
                             {item.metrics.value}
                           </p>
-                          <p className="text-xs text-[#ECD8D5]/60">
+                          <p className="text-xs text-[#a1a1aa]/60">
                             {item.metrics.label}
                           </p>
                         </div>
@@ -247,7 +247,7 @@ export default function WorkPreviewSection() {
                       {item.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-medium text-[#ECD8D5]/60"
+                          className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-medium text-[#a1a1aa]/60"
                         >
                           {tag}
                         </span>
@@ -258,7 +258,7 @@ export default function WorkPreviewSection() {
                   {/* Result Link */}
                   <Link
                     href={`/work/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="group/link mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#F3DB3F] transition-all hover:gap-3"
+                    className="group/link mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#8b5cf6] transition-all hover:gap-3"
                   >
                     {item.result || "Read case study"}
                     <ChevronRight className="size-4 transition-transform group-hover/link:translate-x-1" />
@@ -267,7 +267,7 @@ export default function WorkPreviewSection() {
 
                 {/* Decorative Corner */}
                 <div className="absolute bottom-0 right-0 h-20 w-20 overflow-hidden">
-                  <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-[#F3DB3F]/5 blur-2xl" />
+                  <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-[#8b5cf6]/5 blur-2xl" />
                 </div>
               </motion.article>
             );
@@ -284,24 +284,24 @@ export default function WorkPreviewSection() {
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="size-4 fill-[#F3DB3F] text-[#F3DB3F]" />
+                <Star key={i} className="size-4 fill-[#8b5cf6] text-[#8b5cf6]" />
               ))}
             </div>
-            <span className="text-sm text-[#ECD8D5]/70">4.9/5 from 500+ reviews</span>
+            <span className="text-sm text-[#a1a1aa]/70">4.9/5 from 500+ reviews</span>
           </div>
           
           <div className="h-8 w-px bg-white/10" />
           
           <div className="flex items-center gap-2">
-            <TrendingUp className="size-5 text-[#F3DB3F]" />
-            <span className="text-sm text-[#ECD8D5]/70">98% client retention rate</span>
+            <TrendingUp className="size-5 text-[#8b5cf6]" />
+            <span className="text-sm text-[#a1a1aa]/70">98% client retention rate</span>
           </div>
           
           <div className="h-8 w-px bg-white/10" />
           
           <div className="flex items-center gap-2">
-            <Clock className="size-5 text-[#F3DB3F]" />
-            <span className="text-sm text-[#ECD8D5]/70">50+ successful deliveries in 2024</span>
+            <Clock className="size-5 text-[#8b5cf6]" />
+            <span className="text-sm text-[#a1a1aa]/70">50+ successful deliveries in 2024</span>
           </div>
         </motion.div>
 

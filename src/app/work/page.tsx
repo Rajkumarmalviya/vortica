@@ -85,10 +85,10 @@ function PageHero({ eyebrow, title, description }: { eyebrow?: string; title: st
           initial={{ opacity: 0, x: -20 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-[#F3DB3F]/30 bg-[#F3DB3F]/10 px-4 py-2 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-[#8b5cf6]/30 bg-[#8b5cf6]/10 px-4 py-2 backdrop-blur-sm"
         >
-          <Sparkles className="size-4 text-[#F3DB3F]" />
-          <span className="text-xs font-medium uppercase tracking-wider text-[#F3DB3F]">
+          <Sparkles className="size-4 text-[#8b5cf6]" />
+          <span className="text-xs font-medium uppercase tracking-wider text-[#8b5cf6]">
             {eyebrow}
           </span>
         </motion.div>
@@ -107,7 +107,7 @@ function PageHero({ eyebrow, title, description }: { eyebrow?: string; title: st
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.4, duration: 0.5 }}
-        className="mt-4 text-base leading-relaxed text-[#ECD8D5]/80 sm:text-lg"
+        className="mt-4 text-base leading-relaxed text-[#a1a1aa]/80 sm:text-lg"
       >
         {description}
       </motion.p>
@@ -120,16 +120,16 @@ function PageHero({ eyebrow, title, description }: { eyebrow?: string; title: st
         className="mt-8 flex flex-wrap gap-4"
       >
         <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-          <TrendingUp className="size-4 text-[#F3DB3F]" />
-          <span className="text-sm text-[#ECD8D5]/70">50+ Successful Projects</span>
+          <TrendingUp className="size-4 text-[#8b5cf6]" />
+          <span className="text-sm text-[#a1a1aa]/70">50+ Successful Projects</span>
         </div>
         <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-          <Users className="size-4 text-[#F3DB3F]" />
-          <span className="text-sm text-[#ECD8D5]/70">98% Client Satisfaction</span>
+          <Users className="size-4 text-[#8b5cf6]" />
+          <span className="text-sm text-[#a1a1aa]/70">98% Client Satisfaction</span>
         </div>
         <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-          <Clock className="size-4 text-[#F3DB3F]" />
-          <span className="text-sm text-[#ECD8D5]/70">5+ Years Experience</span>
+          <Clock className="size-4 text-[#8b5cf6]" />
+          <span className="text-sm text-[#a1a1aa]/70">5+ Years Experience</span>
         </div>
       </motion.div>
     </motion.div>
@@ -158,38 +158,38 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
       initial="hidden"
       animate="visible"
       whileHover={{ y: -8 }}
-      className={`group relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur transition-all duration-300 hover:border-[#F3DB3F]/30 hover:shadow-2xl ${
+      className={`group relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur transition-all duration-300 hover:border-[#8b5cf6]/30 hover:shadow-2xl ${
         isFeatured
-          ? "bg-gradient-to-br from-[#F3DB3F]/10 via-white/[0.03] to-transparent"
+          ? "bg-gradient-to-br from-[#8b5cf6]/10 via-white/[0.03] to-transparent"
           : "bg-gradient-to-br from-white/[0.04] to-white/[0.02]"
       }`}
     >
       {/* Hover Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#F3DB3F]/0 via-[#F3DB3F]/5 to-[#F3DB3F]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#8b5cf6]/0 via-[#8b5cf6]/5 to-[#8b5cf6]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       
       {/* Featured Badge */}
       {isFeatured && (
-        <div className="absolute right-6 top-6 z-10 rounded-full bg-[#F3DB3F]/20 px-3 py-1 backdrop-blur">
-          <span className="text-xs font-medium text-[#F3DB3F]">Featured</span>
+        <div className="absolute right-6 top-6 z-10 rounded-full bg-[#8b5cf6]/20 px-3 py-1 backdrop-blur">
+          <span className="text-xs font-medium text-[#8b5cf6]">Featured</span>
         </div>
       )}
 
       <div className="relative p-7">
         {/* Category */}
         <div className="flex items-center gap-2">
-          <div className="h-px flex-1 bg-gradient-to-r from-[#F3DB3F]/50 to-transparent" />
-          <p className="text-xs font-semibold uppercase tracking-wider text-[#F3DB3F]">
+          <div className="h-px flex-1 bg-gradient-to-r from-[#8b5cf6]/50 to-transparent" />
+          <p className="text-xs font-semibold uppercase tracking-wider text-[#8b5cf6]">
             {study.category}
           </p>
         </div>
 
         {/* Title */}
-        <h2 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-[#F3DB3F] transition-colors">
+        <h2 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-[#8b5cf6] transition-colors">
           {study.title}
         </h2>
 
         {/* Summary */}
-        <p className="mt-3 text-sm leading-relaxed text-[#ECD8D5]/80">
+        <p className="mt-3 text-sm leading-relaxed text-[#a1a1aa]/80">
           {study.summary}
         </p>
 
@@ -200,14 +200,14 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
             className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4"
           >
             <div className="flex items-center gap-3">
-              <div className="rounded-lg bg-[#F3DB3F]/10 p-2">
-                <MetricIcon className="size-5 text-[#F3DB3F]" />
+              <div className="rounded-lg bg-[#8b5cf6]/10 p-2">
+                <MetricIcon className="size-5 text-[#8b5cf6]" />
               </div>
               <div>
                 <p className="text-2xl font-bold text-white">
                   {study.metrics.value}
                 </p>
-                <p className="text-xs text-[#ECD8D5]/60">
+                <p className="text-xs text-[#a1a1aa]/60">
                   {study.metrics.label}
                 </p>
               </div>
@@ -221,7 +221,7 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
             {study.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-medium text-[#ECD8D5]/60"
+                className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-medium text-[#a1a1aa]/60"
               >
                 {tag}
               </span>
@@ -231,7 +231,7 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
 
         {/* Client & Year */}
         {(study.client || study.year) && (
-          <div className="mt-4 flex items-center gap-3 text-xs text-[#ECD8D5]/50">
+          <div className="mt-4 flex items-center gap-3 text-xs text-[#a1a1aa]/50">
             {study.client && <span>Client: {study.client}</span>}
             {study.year && <span>Year: {study.year}</span>}
           </div>
@@ -240,7 +240,7 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
         {/* Read More Link */}
         <Link
           href={`/work/${study.title.toLowerCase().replace(/\s+/g, '-')}`}
-          className="group/link mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#F3DB3F] transition-all hover:gap-3"
+          className="group/link mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#8b5cf6] transition-all hover:gap-3"
         >
           {study.result || "Read case study"}
           <ChevronRight className="size-4 transition-transform group-hover/link:translate-x-1" />
@@ -249,7 +249,7 @@ function CaseStudyCard({ study, index, isFeatured }: { study: CaseStudy; index: 
 
       {/* Decorative Corner */}
       <div className="absolute bottom-0 right-0 h-20 w-20 overflow-hidden">
-        <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-[#F3DB3F]/5 blur-2xl" />
+        <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-[#8b5cf6]/5 blur-2xl" />
       </div>
     </motion.article>
   );
@@ -295,8 +295,8 @@ export default function WorkPage() {
         className="mb-8 flex flex-wrap items-center gap-3"
       >
         <div className="flex items-center gap-2">
-          <Filter className="size-4 text-[#ECD8D5]/50" />
-          <span className="text-sm text-[#ECD8D5]/50">Filter by:</span>
+          <Filter className="size-4 text-[#a1a1aa]/50" />
+          <span className="text-sm text-[#a1a1aa]/50">Filter by:</span>
         </div>
         {categories.map((category) => (
           <button
@@ -304,8 +304,8 @@ export default function WorkPage() {
             onClick={() => filterStudies(category)}
             className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
               selectedCategory === category
-                ? "bg-[#F3DB3F] text-[#1A041F] shadow-lg"
-                : "border border-white/10 bg-white/5 text-[#ECD8D5]/70 hover:border-[#F3DB3F]/30 hover:text-[#F3DB3F]"
+                ? "bg-[#8b5cf6] text-white shadow-lg"
+                : "border border-white/10 bg-white/5 text-[#a1a1aa]/70 hover:border-[#8b5cf6]/30 hover:text-[#8b5cf6]"
             }`}
           >
             {category}
@@ -314,7 +314,7 @@ export default function WorkPage() {
         {selectedCategory !== "All" && (
           <button
             onClick={() => filterStudies("All")}
-            className="flex items-center gap-1 rounded-full px-3 py-2 text-sm text-[#ECD8D5]/50 transition-all hover:text-[#F3DB3F]"
+            className="flex items-center gap-1 rounded-full px-3 py-2 text-sm text-[#a1a1aa]/50 transition-all hover:text-[#8b5cf6]"
           >
             <X className="size-3" />
             Clear
@@ -327,7 +327,7 @@ export default function WorkPage() {
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ delay: 0.7 }}
-        className="mb-6 text-sm text-[#ECD8D5]/50"
+        className="mb-6 text-sm text-[#a1a1aa]/50"
       >
         Showing {filteredStudies.length} {filteredStudies.length === 1 ? "project" : "projects"}
       </motion.p>
@@ -356,16 +356,16 @@ export default function WorkPage() {
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-transparent p-12 text-center"
         >
-          <div className="rounded-full bg-[#F3DB3F]/10 p-3">
-            <Sparkles className="size-8 text-[#F3DB3F]" />
+          <div className="rounded-full bg-[#8b5cf6]/10 p-3">
+            <Sparkles className="size-8 text-[#8b5cf6]" />
           </div>
           <h3 className="mt-4 text-xl font-semibold text-white">No projects found</h3>
-          <p className="mt-2 text-[#ECD8D5]/70">
+          <p className="mt-2 text-[#a1a1aa]/70">
             Try adjusting your filter to see more results
           </p>
           <button
             onClick={() => filterStudies("All")}
-            className="mt-6 rounded-full bg-[#F3DB3F]/10 px-6 py-2 text-sm font-medium text-[#F3DB3F] transition-all hover:bg-[#F3DB3F]/20"
+            className="mt-6 rounded-full bg-[#8b5cf6]/10 px-6 py-2 text-sm font-medium text-[#8b5cf6] transition-all hover:bg-[#8b5cf6]/20"
           >
             View all projects
           </button>
@@ -377,17 +377,17 @@ export default function WorkPage() {
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.8, duration: 0.6 }}
-        className="mt-16 rounded-2xl bg-gradient-to-r from-[#F3DB3F]/10 via-[#8E5F74]/10 to-transparent p-8 text-center"
+        className="mt-16 rounded-2xl bg-gradient-to-r from-[#8b5cf6]/10 via-[#6d28d9]/10 to-transparent p-8 text-center"
       >
         <h3 className="text-2xl font-bold text-white">
           Ready to create your success story?
         </h3>
-        <p className="mt-2 text-[#ECD8D5]/70">
+        <p className="mt-2 text-[#a1a1aa]/70">
           Let&apos;s discuss how we can help you achieve similar results
         </p>
         <Link
           href="/contact"
-          className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#F3DB3F] to-[#E5C82E] px-6 py-3 font-semibold text-[#1A041F] transition-all hover:shadow-lg hover:shadow-[#F3DB3F]/20"
+          className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#9d70fa] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg hover:shadow-[#8b5cf6]/20"
         >
           Start a Project
           <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />

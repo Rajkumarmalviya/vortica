@@ -120,20 +120,20 @@ export default function CTASection() {
       aria-label="Call to action"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0210] via-transparent to-[#0A0210]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
 
       {/* Glowing Orbs */}
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={inView ? { opacity: 0.6, scale: 1 } : {}}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute -left-32 -top-32 size-96 rounded-full bg-[#F3DB3F]/20 blur-[100px]"
+        className="absolute -left-32 -top-32 size-96 rounded-full bg-[#8b5cf6]/20 blur-[100px]"
       />
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={inView ? { opacity: 0.4, scale: 1 } : {}}
         transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-        className="absolute -right-32 -bottom-32 size-96 rounded-full bg-[#8E5F74]/20 blur-[100px]"
+        className="absolute -right-32 -bottom-32 size-96 rounded-full bg-[#6d28d9]/20 blur-[100px]"
       />
 
       {/* Grid Pattern */}
@@ -144,10 +144,10 @@ export default function CTASection() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="relative overflow-hidden rounded-3xl border border-[#F3DB3F]/20 bg-gradient-to-br from-[rgba(48,20,60,0.96)] via-[rgba(36,14,48,0.94)] to-[rgba(20,4,24,0.98)] shadow-2xl backdrop-blur"
+          className="relative overflow-hidden rounded-3xl border border-[#8b5cf6]/20 bg-gradient-to-br from-[rgba(15,10,25,0.96)] via-[rgba(10,8,18,0.94)] to-[rgba(5,3,10,0.98)] shadow-2xl backdrop-blur"
         >
           {/* Animated Gradient Border */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#F3DB3F]/0 via-[#F3DB3F]/10 to-[#F3DB3F]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#8b5cf6]/0 via-[#8b5cf6]/10 to-[#8b5cf6]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
           {/* Content Container */}
           <div className="relative p-8 sm:p-12 lg:p-16">
@@ -155,9 +155,9 @@ export default function CTASection() {
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
               <motion.div variants={itemVariants}>
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#F3DB3F]/30 bg-[#F3DB3F]/10 px-4 py-2 backdrop-blur-sm">
-                  <Sparkles className="size-4 text-[#F3DB3F] animate-pulse" />
-                  <span className="text-xs font-medium uppercase tracking-wider text-[#F3DB3F]">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#8b5cf6]/30 bg-[#8b5cf6]/10 px-4 py-2 backdrop-blur-sm">
+                  <Sparkles className="size-4 text-[#8b5cf6] animate-pulse" />
+                  <span className="text-xs font-medium uppercase tracking-wider text-[#8b5cf6]">
                     Limited Availability
                   </span>
                 </div>
@@ -166,20 +166,20 @@ export default function CTASection() {
                 <h2 className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Ready to turn product ambition into
                   <span className="relative mt-2 block">
-                    <span className="bg-gradient-to-r from-[#F3DB3F] to-[#E5C82E] bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#8b5cf6] to-[#9d70fa] bg-clip-text text-transparent">
                       clearer roadmap & stronger execution?
                     </span>
                     <motion.div
                       initial={{ width: 0 }}
                       animate={inView ? { width: "100%" } : {}}
                       transition={{ delay: 0.5, duration: 0.8 }}
-                      className="absolute -bottom-2 left-0 h-[3px] w-full bg-gradient-to-r from-[#F3DB3F] to-transparent"
+                      className="absolute -bottom-2 left-0 h-[3px] w-full bg-gradient-to-r from-[#8b5cf6] to-transparent"
                     />
                   </span>
                 </h2>
 
                 {/* Description */}
-                <p className="mt-4 text-base leading-relaxed text-[#ECD8D5]/80 sm:text-lg">
+                <p className="mt-4 text-base leading-relaxed text-[#a1a1aa]/80 sm:text-lg">
                   Tell us your goals and we will propose the right roadmap, team shape, and delivery
                   timeline. Get started with a free consultation call.
                 </p>
@@ -187,16 +187,16 @@ export default function CTASection() {
                 {/* Trust Indicators */}
                 <div className="mt-6 flex flex-wrap gap-4">
                   <div className="flex items-center gap-2">
-                    <Shield className="size-4 text-[#F3DB3F]" />
-                    <span className="text-sm text-[#ECD8D5]/70">No obligation</span>
+                    <Shield className="size-4 text-[#8b5cf6]" />
+                    <span className="text-sm text-[#a1a1aa]/70">No obligation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock className="size-4 text-[#F3DB3F]" />
-                    <span className="text-sm text-[#ECD8D5]/70">30-min consultation</span>
+                    <Clock className="size-4 text-[#8b5cf6]" />
+                    <span className="text-sm text-[#a1a1aa]/70">30-min consultation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="size-4 text-[#F3DB3F]" />
-                    <span className="text-sm text-[#ECD8D5]/70">Free strategy session</span>
+                    <CheckCircle2 className="size-4 text-[#8b5cf6]" />
+                    <span className="text-sm text-[#a1a1aa]/70">Free strategy session</span>
                   </div>
                 </div>
               </motion.div>
@@ -205,13 +205,13 @@ export default function CTASection() {
               <motion.div variants={itemVariants} className="flex lg:justify-end">
                 <AnimatedButton
                   href="/contact"
-                  // className="group relative overflow-hidden bg-gradient-to-r from-[#F3DB3F] to-[#E5C82E] px-8 py-4 text-lg font-semibold text-[#1A041F] shadow-lg hover:shadow-[#F3DB3F]/25"
+                  // className="group relative overflow-hidden bg-gradient-to-r from-[#8b5cf6] to-[#9d70fa] px-8 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-[#8b5cf6]/25"
                 >
                   <span className="relative z-10 flex items-center">
                     Talk to an expert
                     <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#E5C82E] to-[#F3DB3F] opacity-0 transition-opacity group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#9d70fa] to-[#8b5cf6] opacity-0 transition-opacity group-hover:opacity-100" />
                 </AnimatedButton>
               </motion.div>
             </div>
@@ -231,29 +231,29 @@ export default function CTASection() {
                     custom={index}
                     variants={cardVariants}
                     whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                    className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#F3DB3F]/30 hover:shadow-xl"
+                    className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#8b5cf6]/30 hover:shadow-xl"
                   >
                     {/* Hover Glow */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#F3DB3F]/0 via-[#F3DB3F]/5 to-[#F3DB3F]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#8b5cf6]/0 via-[#8b5cf6]/5 to-[#8b5cf6]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                     <div className="relative">
                       <div className="flex items-center justify-between">
-                        <div className="rounded-lg bg-[#F3DB3F]/10 p-2">
-                          <Icon className="size-5 text-[#F3DB3F]" />
+                        <div className="rounded-lg bg-[#8b5cf6]/10 p-2">
+                          <Icon className="size-5 text-[#8b5cf6]" />
                         </div>
                         {benefit.metric && (
                           <div className="text-right">
-                            <p className="text-lg font-bold text-[#F3DB3F]">{benefit.metric}</p>
-                            <p className="text-[10px] uppercase tracking-wider text-[#ECD8D5]/50">
+                            <p className="text-lg font-bold text-[#8b5cf6]">{benefit.metric}</p>
+                            <p className="text-[10px] uppercase tracking-wider text-[#a1a1aa]/50">
                               {benefit.metricLabel}
                             </p>
                           </div>
                         )}
                       </div>
-                      <p className="mt-3 text-sm font-semibold uppercase tracking-wider text-[#F3DB3F]">
+                      <p className="mt-3 text-sm font-semibold uppercase tracking-wider text-[#8b5cf6]">
                         {benefit.title}
                       </p>
-                      <p className="mt-2 text-sm leading-relaxed text-[#ECD8D5]/80">
+                      <p className="mt-2 text-sm leading-relaxed text-[#a1a1aa]/80">
                         {benefit.description}
                       </p>
                     </div>
@@ -275,7 +275,7 @@ export default function CTASection() {
                 className="rounded-xl border border-white/10 bg-white/[0.02] p-5"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <Mail className="size-4 text-[#F3DB3F]" />
+                  <Mail className="size-4 text-[#8b5cf6]" />
                   <p className="text-sm font-medium text-white">Quick contact</p>
                 </div>
                 <form onSubmit={handleQuickContact} className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -284,17 +284,17 @@ export default function CTASection() {
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-[#ECD8D5]/50 focus:border-[#F3DB3F]/50 focus:outline-none focus:ring-1 focus:ring-[#F3DB3F]/50"
+                    className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-[#a1a1aa]/50 focus:border-[#8b5cf6]/50 focus:outline-none focus:ring-1 focus:ring-[#8b5cf6]/50"
                     required
                   />
                   <button
                     type="submit"
-                    className="w-full rounded-lg bg-[#F3DB3F]/10 px-4 py-2.5 text-sm font-medium text-[#F3DB3F] transition-all hover:bg-[#F3DB3F]/20 sm:w-auto sm:shrink-0"
+                    className="w-full rounded-lg bg-[#8b5cf6]/10 px-4 py-2.5 text-sm font-medium text-[#8b5cf6] transition-all hover:bg-[#8b5cf6]/20 sm:w-auto sm:shrink-0"
                   >
                     {submitted ? "Sent!" : "Send"}
                   </button>
                 </form>
-                <p className="mt-2 text-xs text-[#ECD8D5]/50">
+                <p className="mt-2 text-xs text-[#a1a1aa]/50">
                   Get a free consultation within 24 hours
                 </p>
               </motion.div>
@@ -305,19 +305,19 @@ export default function CTASection() {
                 className="rounded-xl border border-white/10 bg-white/[0.02] p-5"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <MessageSquare className="size-4 text-[#F3DB3F]" />
+                  <MessageSquare className="size-4 text-[#8b5cf6]" />
                   <p className="text-sm font-medium text-white">What clients say</p>
                 </div>
                 <div className="space-y-3">
                   {testimonials.map((testimonial, idx) => (
-                    <div key={idx} className="border-l-2 border-[#F3DB3F] pl-3">
+                    <div key={idx} className="border-l-2 border-[#8b5cf6] pl-3">
                       <div className="flex items-center gap-1 mb-1">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="size-3 fill-[#F3DB3F] text-[#F3DB3F]" />
+                          <Star key={i} className="size-3 fill-[#8b5cf6] text-[#8b5cf6]" />
                         ))}
                       </div>
-                      <p className="text-sm text-[#ECD8D5]/80">&ldquo;{testimonial.quote}&rdquo;</p>
-                      <p className="mt-1 text-xs text-[#ECD8D5]/50">
+                      <p className="text-sm text-[#a1a1aa]/80">&ldquo;{testimonial.quote}&rdquo;</p>
+                      <p className="mt-1 text-xs text-[#a1a1aa]/50">
                         {testimonial.name}, {testimonial.role}
                       </p>
                     </div>
@@ -332,23 +332,23 @@ export default function CTASection() {
               className="mt-8 grid gap-3 sm:grid-cols-2"
             >
               <div className="flex flex-col items-start gap-2 rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left sm:items-center sm:text-center">
-                <div className="flex items-center gap-2 text-sm text-[#ECD8D5]/60">
-                  <Phone className="size-4 text-[#F3DB3F]" />
+                <div className="flex items-center gap-2 text-sm text-[#a1a1aa]/60">
+                  <Phone className="size-4 text-[#8b5cf6]" />
                   <span>Or call us directly</span>
                 </div>
                 <a
                   href="tel:+917354489974"
-                  className="break-all text-base font-medium text-[#F3DB3F] hover:underline sm:break-normal"
+                  className="break-all text-base font-medium text-[#8b5cf6] hover:underline sm:break-normal"
                 >
                   7354489974
                 </a>
               </div>
               <div className="flex flex-col items-start gap-2 rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left sm:items-center sm:text-center">
-                <div className="flex items-center gap-2 text-sm text-[#ECD8D5]/60">
-                  <Clock className="size-4 text-[#F3DB3F]" />
+                <div className="flex items-center gap-2 text-sm text-[#a1a1aa]/60">
+                  <Clock className="size-4 text-[#8b5cf6]" />
                   <span>Response time</span>
                 </div>
-                <p className="text-base font-medium text-[#F3DB3F]">
+                <p className="text-base font-medium text-[#8b5cf6]">
                   Within 24 hours
                 </p>
               </div>
