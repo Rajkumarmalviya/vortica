@@ -111,25 +111,25 @@ const deliveryApproach = [
     icon: Target,
     title: "Discovery & Strategy",
     description: "Deep dive into your goals, challenges, and opportunities to create a tailored roadmap.",
-    color: "#F3DB3F",
+    color: "#5B6BC4",
   },
   {
     icon: Code2,
     title: "Agile Development",
     description: "Iterative development with continuous feedback and transparent progress tracking.",
-    color: "#F3DB3F",
+    color: "#5B6BC4",
   },
   {
     icon: Rocket,
     title: "Launch & Scale",
     description: "Enterprise-grade deployment with comprehensive monitoring and support.",
-    color: "#F3DB3F",
+    color: "#5B6BC4",
   },
   {
     icon: BarChart3,
     title: "Optimize & Grow",
     description: "Continuous improvement and optimization for sustainable growth.",
-    color: "#F3DB3F",
+    color: "#5B6BC4",
   },
 ];
 
@@ -159,8 +159,8 @@ export default function ServicesPage() {
     <PageShell className="relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#F3DB3F]/5 blur-3xl" />
-        <div className="absolute right-0 bottom-0 size-72 rounded-full bg-[#8E5F74]/10 blur-3xl" />
+        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#5B6BC4]/5 blur-3xl" />
+        <div className="absolute right-0 bottom-0 size-72 rounded-full bg-[#5B6BC4]/10 blur-3xl" />
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-5" />
       </div>
 
@@ -189,15 +189,15 @@ export default function ServicesPage() {
                 key={metric.label}
                 custom={index}
                 variants={cardVariants}
-                className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center"
+                className="rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6 text-center"
               >
                 <div className="flex justify-center mb-3">
-                  <div className="rounded-lg bg-[#F3DB3F]/10 p-2">
-                    <Icon className="size-6 text-[#F3DB3F]" />
+                  <div className="rounded-lg bg-[#5B6BC4]/10 p-2">
+                    <Icon className="size-6 text-[#5B6BC4]" />
                   </div>
                 </div>
                 <p className="text-2xl font-bold text-white sm:text-3xl">{metric.value}</p>
-                <p className="mt-1 text-sm text-[#ECD8D5]/60">{metric.label}</p>
+                <p className="mt-1 text-sm text-white/40">{metric.label}</p>
               </motion.div>
             );
           })}
@@ -224,38 +224,38 @@ export default function ServicesPage() {
               variants={itemVariants}
               className="grid gap-4 sm:grid-cols-3"
             >
-              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#F3DB3F]/30 hover:shadow-xl">
-                <div className="rounded-lg bg-[#F3DB3F]/10 p-2 w-fit">
-                  <Code2 className="size-5 text-[#F3DB3F]" />
+              <div className="group relative overflow-hidden rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-5 transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl">
+                <div className="rounded-lg bg-[#5B6BC4]/10 p-2 w-fit">
+                  <Code2 className="size-5 text-[#5B6BC4]" />
                 </div>
-                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#F3DB3F]">
+                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#5B6BC4]">
                   Build
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-[#ECD8D5]/80">
+                <p className="mt-2 text-sm leading-relaxed text-white/60">
                   Custom systems and product delivery with enterprise-grade quality.
                 </p>
               </div>
               
-              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#F3DB3F]/30 hover:shadow-xl">
-                <div className="rounded-lg bg-[#F3DB3F]/10 p-2 w-fit">
-                  <Brain className="size-5 text-[#F3DB3F]" />
+              <div className="group relative overflow-hidden rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-5 transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl">
+                <div className="rounded-lg bg-[#5B6BC4]/10 p-2 w-fit">
+                  <Brain className="size-5 text-[#5B6BC4]" />
                 </div>
-                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#F3DB3F]">
+                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#5B6BC4]">
                   Automate
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-[#ECD8D5]/80">
+                <p className="mt-2 text-sm leading-relaxed text-white/60">
                   AI assistants, intelligent workflows, and real-time dashboards.
                 </p>
               </div>
               
-              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-5 transition-all duration-300 hover:border-[#F3DB3F]/30 hover:shadow-xl">
-                <div className="rounded-lg bg-[#F3DB3F]/10 p-2 w-fit">
-                  <Rocket className="size-5 text-[#F3DB3F]" />
+              <div className="group relative overflow-hidden rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-5 transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl">
+                <div className="rounded-lg bg-[#5B6BC4]/10 p-2 w-fit">
+                  <Rocket className="size-5 text-[#5B6BC4]" />
                 </div>
-                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#F3DB3F]">
+                <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#5B6BC4]">
                   Scale
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-[#ECD8D5]/80">
+                <p className="mt-2 text-sm leading-relaxed text-white/60">
                   Cloud, reliability, DevOps, and security maturity at scale.
                 </p>
               </div>
@@ -279,8 +279,8 @@ export default function ServicesPage() {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category.id
-                      ? "bg-[#F3DB3F] text-[#1A041F] shadow-lg"
-                      : "border border-white/10 bg-white/5 text-[#ECD8D5]/70 hover:border-[#F3DB3F]/30 hover:text-[#F3DB3F]"
+                      ? "bg-[#5B6BC4] text-white shadow-lg"
+                      : "border border-[rgba(160,175,255,0.15)] bg-[#08111A] text-white/50 hover:border-[#5B6BC4]/30 hover:text-[#A0AFFF]"
                   }`}
                 >
                   <Icon className="size-4" />
@@ -316,18 +316,18 @@ export default function ServicesPage() {
           {filteredServices.length === 0 && (
             <motion.div
               variants={itemVariants}
-              className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-transparent p-12 text-center"
+              className="flex flex-col items-center justify-center rounded-2xl border border-[rgba(160,175,255,0.15)] bg-[#08111A] p-12 text-center"
             >
-              <div className="rounded-full bg-[#F3DB3F]/10 p-3">
-                <Sparkles className="size-8 text-[#F3DB3F]" />
+              <div className="rounded-full bg-[#5B6BC4]/10 p-3">
+                <Sparkles className="size-8 text-[#5B6BC4]" />
               </div>
               <h3 className="mt-4 text-xl font-semibold text-white">No services found</h3>
-              <p className="mt-2 text-[#ECD8D5]/70">
+              <p className="mt-2 text-white/50">
                 Try selecting a different category to see more results
               </p>
               <button
                 onClick={() => setSelectedCategory("all")}
-                className="mt-6 rounded-full bg-[#F3DB3F]/10 px-6 py-2 text-sm font-medium text-[#F3DB3F] transition-all hover:bg-[#F3DB3F]/20"
+                className="mt-6 rounded-full bg-[#5B6BC4]/10 px-6 py-2 text-sm font-medium text-[#5B6BC4] transition-all hover:bg-[#5B6BC4]/20"
               >
                 View all services
               </button>
@@ -344,16 +344,16 @@ export default function ServicesPage() {
           className="mb-16"
         >
           <motion.div variants={itemVariants} className="mb-8 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <Zap className="size-4 text-[#F3DB3F]" />
-              <span className="text-xs font-medium uppercase tracking-wider text-[#ECD8D5]/70">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
+              <Zap className="size-4 text-[#5B6BC4]" />
+              <span className="text-xs font-medium uppercase tracking-wider text-white/50">
                 Our Approach
               </span>
             </div>
             <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
               How we deliver excellence
             </h2>
-            <p className="mt-2 text-[#ECD8D5]/60">
+            <p className="mt-2 text-white/40">
               A proven methodology that ensures success at every stage
             </p>
           </motion.div>
@@ -367,17 +367,17 @@ export default function ServicesPage() {
                   custom={index}
                   variants={cardVariants}
                   whileHover={{ y: -4 }}
-                  className="group rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center transition-all duration-300 hover:border-[#F3DB3F]/30 hover:shadow-xl"
+                  className="group rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6 text-center transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl"
                 >
                   <div className="flex justify-center">
-                    <div className="rounded-lg bg-[#F3DB3F]/10 p-3 transition-all duration-300 group-hover:scale-110">
-                      <Icon className="size-6 text-[#F3DB3F]" />
+                    <div className="rounded-lg bg-[#5B6BC4]/10 p-3 transition-all duration-300 group-hover:scale-110">
+                      <Icon className="size-6 text-[#5B6BC4]" />
                     </div>
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-white">
                     {approach.title}
                   </h3>
-                  <p className="mt-2 text-sm text-[#ECD8D5]/70">
+                  <p className="mt-2 text-sm text-white/50">
                     {approach.description}
                   </p>
                 </motion.div>
@@ -394,9 +394,9 @@ export default function ServicesPage() {
           className="mb-16"
         >
           <motion.div variants={itemVariants} className="mb-8 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <Award className="size-4 text-[#F3DB3F]" />
-              <span className="text-xs font-medium uppercase tracking-wider text-[#ECD8D5]/70">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
+              <Award className="size-4 text-[#5B6BC4]" />
+              <span className="text-xs font-medium uppercase tracking-wider text-white/50">
                 Why Choose Us
               </span>
             </div>
@@ -408,15 +408,15 @@ export default function ServicesPage() {
           <div className="grid gap-6 md:grid-cols-2">
             <motion.div
               variants={itemVariants}
-              className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
+              className="rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#F3DB3F]/10 p-2">
-                  <Users className="size-5 text-[#F3DB3F]" />
+                <div className="rounded-lg bg-[#5B6BC4]/10 p-2">
+                  <Users className="size-5 text-[#5B6BC4]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Expert Team</h3>
-                  <p className="mt-2 text-sm text-[#ECD8D5]/70">
+                  <p className="mt-2 text-sm text-white/50">
                     Our engineers bring deep expertise across AI, cloud, and enterprise software development.
                   </p>
                 </div>
@@ -425,15 +425,15 @@ export default function ServicesPage() {
 
             <motion.div
               variants={itemVariants}
-              className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
+              className="rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#F3DB3F]/10 p-2">
-                  <Target className="size-5 text-[#F3DB3F]" />
+                <div className="rounded-lg bg-[#5B6BC4]/10 p-2">
+                  <Target className="size-5 text-[#5B6BC4]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Results-Driven</h3>
-                  <p className="mt-2 text-sm text-[#ECD8D5]/70">
+                  <p className="mt-2 text-sm text-white/50">
                     We focus on delivering measurable business outcomes, not just code.
                   </p>
                 </div>
@@ -442,15 +442,15 @@ export default function ServicesPage() {
 
             <motion.div
               variants={itemVariants}
-              className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
+              className="rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#F3DB3F]/10 p-2">
-                  <Lock className="size-5 text-[#F3DB3F]" />
+                <div className="rounded-lg bg-[#5B6BC4]/10 p-2">
+                  <Lock className="size-5 text-[#5B6BC4]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Enterprise Security</h3>
-                  <p className="mt-2 text-sm text-[#ECD8D5]/70">
+                  <p className="mt-2 text-sm text-white/50">
                     ISO 27001 certified practices ensure your data and applications are secure.
                   </p>
                 </div>
@@ -459,15 +459,15 @@ export default function ServicesPage() {
 
             <motion.div
               variants={itemVariants}
-              className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6"
+              className="rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-[#F3DB3F]/10 p-2">
-                  <Globe className="size-5 text-[#F3DB3F]" />
+                <div className="rounded-lg bg-[#5B6BC4]/10 p-2">
+                  <Globe className="size-5 text-[#5B6BC4]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Global Expertise</h3>
-                  <p className="mt-2 text-sm text-[#ECD8D5]/70">
+                  <p className="mt-2 text-sm text-white/50">
                     Experience working with clients across North America, Europe, and Asia.
                   </p>
                 </div>
@@ -481,17 +481,17 @@ export default function ServicesPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="rounded-2xl bg-gradient-to-r from-[#F3DB3F]/10 via-[#8E5F74]/10 to-transparent p-8 text-center"
+          className="rounded-2xl bg-gradient-to-r from-[#5B6BC4]/10 via-[#5B6BC4]/10 to-transparent p-8 text-center"
         >
           <h3 className="text-2xl font-bold text-white">
             Ready to transform your business?
           </h3>
-          <p className="mt-2 text-[#ECD8D5]/70">
+          <p className="mt-2 text-white/50">
             Let&apos;s discuss which service track is right for your goals
           </p>
           <Link
             href="/contact"
-            className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#F3DB3F] to-[#E5C82E] px-6 py-3 font-semibold text-[#1A041F] transition-all hover:shadow-lg hover:shadow-[#F3DB3F]/20"
+            className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5B6BC4] to-[#5B6BC4] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg hover:shadow-[#5B6BC4]/20"
           >
             Get Started
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

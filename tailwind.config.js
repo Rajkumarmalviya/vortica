@@ -8,35 +8,38 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        sans: ["Helvetica", "Helvetica Neue", "Arial", "sans-serif"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
       colors: {
+        background: "#000000",
+        surface: "#090A14",
+        card: "#0E1020",
+        foreground: {
+          DEFAULT: "#ffffff",
+          muted: "rgba(255,255,255,0.75)",
+          subtle: "rgba(255,255,255,0.45)",
+        },
         primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
+          DEFAULT: "#5B6BC4",
+          hover: "#6B7DD4",
+          light: "#A0AFFF",
+          deep: "#3B3F8C",
         },
-        slate: {
-          850: '#1e1e2f',
-          950: '#0f0f1a',
+        border: {
+          DEFAULT: "rgba(160,175,255,0.15)",
+          strong: "rgba(160,175,255,0.3)",
         },
-        accent: {
-          blue: '#2563eb',
-          indigo: '#4f46e5',
-          purple: '#7c3aed',
-        }
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-world': 'linear-gradient(to right bottom, rgba(30, 30, 47, 0.8), rgba(15, 15, 26, 0.8))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "hero-glow": "radial-gradient(circle at center, rgba(91,107,196,0.35), transparent 60%)",
+        "brand-gradient": "linear-gradient(90deg, #5B6BC4, #A0AFFF)",
+      },
+      boxShadow: {
+        "glow-sm": "0 0 15px rgba(160,175,255,0.15)",
+        "glow":    "0 0 25px rgba(160,175,255,0.25)",
+        "glow-lg": "0 0 40px rgba(91,107,196,0.45)",
       },
     },
   },
