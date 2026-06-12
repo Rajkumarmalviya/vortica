@@ -59,25 +59,25 @@ const values = [
     icon: Target,
     title: "Purpose-Driven",
     description: "We focus on outcomes that matter, aligning technology with business goals to deliver measurable impact.",
-    color: "#E8C96A",
+    color: "#5B6BC4",
   },
   {
     icon: Heart,
     title: "Client-Centric",
     description: "Your success is our success. We build lasting partnerships through trust, transparency, and results.",
-    color: "#E8C96A",
+    color: "#5B6BC4",
   },
   {
     icon: Rocket,
     title: "Innovation First",
     description: "We embrace cutting-edge technologies to solve complex challenges and create competitive advantages.",
-    color: "#E8C96A",
+    color: "#5B6BC4",
   },
   {
     icon: Shield,
     title: "Quality Assured",
     description: "Enterprise-grade security, reliability, and performance are baked into everything we build.",
-    color: "#E8C96A",
+    color: "#5B6BC4",
   },
 ];
 
@@ -169,10 +169,10 @@ function EnhancedPageHero({ eyebrow, title, description }: { eyebrow?: string; t
           initial={{ opacity: 0, x: -20 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-[#E8C96A]/30 bg-[#E8C96A]/10 px-4 py-2 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-[#5B6BC4]/30 bg-[#5B6BC4]/10 px-4 py-2 backdrop-blur-sm"
         >
-          <Sparkles className="size-4 text-[#E8C96A]" />
-          <span className="text-xs font-medium uppercase tracking-wider text-[#E8C96A]">
+          <Sparkles className="size-4 text-[#5B6BC4]" />
+          <span className="text-xs font-medium uppercase tracking-wider text-[#5B6BC4]">
             {eyebrow}
           </span>
         </motion.div>
@@ -191,7 +191,7 @@ function EnhancedPageHero({ eyebrow, title, description }: { eyebrow?: string; t
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.4, duration: 0.5 }}
-        className="mt-4 text-base leading-relaxed text-[#a1a1aa]/80 sm:text-lg"
+        className="mt-4 text-base leading-relaxed text-white/60 sm:text-lg"
       >
         {description}
       </motion.p>
@@ -213,9 +213,9 @@ export default function AboutPage() {
     <PageShell className="relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#E8C96A]/5 blur-3xl" />
-        <div className="absolute right-0 top-20 size-72 rounded-full bg-[#C9A84C]/10 blur-3xl" />
-        <div className="absolute bottom-0 left-1/2 size-96 -translate-x-1/2 rounded-full bg-[#E8C96A]/5 blur-3xl" />
+        <div className="absolute left-0 top-0 size-56 rounded-full bg-[#5B6BC4]/5 blur-3xl" />
+        <div className="absolute right-0 top-20 size-72 rounded-full bg-[#5B6BC4]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 size-96 -translate-x-1/2 rounded-full bg-[#5B6BC4]/5 blur-3xl" />
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-5" />
       </div>
 
@@ -244,15 +244,15 @@ export default function AboutPage() {
                 key={stat.label}
                 custom={index}
                 variants={cardVariants}
-                className="rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center"
+                className="rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6 text-center"
               >
                 <div className="flex justify-center mb-3">
-                  <div className="rounded-lg bg-[#E8C96A]/10 p-2">
-                    <Icon className="size-6 text-[#E8C96A]" />
+                  <div className="rounded-lg bg-[#5B6BC4]/10 p-2">
+                    <Icon className="size-6 text-[#5B6BC4]" />
                   </div>
                 </div>
                 <p className="text-2xl font-bold text-white sm:text-3xl">{stat.value}</p>
-                <p className="mt-1 text-sm text-[#a1a1aa]/60">{stat.label}</p>
+                <p className="mt-1 text-sm text-white/40">{stat.label}</p>
               </motion.div>
             );
           })}
@@ -267,58 +267,58 @@ export default function AboutPage() {
         >
           <motion.div
             variants={itemVariants}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[rgba(36,14,48,0.72)] to-[rgba(20,4,24,0.82)] p-8 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
+            className="group relative overflow-hidden rounded-2xl border border-[rgba(160,175,255,0.15)] bg-gradient-to-br from-[#0D1824] to-[rgba(20,4,24,0.82)] p-8 transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#E8C96A]/0 via-[#E8C96A]/5 to-[#E8C96A]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#5B6BC4]/0 via-[#5B6BC4]/5 to-[#5B6BC4]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <div className="relative">
               <div className="flex items-center gap-2">
-                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
-                  <Target className="size-5 text-[#E8C96A]" />
+                <div className="rounded-lg bg-[#5B6BC4]/10 p-2">
+                  <Target className="size-5 text-[#5B6BC4]" />
                 </div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#E8C96A]">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#5B6BC4]">
                   What we do
                 </p>
               </div>
-              <p className="mt-4 text-base leading-relaxed text-[#a1a1aa]/80">
+              <p className="mt-4 text-base leading-relaxed text-white/60">
                 Our team combines design, engineering, cloud, and delivery excellence to build products that drive measurable impact. 
                 We specialize in AI/ML, cloud transformation, and scalable product development.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">AI/ML</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Cloud Native</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">DevOps</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Product Design</span>
+                <span className="rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-3 py-1 text-xs">AI/ML</span>
+                <span className="rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-3 py-1 text-xs">Cloud Native</span>
+                <span className="rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-3 py-1 text-xs">DevOps</span>
+                <span className="rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-3 py-1 text-xs">Product Design</span>
               </div>
             </div>
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-8 transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
+            className="group relative overflow-hidden rounded-2xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-8 transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#E8C96A]/0 via-[#E8C96A]/5 to-[#E8C96A]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#5B6BC4]/0 via-[#5B6BC4]/5 to-[#5B6BC4]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <div className="relative">
               <div className="flex items-center gap-2">
-                <div className="rounded-lg bg-[#E8C96A]/10 p-2">
-                  <Eye className="size-5 text-[#E8C96A]" />
+                <div className="rounded-lg bg-[#5B6BC4]/10 p-2">
+                  <Eye className="size-5 text-[#5B6BC4]" />
                 </div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#E8C96A]">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#5B6BC4]">
                   How we work
                 </p>
               </div>
-              <p className="mt-4 text-base leading-relaxed text-[#a1a1aa]/80">
+              <p className="mt-4 text-base leading-relaxed text-white/60">
                 We work in transparent sprint cycles with clear milestones, enabling faster learning and predictable execution. 
                 Agile methodology meets enterprise-grade delivery.
               </p>
               <div className="mt-4 flex items-center gap-2">
-                <CheckCircle2 className="size-4 text-[#E8C96A]" />
-                <span className="text-sm text-[#a1a1aa]/70">2-week sprints</span>
-                <span className="text-[#a1a1aa]/30">•</span>
-                <CheckCircle2 className="size-4 text-[#E8C96A]" />
-                <span className="text-sm text-[#a1a1aa]/70">Daily standups</span>
-                <span className="text-[#a1a1aa]/30">•</span>
-                <CheckCircle2 className="size-4 text-[#E8C96A]" />
-                <span className="text-sm text-[#a1a1aa]/70">Weekly demos</span>
+                <CheckCircle2 className="size-4 text-[#5B6BC4]" />
+                <span className="text-sm text-white/50">2-week sprints</span>
+                <span className="text-white/75/30">•</span>
+                <CheckCircle2 className="size-4 text-[#5B6BC4]" />
+                <span className="text-sm text-white/50">Daily standups</span>
+                <span className="text-white/75/30">•</span>
+                <CheckCircle2 className="size-4 text-[#5B6BC4]" />
+                <span className="text-sm text-white/50">Weekly demos</span>
               </div>
             </div>
           </motion.div>
@@ -333,16 +333,16 @@ export default function AboutPage() {
           className="mb-16"
         >
           <motion.div variants={itemVariants} className="mb-8 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <Heart className="size-4 text-[#E8C96A]" />
-              <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
+              <Heart className="size-4 text-[#5B6BC4]" />
+              <span className="text-xs font-medium uppercase tracking-wider text-white/50">
                 Our Values
               </span>
             </div>
             <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
               What drives us
             </h2>
-            <p className="mt-2 text-[#a1a1aa]/60">
+            <p className="mt-2 text-white/40">
               Core principles that guide everything we do
             </p>
           </motion.div>
@@ -356,17 +356,17 @@ export default function AboutPage() {
                   custom={index}
                   variants={cardVariants}
                   whileHover={{ y: -4 }}
-                  className="group rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
+                  className="group rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6 text-center transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl"
                 >
                   <div className="flex justify-center">
-                    <div className="rounded-lg bg-[#E8C96A]/10 p-3 transition-all duration-300 group-hover:scale-110">
-                      <Icon className="size-6 text-[#E8C96A]" />
+                    <div className="rounded-lg bg-[#5B6BC4]/10 p-3 transition-all duration-300 group-hover:scale-110">
+                      <Icon className="size-6 text-[#5B6BC4]" />
                     </div>
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-white">
                     {value.title}
                   </h3>
-                  <p className="mt-2 text-sm text-[#a1a1aa]/70">
+                  <p className="mt-2 text-sm text-white/50">
                     {value.description}
                   </p>
                 </motion.div>
@@ -384,9 +384,9 @@ export default function AboutPage() {
           className="mb-16"
         >
           <motion.div variants={itemVariants} className="mb-8 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <TrendingUp className="size-4 text-[#E8C96A]" />
-              <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
+              <TrendingUp className="size-4 text-[#5B6BC4]" />
+              <span className="text-xs font-medium uppercase tracking-wider text-white/50">
                 Our Journey
               </span>
             </div>
@@ -396,7 +396,7 @@ export default function AboutPage() {
           </motion.div>
 
           <div className="relative">
-            <div className="absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-[#E8C96A]/30 to-transparent" />
+            <div className="absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-[#5B6BC4]/30 to-transparent" />
             <div className="space-y-8">
               {milestones.map((milestone, index) => {
                 const Icon = milestone.icon;
@@ -410,15 +410,15 @@ export default function AboutPage() {
                     } gap-4 md:gap-8`}
                   >
                     <div className="flex-1 md:text-right">
-                      <div className="inline-flex items-center gap-2 rounded-full border border-[#E8C96A]/30 bg-[#E8C96A]/10 px-4 py-2">
-                        <Icon className="size-4 text-[#E8C96A]" />
-                        <span className="text-sm font-semibold text-[#E8C96A]">{milestone.year}</span>
+                      <div className="inline-flex items-center gap-2 rounded-full border border-[#5B6BC4]/30 bg-[#5B6BC4]/10 px-4 py-2">
+                        <Icon className="size-4 text-[#5B6BC4]" />
+                        <span className="text-sm font-semibold text-[#5B6BC4]">{milestone.year}</span>
                       </div>
                       <h3 className="mt-2 text-lg font-semibold text-white">{milestone.title}</h3>
-                      <p className="text-sm text-[#a1a1aa]/70">{milestone.description}</p>
+                      <p className="text-sm text-white/50">{milestone.description}</p>
                     </div>
                     <div className="relative flex items-center justify-center">
-                      <div className="z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#E8C96A]">
+                      <div className="z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#5B6BC4]">
                         <div className="h-2 w-2 rounded-full bg-white" />
                       </div>
                     </div>
@@ -439,16 +439,16 @@ export default function AboutPage() {
           className="mb-16"
         >
           <motion.div variants={itemVariants} className="mb-8 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <Users className="size-4 text-[#E8C96A]" />
-              <span className="text-xs font-medium uppercase tracking-wider text-[#a1a1aa]/70">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
+              <Users className="size-4 text-[#5B6BC4]" />
+              <span className="text-xs font-medium uppercase tracking-wider text-white/50">
                 Leadership Team
               </span>
             </div>
             <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
               Meet the experts
             </h2>
-            <p className="mt-2 text-[#a1a1aa]/60">
+            <p className="mt-2 text-white/40">
               Passionate professionals dedicated to your success
             </p>
           </motion.div>
@@ -460,9 +460,9 @@ export default function AboutPage() {
                 custom={index}
                 variants={cardVariants}
                 whileHover={{ y: -4 }}
-                className="group rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-6 text-center transition-all duration-300 hover:border-[#E8C96A]/30 hover:shadow-xl"
+                className="group rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6 text-center transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl"
               >
-                <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full border-2 border-[#E8C96A]/30">
+                <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full border-2 border-[#5B6BC4]/30">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -471,10 +471,10 @@ export default function AboutPage() {
                   />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-white">{member.name}</h3>
-                <p className="text-sm text-[#E8C96A]">{member.role}</p>
-                <p className="mt-2 text-sm text-[#a1a1aa]/70">{member.bio}</p>
+                <p className="text-sm text-[#5B6BC4]">{member.role}</p>
+                <p className="mt-2 text-sm text-white/50">{member.bio}</p>
                 <div className="mt-4 flex justify-center gap-3">
-                  <a href={member.social.linkedin} className="text-[#a1a1aa]/50 hover:text-[#E8C96A]">
+                  <a href={member.social.linkedin} className="text-white/35 hover:text-[#A0AFFF]">
                     <svg className="size-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
@@ -490,18 +490,18 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="rounded-2xl bg-gradient-to-r from-[#E8C96A]/10 via-[#C9A84C]/10 to-transparent p-8 text-center"
+          className="rounded-2xl bg-gradient-to-r from-[#5B6BC4]/10 via-[#5B6BC4]/10 to-transparent p-8 text-center"
         >
-          <Quote className="mx-auto mb-4 size-8 text-[#E8C96A]" />
+          <Quote className="mx-auto mb-4 size-8 text-[#5B6BC4]" />
           <h3 className="text-2xl font-bold text-white">
             Ready to build something great together?
           </h3>
-          <p className="mt-2 text-[#a1a1aa]/70">
+          <p className="mt-2 text-white/50">
             Let&apos;s discuss how we can help you achieve your goals
           </p>
           <Link
             href="/contact"
-            className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#E8C96A] to-[#E8C96A] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg hover:shadow-[#E8C96A]/20"
+            className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5B6BC4] to-[#5B6BC4] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg hover:shadow-[#5B6BC4]/20"
           >
             Start a Conversation
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

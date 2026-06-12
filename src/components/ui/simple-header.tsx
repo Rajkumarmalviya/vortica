@@ -21,7 +21,6 @@ import {
   Mail,
 } from "lucide-react";
 
-// Types
 interface NavLink {
   label: string;
   href: string;
@@ -48,7 +47,6 @@ interface SimpleHeaderProps {
   email?: string;
 }
 
-// Mega Menu Data
 const MEGA_MENU_ITEMS: Record<string, MegaMenuItem[]> = {
   services: [
     {
@@ -96,41 +94,22 @@ const MEGA_MENU_ITEMS: Record<string, MegaMenuItem[]> = {
   ]
 };
 
-// Main Navigation Links
 const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
-  { 
-    label: "Services", 
-    href: "/services",
-    megaMenu: MEGA_MENU_ITEMS.services
-  },
+  { label: "Services", href: "/services", megaMenu: MEGA_MENU_ITEMS.services },
   { label: "Work", href: "/work" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
-// Mega Menu Component
-const MegaMenu = memo(({ 
-  items, 
-  isOpen, 
-  onClose 
-}: { 
-  items: MegaMenuItem[]; 
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
+const MegaMenu = memo(({ items, isOpen, onClose }: { items: MegaMenuItem[]; isOpen: boolean; onClose: () => void }) => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        onClose();
-      }
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) onClose();
     };
-
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+    if (isOpen) document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen, onClose]);
 
@@ -143,34 +122,29 @@ const MegaMenu = memo(({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className="absolute left-0 top-full mt-2 w-[720px] rounded-2xl border border-white/10 bg-gradient-to-b from-[rgba(10,10,10,0.98)] to-[rgba(15,15,15,0.98)] backdrop-blur-xl shadow-2xl"
+          className="absolute left-0 top-full mt-2 w-[720px] rounded-2xl border border-[rgba(160,175,255,0.15)] bg-[#08111A] backdrop-blur-xl shadow-[0_0_40px_rgba(91,107,196,0.15)]"
         >
           <div className="grid grid-cols-2 gap-4 p-6">
             {items.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="group rounded-xl p-4 transition-all duration-200 hover:bg-white/5"
+                className="group rounded-xl p-4 transition-all duration-200 hover:bg-[#5B6BC4]/10"
                 onClick={onClose}
               >
                 <div className="flex items-start gap-3">
-                  <div className="rounded-lg bg-[#E8C96A]/10 p-2 text-[#E8C96A] transition-all duration-200 group-hover:bg-[#E8C96A]/20">
+                  <div className="rounded-lg bg-[#5B6BC4]/15 p-2 text-[#5B6BC4] transition-all duration-200 group-hover:bg-[#5B6BC4]/25">
                     {item.icon}
                   </div>
                   <div className="flex-1">
-                    <p className="font-semibold text-white group-hover:text-[#E8C96A] transition-colors">
+                    <p className="font-semibold text-white group-hover:text-[#A0AFFF] transition-colors">
                       {item.label}
                     </p>
-                    <p className="mt-1 text-sm text-[#a1a1aa]/60">
-                      {item.description}
-                    </p>
+                    <p className="mt-1 text-sm text-white/50">{item.description}</p>
                     {item.tags && (
                       <div className="mt-2 flex flex-wrap gap-1">
                         {item.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 text-[#a1a1aa]/50"
-                          >
+                          <span key={tag} className="text-[10px] px-2 py-0.5 rounded-full bg-[#5B6BC4]/10 text-[#A0AFFF]/70">
                             {tag}
                           </span>
                         ))}
@@ -181,10 +155,10 @@ const MegaMenu = memo(({
               </Link>
             ))}
           </div>
-          <div className="border-t border-white/10 p-4">
+          <div className="border-t border-[rgba(160,175,255,0.1)] p-4">
             <Link
               href="/services"
-              className="group flex items-center justify-between text-sm text-[#E8C96A] hover:text-[#E8C96A]/80"
+              className="group flex items-center justify-between text-sm text-[#A0AFFF] hover:text-white"
               onClick={onClose}
             >
               <span>View all services</span>
@@ -196,90 +170,52 @@ const MegaMenu = memo(({
     </AnimatePresence>
   );
 });
-
 MegaMenu.displayName = "MegaMenu";
 
-// Desktop Nav Link Component
-const DesktopNavLink = memo(({ 
-  link, 
-  isActive,
-  onMegaMenuOpen,
-  activeMegaMenu
-}: { 
-  link: NavLink; 
-  isActive: boolean;
+const DesktopNavLink = memo(({ link, isActive, onMegaMenuOpen, activeMegaMenu }: {
+  link: NavLink; isActive: boolean;
   onMegaMenuOpen: (label: string | null) => void;
   activeMegaMenu: string | null;
 }) => {
   const hasMegaMenu = !!link.megaMenu;
   const isOpen = activeMegaMenu === link.label;
 
+  const baseClass = cn(
+    "group flex items-center gap-1 rounded-full px-4 py-2 text-[0.9rem] font-medium tracking-[-0.01em] transition-all duration-200",
+    isActive || isOpen
+      ? "text-white bg-[rgba(91,107,196,0.15)] border border-[rgba(91,107,196,0.3)]"
+      : "text-white/60 hover:text-white hover:bg-[rgba(91,107,196,0.1)]"
+  );
+
   return (
     <div className="relative">
       {hasMegaMenu ? (
-        <button
-          onClick={() => onMegaMenuOpen(isOpen ? null : link.label)}
-          className={cn(
-            "group flex items-center gap-1 rounded-full px-4 py-2 text-[0.9rem] font-medium tracking-[-0.01em] transition-all duration-200",
-            "hover:bg-[rgba(232,201,106,0.10)]",
-            isActive || isOpen
-              ? "text-[#E8C96A] bg-gradient-to-b from-[rgba(232,201,106,0.12)] to-[rgba(232,201,106,0.06)]"
-              : "text-[#a1a1aa]/82 hover:text-[#E8C96A]"
-          )}
-          aria-expanded={isOpen}
-          aria-haspopup="menu"
-        >
+        <button onClick={() => onMegaMenuOpen(isOpen ? null : link.label)} className={baseClass} aria-expanded={isOpen} aria-haspopup="menu">
           {link.label}
-          <ChevronDown className={cn(
-            "size-4 transition-transform duration-200",
-            isOpen && "rotate-180"
-          )} />
+          <ChevronDown className={cn("size-4 transition-transform duration-200", isOpen && "rotate-180")} />
         </button>
       ) : (
-        <Link
-          href={link.href}
-          className={cn(
-            "group flex items-center gap-1 rounded-full px-4 py-2 text-[0.9rem] font-medium tracking-[-0.01em] transition-all duration-200",
-            "hover:bg-[rgba(232,201,106,0.10)]",
-            isActive
-              ? "text-[#E8C96A] bg-gradient-to-b from-[rgba(232,201,106,0.12)] to-[rgba(232,201,106,0.06)]"
-              : "text-[#a1a1aa]/82 hover:text-[#E8C96A]"
-          )}
-        >
-          {link.label}
-        </Link>
+        <Link href={link.href} className={baseClass}>{link.label}</Link>
       )}
-      
       {hasMegaMenu && link.megaMenu && (
-        <MegaMenu 
-          items={link.megaMenu} 
-          isOpen={isOpen}
-          onClose={() => onMegaMenuOpen(null)}
-        />
+        <MegaMenu items={link.megaMenu} isOpen={isOpen} onClose={() => onMegaMenuOpen(null)} />
       )}
     </div>
   );
 });
-
 DesktopNavLink.displayName = "DesktopNavLink";
 
-// Contact Info Component
 const ContactInfo = memo(() => (
-  <div className="hidden lg:flex items-center gap-4 ml-4 pl-4 border-l border-white/10">
-    <a
-      href="tel:+917354489974"
-      className="flex items-center gap-2 text-sm text-[#a1a1aa]/70 hover:text-[#E8C96A] transition-colors"
-    >
+  <div className="hidden lg:flex items-center gap-4 ml-4 pl-4 border-l border-[rgba(160,175,255,0.15)]">
+    <a href="tel:+917354489974" className="flex items-center gap-2 text-sm text-white/50 hover:text-[#A0AFFF] transition-colors">
       <Phone className="size-4" />
       <span>7354489974</span>
     </a>
   </div>
 ));
-
 ContactInfo.displayName = "ContactInfo";
 
-// Main Header Component
-export const SimpleHeader = memo(function SimpleHeader({ 
+export const SimpleHeader = memo(function SimpleHeader({
   className = "",
   logoSrc = "/logo.png",
   logoAlt = "Vortica logo",
@@ -292,93 +228,56 @@ export const SimpleHeader = memo(function SimpleHeader({
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
   const pathname = usePathname();
 
-  // Handle scroll effect
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    
+    const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mega menu on route change
-  useEffect(() => {
-    setActiveMegaMenu(null);
-  }, [pathname]);
+  useEffect(() => { setActiveMegaMenu(null); }, [pathname]);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  const handleLinkClick = useCallback(() => {
-    setOpen(false);
-    setActiveMegaMenu(null);
-  }, []);
-
-  const handleMegaMenuOpen = useCallback((label: string | null) => {
-    setActiveMegaMenu(label);
-  }, []);
-
-  const isActiveLink = useCallback((href: string) => {
-    if (href === "/") {
-      return pathname === href;
-    }
-    return pathname.startsWith(href);
-  }, [pathname]);
+  const handleLinkClick = useCallback(() => { setOpen(false); setActiveMegaMenu(null); }, []);
+  const handleMegaMenuOpen = useCallback((label: string | null) => { setActiveMegaMenu(label); }, []);
+  const isActiveLink = useCallback((href: string) => href === "/" ? pathname === href : pathname.startsWith(href), [pathname]);
 
   return (
-    <motion.header 
+    <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
-        "border-b border-white/[0.08] after:absolute after:inset-x-0 after:top-0 after:h-px after:bg-[linear-gradient(to_right,transparent,rgba(232,201,106,0.4),transparent)] relative",
-        scrolled 
-          ? "bg-gradient-to-b from-[rgba(10,10,10,0.95)] to-[rgba(15,15,15,0.92)] backdrop-blur-xl shadow-2xl"
-          : "bg-gradient-to-b from-[rgba(10,10,10,0.88)] to-[rgba(15,15,15,0.72)] backdrop-blur-lg",
+        "border-b border-[rgba(160,175,255,0.1)] relative",
+        "after:absolute after:inset-x-0 after:top-0 after:h-px after:bg-[linear-gradient(to_right,transparent,rgba(91,107,196,0.4),transparent)]",
+        scrolled
+          ? "bg-[rgba(0,0,0,0.94)] backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+          : "bg-[rgba(0,0,0,0.75)] backdrop-blur-lg",
         className
       )}
     >
       <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-6 xl:px-3 2xl:px-0">
-        {/* Logo Section */}
-        <Link 
-          href="/" 
-          className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8C96A]/50 rounded-xl transition-all duration-200"
+        <Link
+          href="/"
+          className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5B6BC4]/50 rounded-xl transition-all duration-200"
           onClick={handleLinkClick}
           aria-label={`${companyName} homepage`}
         >
-          <div className="relative size-10 overflow-hidden rounded-xl border border-[rgba(255,255,255,0.10)] bg-gradient-to-br from-white/10 to-white/5 shadow-[0_14px_30px_rgba(0,0,0,0.28)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
-            <Image
-              src={logoSrc}
-              alt={logoAlt}
-              width={40}
-              height={40}
-              className="object-cover"
-              priority
-              quality={100}
-            />
+          <div className="relative size-10 overflow-hidden rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#08111A] shadow-[0_0_20px_rgba(91,107,196,0.15)] transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(91,107,196,0.3)]">
+            <Image src={logoSrc} alt={logoAlt} width={40} height={40} className="object-cover" priority quality={100} />
           </div>
           <div>
-            <p className="text-xl font-bold tracking-[-0.02em] text-white transition-colors duration-200 group-hover:text-[#E8C96A]">
+            <p className="text-xl font-bold tracking-[-0.02em] text-white transition-colors duration-200 group-hover:text-[#A0AFFF]">
               {companyName}
             </p>
-            <p className="text-[10px] font-medium tracking-wide text-[#a1a1aa]/50">
-              TECHNOLOGY PARTNERS
-            </p>
+            <p className="text-[10px] font-medium tracking-wide text-white/35">TECHNOLOGY PARTNERS</p>
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-1">
           {NAV_LINKS.map((link) => (
             <DesktopNavLink
@@ -391,48 +290,37 @@ export const SimpleHeader = memo(function SimpleHeader({
           ))}
         </div>
 
-        {/* Right Side - Contact & CTA */}
         <div className="flex items-center gap-3">
           <ContactInfo />
-          
-          {/* Desktop CTA Button */}
           <Button
-            className="hidden lg:flex bg-gradient-to-r from-[#E8C96A] to-[#E8C96A] text-white font-semibold hover:shadow-lg hover:shadow-[#E8C96A]/20 transition-all duration-300 hover:scale-105"
+            className="hidden lg:flex bg-[#5B6BC4] text-white font-semibold hover:bg-[#6B7DD4] hover:shadow-[0_0_20px_rgba(91,107,196,0.4)] transition-all duration-300 border-0"
             onClick={() => window.location.href = "/contact"}
           >
             Start a Project
             <ArrowRight className="ml-2 size-4" />
           </Button>
 
-          {/* Mobile Menu Button */}
           <Sheet open={open} onOpenChange={setOpen}>
             <Button
               size="icon"
               variant="outline"
               className={cn(
-                "border-[rgba(255,255,255,0.10)] bg-white/5",
-                "text-[#a1a1aa]/82 hover:text-[#E8C96A]",
-                "hover:bg-[rgba(232,201,106,0.10)]",
+                "border-[rgba(160,175,255,0.15)] bg-[#08111A]",
+                "text-white/60 hover:text-white hover:bg-[rgba(91,107,196,0.15)]",
                 "transition-all duration-200 lg:hidden",
-                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8C96A]/50"
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5B6BC4]/50"
               )}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
             >
-              <MenuToggle
-                strokeWidth={2.5}
-                open={open}
-                onOpenChange={setOpen}
-                className="size-6"
-              />
+              <MenuToggle strokeWidth={2.5} open={open} onOpenChange={setOpen} className="size-6" />
             </Button>
 
-            {/* Mobile Navigation Sheet */}
             <SheetContent
               className={cn(
-                "gap-0 border-r border-[rgba(255,255,255,0.08)]",
-                "bg-gradient-to-b from-[rgba(10,10,10,0.98)] to-[rgba(15,15,15,0.98)]",
-                "text-[#a1a1aa] backdrop-blur-xl",
+                "gap-0 border-r border-[rgba(160,175,255,0.1)]",
+                "bg-[#000000]",
+                "text-white/75 backdrop-blur-xl",
                 "data-[state=open]:animate-in data-[state=closed]:animate-out",
                 "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
                 "data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left"
@@ -441,34 +329,18 @@ export const SimpleHeader = memo(function SimpleHeader({
               side="left"
             >
               <div className="flex flex-col h-full">
-                {/* Mobile Header */}
-                <div className="border-b border-[rgba(255,255,255,0.08)] px-6 py-5">
-                  <Link 
-                    href="/" 
-                    className="flex items-center gap-3"
-                    onClick={handleLinkClick}
-                  >
+                <div className="border-b border-[rgba(160,175,255,0.1)] px-6 py-5">
+                  <Link href="/" className="flex items-center gap-3" onClick={handleLinkClick}>
                     <div className="relative size-10">
-                      <Image
-                        src={logoSrc}
-                        alt={logoAlt}
-                        width={40}
-                        height={40}
-                        className="rounded-xl"
-                      />
+                      <Image src={logoSrc} alt={logoAlt} width={40} height={40} className="rounded-xl" />
                     </div>
                     <div>
-                      <span className="text-lg font-bold text-white">
-                        {companyName}
-                      </span>
-                      <p className="text-[9px] text-[#a1a1aa]/50">
-                        TECHNOLOGY PARTNERS
-                      </p>
+                      <span className="text-lg font-bold text-white">{companyName}</span>
+                      <p className="text-[9px] text-white/35">TECHNOLOGY PARTNERS</p>
                     </div>
                   </Link>
                 </div>
 
-                {/* Navigation Links */}
                 <div className="flex-1 overflow-y-auto px-6 py-8">
                   {NAV_LINKS.map((link) => (
                     <div key={link.label} className="mb-2">
@@ -477,37 +349,28 @@ export const SimpleHeader = memo(function SimpleHeader({
                         className={cn(
                           "flex items-center justify-between rounded-xl px-4 py-3 text-[0.95rem] font-medium transition-all duration-200",
                           isActiveLink(link.href)
-                            ? "bg-gradient-to-r from-[#E8C96A]/10 to-transparent text-[#E8C96A]"
-                            : "text-[#a1a1aa]/82 hover:bg-white/5 hover:text-[#E8C96A]"
+                            ? "bg-[rgba(91,107,196,0.15)] border border-[rgba(91,107,196,0.3)] text-white"
+                            : "text-white/60 hover:bg-[rgba(91,107,196,0.1)] hover:text-white"
                         )}
                         onClick={handleLinkClick}
                       >
                         {link.label}
-                        {link.megaMenu && (
-                          <ChevronDown className="size-4" />
-                        )}
+                        {link.megaMenu && <ChevronDown className="size-4" />}
                       </Link>
-                      
-                      {/* Mobile Mega Menu Items */}
+
                       {link.megaMenu && (
-                        <div className="ml-4 mt-1 space-y-1 border-l border-white/10 pl-4">
+                        <div className="ml-4 mt-1 space-y-1 border-l border-[rgba(160,175,255,0.1)] pl-4">
                           {link.megaMenu.map((item) => (
                             <Link
                               key={item.label}
                               href={item.href}
-                              className="flex items-start gap-3 rounded-lg p-3 transition-all duration-200 hover:bg-white/5"
+                              className="flex items-start gap-3 rounded-lg p-3 transition-all duration-200 hover:bg-[rgba(91,107,196,0.1)]"
                               onClick={handleLinkClick}
                             >
-                              <div className="mt-0.5 rounded-lg bg-[#E8C96A]/10 p-1.5 text-[#E8C96A]">
-                                {item.icon}
-                              </div>
+                              <div className="mt-0.5 rounded-lg bg-[#5B6BC4]/15 p-1.5 text-[#5B6BC4]">{item.icon}</div>
                               <div className="flex-1">
-                                <p className="text-sm font-medium text-white">
-                                  {item.label}
-                                </p>
-                                <p className="text-xs text-[#a1a1aa]/60">
-                                  {item.description}
-                                </p>
+                                <p className="text-sm font-medium text-white">{item.label}</p>
+                                <p className="text-xs text-white/40">{item.description}</p>
                               </div>
                             </Link>
                           ))}
@@ -517,31 +380,20 @@ export const SimpleHeader = memo(function SimpleHeader({
                   ))}
                 </div>
 
-                {/* Mobile Contact & CTA */}
-                <div className="border-t border-[rgba(255,255,255,0.08)] p-6 space-y-4">
+                <div className="border-t border-[rgba(160,175,255,0.1)] p-6 space-y-4">
                   <div className="space-y-3">
-                    <a
-                      href={`tel:${phoneNumber}`}
-                      className="flex items-center gap-3 text-sm text-[#a1a1aa]/70 hover:text-[#E8C96A] transition-colors"
-                    >
+                    <a href={`tel:${phoneNumber}`} className="flex items-center gap-3 text-sm text-white/50 hover:text-[#A0AFFF] transition-colors">
                       <Phone className="size-4" />
                       <span>{phoneNumber}</span>
                     </a>
-                    <a
-                      href={`mailto:${email}`}
-                      className="flex items-center gap-3 text-sm text-[#a1a1aa]/70 hover:text-[#E8C96A] transition-colors"
-                    >
+                    <a href={`mailto:${email}`} className="flex items-center gap-3 text-sm text-white/50 hover:text-[#A0AFFF] transition-colors">
                       <Mail className="size-4" />
                       <span>{email}</span>
                     </a>
                   </div>
-                  
                   <Button
-                    className="w-full bg-gradient-to-r from-[#E8C96A] to-[#E8C96A] text-white font-semibold hover:shadow-lg"
-                    onClick={() => {
-                      handleLinkClick();
-                      window.location.href = "/contact";
-                    }}
+                    className="w-full bg-[#5B6BC4] text-white font-semibold hover:bg-[#6B7DD4] border-0"
+                    onClick={() => { handleLinkClick(); window.location.href = "/contact"; }}
                   >
                     Start a Project
                     <ArrowRight className="ml-2 size-4" />
@@ -555,5 +407,4 @@ export const SimpleHeader = memo(function SimpleHeader({
     </motion.header>
   );
 });
-
 SimpleHeader.displayName = "SimpleHeader";

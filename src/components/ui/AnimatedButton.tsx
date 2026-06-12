@@ -10,13 +10,13 @@ type AnimatedButtonProps = {
 export default function AnimatedButton({ href, children, variant = "primary" }: AnimatedButtonProps) {
   const className =
     variant === "primary"
-      ? "border border-[#E8C96A]/80 bg-[linear-gradient(135deg,#EDD97A_0%,#E8C96A_55%,#C9A84C_100%)] text-[#0a0a0a] font-semibold shadow-[0_8px_32px_rgba(232,201,106,0.25),inset_0_1px_0_rgba(255,255,255,0.2)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(232,201,106,0.35),inset_0_1px_0_rgba(255,255,255,0.2)]"
-      : "border border-white/10 bg-[rgba(255,255,255,0.05)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] hover:-translate-y-1 hover:border-[#E8C96A]/40 hover:bg-[rgba(232,201,106,0.08)]";
+      ? "bg-[#5B6BC4] text-white border border-[#5B6BC4] hover:bg-[#6B7DD4] hover:shadow-[0_0_30px_rgba(160,175,255,0.35)] hover:-translate-y-0.5 font-medium"
+      : "bg-transparent text-white border border-[#5B6BC4] hover:bg-[#5B6BC4] hover:-translate-y-0.5 font-medium";
 
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full px-6 py-3.5 text-[0.78rem] font-medium uppercase tracking-[0.12em] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8C96A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a] ${className}`}
+      className={`group inline-flex items-center justify-center rounded-full px-6 py-3.5 text-[0.78rem] uppercase tracking-[0.1em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5B6BC4] focus-visible:ring-offset-2 focus-visible:ring-offset-black ${className}`}
     >
       {children}
     </Link>
