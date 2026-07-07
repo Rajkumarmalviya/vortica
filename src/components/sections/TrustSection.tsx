@@ -82,19 +82,19 @@ function getStepColor(index: number) {
 // Enhanced trust points with icons and metrics
 const enhancedTrustPoints = [
   {
-    title: "98% Client Retention",
-    description: "Long-term partnerships built on trust and results",
+    title: "Client-first delivery",
+    description: "We work as an extension of your team, not just a vendor",
     icon: Heart,
-    metric: "98%",
-    metricLabel: "Retention Rate",
+    metric: null,
+    metricLabel: null,
     color: "#5B6BC4",
   },
   {
-    title: "50+ Successful Deliveries",
-    description: "Proven track record across industries",
+    title: "Growing project portfolio",
+    description: "Proven execution across product, AI, and cloud engagements",
     icon: Rocket,
-    metric: "50+",
-    metricLabel: "Projects Delivered",
+    metric: null,
+    metricLabel: null,
     color: "#5B6BC4",
   },
   {
@@ -106,11 +106,11 @@ const enhancedTrustPoints = [
     color: "#5B6BC4",
   },
   {
-    title: "Enterprise Security",
-    description: "ISO 27001 certified security standards",
+    title: "Security-first engineering",
+    description: "Security and quality built into every stage of delivery",
     icon: Shield,
-    metric: "ISO 27001",
-    metricLabel: "Certified",
+    metric: null,
+    metricLabel: null,
     color: "#5B6BC4",
   },
   ...trustPoints.map((point, index) => ({
@@ -141,13 +141,11 @@ function getTrustDescription(index: number) {
 }
 
 function getTrustMetric(index: number) {
-  const metrics = ["#1", "500+", "4.9", "3x", "99.9%", "<1hr"];
-  return metrics[index % metrics.length];
+  return null;
 }
 
 function getTrustMetricLabel(index: number) {
-  const labels = ["Rating", "Clients", "Stars", "ROI", "Uptime", "Response"];
-  return labels[index % labels.length];
+  return null;
 }
 
 export default function TrustSection() {
@@ -356,7 +354,7 @@ export default function TrustSection() {
                   ))}
                 </div>
                 <p className="text-sm font-medium text-white">
-                  Rated 4.9/5 by 500+ clients
+                  Highly rated by our clients
                 </p>
               </div>
               <p className="mt-2 text-xs text-white/40">

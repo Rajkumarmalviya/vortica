@@ -121,15 +121,15 @@ function PageHero({ eyebrow, title, description }: { eyebrow?: string; title: st
       >
         <div className="flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
           <TrendingUp className="size-4 text-[#5B6BC4]" />
-          <span className="text-sm text-white/50">50+ Successful Projects</span>
+          <span className="text-sm text-white/50">Growing project portfolio</span>
         </div>
         <div className="flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
           <Users className="size-4 text-[#5B6BC4]" />
-          <span className="text-sm text-white/50">98% Client Satisfaction</span>
+          <span className="text-sm text-white/50">Client-first delivery</span>
         </div>
         <div className="flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
           <Clock className="size-4 text-[#5B6BC4]" />
-          <span className="text-sm text-white/50">5+ Years Experience</span>
+          <span className="text-sm text-white/50">Delivering since 2024</span>
         </div>
       </motion.div>
     </motion.div>

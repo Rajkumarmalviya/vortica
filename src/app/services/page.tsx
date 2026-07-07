@@ -3,11 +3,11 @@
 import { motion, useInView, easeOut } from "framer-motion";
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { 
-  ArrowRight, 
-  Cloud, 
-  Shield, 
-  Smartphone, 
+import {
+  ArrowRight,
+  Cloud,
+  Shield,
+  Smartphone,
   Sparkles,
   Zap,
   Globe,
@@ -135,10 +135,10 @@ const deliveryApproach = [
 
 // Success metrics
 const successMetrics = [
-  { value: "50+", label: "Projects Delivered", icon: Code2 },
+  { value: "5+", label: "Projects Delivered", icon: Code2 },
   { value: "98%", label: "Client Satisfaction", icon: Users },
-  { value: "3x", label: "Faster Time-to-Market", icon: Rocket },
-  { value: "99.9%", label: "Uptime Guarantee", icon: Server },
+  { value: "24/7", label: "Support Available", icon: Shield },
+  { value: "2+", label: "Years Experience", icon: Award },
 ];
 
 export default function ServicesPage() {
@@ -151,8 +151,8 @@ export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   // Filter services based on category
-  const filteredServices = selectedCategory === "all" 
-    ? services 
+  const filteredServices = selectedCategory === "all"
+    ? services
     : services.filter((service) => serviceCategorySlugs[selectedCategory]?.includes(service.slug));
 
   return (
@@ -219,7 +219,7 @@ export default function ServicesPage() {
                 className="text-white"
               />
             </motion.div>
-            
+
             <motion.div
               variants={itemVariants}
               className="grid gap-4 sm:grid-cols-3"
@@ -235,7 +235,7 @@ export default function ServicesPage() {
                   Custom systems and product delivery with enterprise-grade quality.
                 </p>
               </div>
-              
+
               <div className="group relative overflow-hidden rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-5 transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl">
                 <div className="rounded-lg bg-[#5B6BC4]/10 p-2 w-fit">
                   <Brain className="size-5 text-[#5B6BC4]" />
@@ -247,7 +247,7 @@ export default function ServicesPage() {
                   AI assistants, intelligent workflows, and real-time dashboards.
                 </p>
               </div>
-              
+
               <div className="group relative overflow-hidden rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-5 transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl">
                 <div className="rounded-lg bg-[#5B6BC4]/10 p-2 w-fit">
                   <Rocket className="size-5 text-[#5B6BC4]" />
@@ -277,11 +277,10 @@ export default function ServicesPage() {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category.id
+                  className={`group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${selectedCategory === category.id
                       ? "bg-[#5B6BC4] text-white shadow-lg"
                       : "border border-[rgba(160,175,255,0.15)] bg-[#08111A] text-white/50 hover:border-[#5B6BC4]/30 hover:text-[#A0AFFF]"
-                  }`}
+                    }`}
                 >
                   <Icon className="size-4" />
                   <span>{category.label}</span>

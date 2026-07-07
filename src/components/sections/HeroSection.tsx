@@ -106,8 +106,8 @@ export default function HeroSection() {
             <motion.div variants={itemVariants} className="mt-8 flex flex-wrap gap-5">
               {[
                 { icon: CheckCircle2, text: "Enterprise-grade" },
-                { icon: Shield, text: "ISO 27001 Certified" },
-                { icon: TrendingUp, text: "98% Client Retention" },
+                { icon: Shield, text: "Security-first delivery" },
+                { icon: TrendingUp, text: "Product-minded teams" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <item.icon className="size-4 text-[#5B6BC4]" />

@@ -47,19 +47,25 @@ export const caseStudies = [
   {
     title: "Operations automation platform",
     summary:
-      "Reduced manual processing effort by introducing workflow automation and dashboards.",
+      "Reduced manual processing effort by introducing workflow automation and real-time dashboards, freeing the ops team to focus on higher-value work.",
     category: "AI & Automation",
+    tags: ["Workflow Automation", "Dashboards", "Next.js"],
+    result: "View project overview",
   },
   {
     title: "Cloud modernization engagement",
     summary:
-      "Migrated a legacy stack to cloud-native architecture with improved stability and release speed.",
+      "Migrated a legacy monolith to a cloud-native architecture, improving deployment reliability and cutting release cycle time significantly.",
     category: "Enterprise & Cloud",
+    tags: ["Cloud Migration", "DevOps", "Reliability"],
+    result: "View project overview",
   },
   {
     title: "Commerce revamp",
     summary:
-      "Improved storefront UX and checkout flows to increase conversion and retention.",
+      "Redesigned storefront UX and streamlined checkout flows, resulting in a measurably smoother purchase experience and improved retention.",
     category: "E-Commerce & UX",
+    tags: ["UX Design", "Shopify", "Conversion"],
+    result: "View project overview",
   },
 ];

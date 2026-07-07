@@ -70,26 +70,19 @@ const benefits = [
     icon: Rocket,
     title: "Execution confidence",
     description:
-      "Move forward with a partner who can ship and scale, backed by our delivery guarantee.",
-    metric: "98%",
-    metricLabel: "Success Rate",
+      "Move forward with a partner who can ship and scale, backed by our delivery commitment.",
+    metric: null,
+    metricLabel: null,
   },
 ];
 
 // Testimonials
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CTO, TechFlow Inc",
+    name: "Early client",
+    role: "Startup founder",
     quote:
-      "Vortica transformed our product development process. The roadmap they provided was spot-on.",
-    rating: 5,
-  },
-  {
-    name: "Michael Chen",
-    role: "VP of Engineering, DataCore",
-    quote:
-      "Best technology partner we've worked with. They delivered ahead of schedule and under budget.",
+      "Vortica helped us move fast without cutting corners. Clear communication throughout.",
     rating: 5,
   },
 ];

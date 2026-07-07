@@ -14,7 +14,6 @@ import {
   Youtube,
   ArrowUpRight,
   Shield,
-  Award,
   Clock,
   Send,
   ChevronRight,
@@ -48,38 +47,33 @@ const quickLinks = [
   { label: "Work", href: "/work" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
-  { label: "Blog", href: "/blog" },
-  { label: "Careers", href: "/careers" },
 ];
 
 const servicesLinks = [
-  { label: "AI & Machine Learning", href: "/services/ai-ml" },
-  { label: "Cloud Solutions", href: "/services/cloud" },
-  { label: "Cybersecurity", href: "/services/security" },
-  { label: "Digital Transformation", href: "/services/digital-transformation" },
-  { label: "Mobile Development", href: "/services/mobile" },
-  { label: "IT Consulting", href: "/services/consulting" },
+  { label: "Custom Software Development", href: "/services/custom-software-development" },
+  { label: "AI & Automation", href: "/services/ai-automation" },
+  { label: "Enterprise & Cloud", href: "/services/enterprise-cloud" },
+  { label: "E-Commerce & CMS", href: "/services/ecommerce-cms" },
+  { label: "UI/UX & Product Design", href: "/services/product-design" },
+  { label: "DevOps & Security", href: "/services/devops-security" },
 ];
 
 const legalLinks = [
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
-  { label: "Cookie Policy", href: "/cookies" },
-  { label: "GDPR Compliance", href: "/gdpr" },
+  { label: "Privacy Policy", href: "/contact" },
+  { label: "Terms of Service", href: "/contact" },
 ];
 
 const socialLinks = [
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/vortica", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com/vortica", label: "Twitter" },
+  { icon: Github, href: "https://github.com/Rajkumarmalviya", label: "GitHub" },
+  { icon: Youtube, href: "https://www.youtube.com/@Vortica", label: "YouTube" },
 ];
 
 // Badges data
 const badges = [
-  { icon: Shield, label: "ISO 27001", text: "Certified" },
-  { icon: Award, label: "AWS Partner", text: "Advanced Tier" },
-  { icon: Clock, label: "24/7 Support", text: "Global Coverage" },
+  { icon: Shield, label: "Security-first", text: "Built-in" },
+  { icon: Clock, label: "24/7 Support", text: "Available" },
 ];
 
 export default function Footer() {

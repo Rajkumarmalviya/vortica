@@ -4,12 +4,12 @@ import { motion, useInView, cubicBezier } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Target, 
-  Eye, 
-  Heart, 
-  Users, 
-  Award, 
+import {
+  Target,
+  Eye,
+  Heart,
+  Users,
+  Award,
   TrendingUp,
   Shield,
   Rocket,
@@ -84,33 +84,12 @@ const values = [
 // Team members data
 const teamMembers = [
   {
-    name: "Raj Malvi",
+    name: "Rajkumar Malviya",
     role: "Founder & CEO",
-    bio: "10+ years of experience in product engineering and digital transformation.",
-    image: "/team/raj.jpg",
+    bio: "Frontend Engineer with 2+ years building scalable web apps using Next.js, React, TypeScript & Astro.js. Passionate about AI-powered products, LLM integrations, and agentic workflows.",
+    image: "https://rajkumar-malviya-portfolio.vercel.app/raj-image.webp",
     social: {
       linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
-    },
-  },
-  {
-    name: "Sarah Johnson",
-    role: "CTO",
-    bio: "Former AWS architect specializing in scalable cloud solutions and AI/ML.",
-    image: "/team/sarah.jpg",
-    social: {
-      linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
-    },
-  },
-  {
-    name: "Michael Chen",
-    role: "Head of Product",
-    bio: "Product strategist with expertise in B2B SaaS and enterprise platforms.",
-    image: "/team/michael.jpg",
-    social: {
-      linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
     },
   },
 ];
@@ -118,37 +97,44 @@ const teamMembers = [
 // Company milestones
 const milestones = [
   {
-    year: "2020",
+    year: "2024",
     title: "Company Founded",
-    description: "Started with a vision to transform digital product development.",
+    description: "Started Vortica with a vision to build scalable, AI-powered digital products.",
     icon: Calendar,
   },
   {
-    year: "2021",
-    title: "First Enterprise Client",
-    description: "Secured first Fortune 500 client and delivered successful transformation.",
+    year: "2024",
+    title: "First Clients Onboarded",
+    description: "Delivered first set of production-ready web products for early clients.",
     icon: Briefcase,
   },
   {
-    year: "2022",
-    title: "AWS Partnership",
-    description: "Became certified AWS Advanced Consulting Partner.",
-    icon: Award,
+    year: "2025",
+    title: "AI Integration Practice",
+    description: "Launched dedicated AI/LLM integration services and agentic workflow solutions.",
+    icon: Rocket,
   },
   {
-    year: "2024",
-    title: "Global Expansion",
-    description: "Expanded operations to serve clients across North America and Europe.",
+    year: "2025",
+    title: "Growing Portfolio",
+    description: "Expanded to serve clients across e-commerce, SaaS, and observability domains.",
     icon: TrendingUp,
   },
 ];
 
+// Clients
+const clients = [
+  { name: "RM Enterprise" },
+  { name: "Harshal Joshi" },
+  { name: "Vinay Gupta" },
+];
+
 // Statistics
 const stats = [
-  { value: "50+", label: "Projects Delivered", icon: Code2 },
+  { value: "5+", label: "Projects Delivered", icon: Code2 },
   { value: "98%", label: "Client Satisfaction", icon: Users },
   { value: "24/7", label: "Support Available", icon: Shield },
-  { value: "5+", label: "Years Experience", icon: Award },
+  { value: "2+", label: "Years Experience", icon: Award },
 ];
 
 // Enhanced Page Hero Component
@@ -177,7 +163,7 @@ function EnhancedPageHero({ eyebrow, title, description }: { eyebrow?: string; t
           </span>
         </motion.div>
       )}
-      
+
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -186,7 +172,7 @@ function EnhancedPageHero({ eyebrow, title, description }: { eyebrow?: string; t
       >
         {title}
       </motion.h1>
-      
+
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -280,7 +266,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <p className="mt-4 text-base leading-relaxed text-white/60">
-                Our team combines design, engineering, cloud, and delivery excellence to build products that drive measurable impact. 
+                Our team combines design, engineering, cloud, and delivery excellence to build products that drive measurable impact.
                 We specialize in AI/ML, cloud transformation, and scalable product development.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -307,7 +293,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <p className="mt-4 text-base leading-relaxed text-white/60">
-                We work in transparent sprint cycles with clear milestones, enabling faster learning and predictable execution. 
+                We work in transparent sprint cycles with clear milestones, enabling faster learning and predictable execution.
                 Agile methodology meets enterprise-grade delivery.
               </p>
               <div className="mt-4 flex items-center gap-2">
@@ -405,9 +391,8 @@ export default function AboutPage() {
                     key={milestone.year}
                     custom={index}
                     variants={itemVariants}
-                    className={`relative flex flex-col md:flex-row ${
-                      index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                    } gap-4 md:gap-8`}
+                    className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                      } gap-4 md:gap-8`}
                   >
                     <div className="flex-1 md:text-right">
                       <div className="inline-flex items-center gap-2 rounded-full border border-[#5B6BC4]/30 bg-[#5B6BC4]/10 px-4 py-2">
@@ -442,25 +427,25 @@ export default function AboutPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
               <Users className="size-4 text-[#5B6BC4]" />
               <span className="text-xs font-medium uppercase tracking-wider text-white/50">
-                Leadership Team
+                Leadership
               </span>
             </div>
             <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
-              Meet the experts
+              Meet our CEO
             </h2>
             <p className="mt-2 text-white/40">
-              Passionate professionals dedicated to your success
+              Passionate professional dedicated to your success
             </p>
           </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex justify-center">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
                 custom={index}
                 variants={cardVariants}
                 whileHover={{ y: -4 }}
-                className="group rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6 text-center transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl"
+                className="group w-full max-w-sm rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] p-6 text-center transition-all duration-300 hover:border-[#5B6BC4]/30 hover:shadow-xl"
               >
                 <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full border-2 border-[#5B6BC4]/30">
                   <Image
@@ -476,7 +461,7 @@ export default function AboutPage() {
                 <div className="mt-4 flex justify-center gap-3">
                   <a href={member.social.linkedin} className="text-white/35 hover:text-[#A0AFFF]">
                     <svg className="size-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
                   </a>
                 </div>
@@ -484,6 +469,39 @@ export default function AboutPage() {
             ))}
           </div>
         </motion.div>
+
+        {/* Clients Section
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="mb-16"
+        >
+          <motion.div variants={itemVariants} className="mb-8 text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
+              <Briefcase className="size-4 text-[#5B6BC4]" />
+              <span className="text-xs font-medium uppercase tracking-wider text-white/50">
+                Clients
+              </span>
+            </div>
+            <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
+              Trusted by
+            </h2>
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            {clients.map((client, index) => (
+              <motion.div
+                key={client.name}
+                custom={index}
+                variants={cardVariants}
+                className="rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#0D1824] px-8 py-5 text-center"
+              >
+                <p className="text-base font-semibold text-white">{client.name}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div> */}
 
         {/* CTA Section */}
         <motion.div

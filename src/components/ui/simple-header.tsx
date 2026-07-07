@@ -97,7 +97,7 @@ const MEGA_MENU_ITEMS: Record<string, MegaMenuItem[]> = {
 const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services", megaMenu: MEGA_MENU_ITEMS.services },
-  { label: "Work", href: "/work" },
+  // { label: "Work", href: "/work" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
