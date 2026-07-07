@@ -131,7 +131,7 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* Tech Partners */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={servicesInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6, duration: 0.6 }}
@@ -160,7 +160,7 @@ export default function ServicesSection() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* CTA Banner */}
         <motion.div

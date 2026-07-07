@@ -17,7 +17,7 @@ export default function Home() {
     <main className="min-h-screen text-white/75">
       <HeroSection />
       <ServicesSection />
-      <WorkPreviewSection />
+      {/* <WorkPreviewSection /> */}
       <TrustSection />
       <CTASection />
     </main>
