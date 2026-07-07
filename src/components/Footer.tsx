@@ -44,7 +44,7 @@ const itemVariants = {
 // Footer links data
 const quickLinks = [
   { label: "Services", href: "/services" },
-  { label: "Work", href: "/work" },
+  // { label: "Work", href: "/work" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

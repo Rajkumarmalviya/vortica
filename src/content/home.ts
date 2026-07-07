@@ -43,6 +43,50 @@ export const processSteps = [
   },
 ];
 
+export const qualityPillars = [
+  {
+    eyebrow: "Code Quality",
+    title: "Clean, maintainable code by default",
+    description:
+      "Every codebase we touch follows consistent conventions, clear separation of concerns, and documentation that the next engineer can actually read.",
+    metric: "100%",
+    metricLabel: "peer-reviewed",
+  },
+  {
+    eyebrow: "Performance",
+    title: "Fast by design, not as an afterthought",
+    description:
+      "We architect for performance from the first commit — optimizing renders, bundle size, API latency, and database access before they become problems.",
+    metric: "<100ms",
+    metricLabel: "target API response",
+  },
+  {
+    eyebrow: "Reliability",
+    title: "Systems that hold up under pressure",
+    description:
+      "Comprehensive test coverage, CI/CD pipelines, structured error handling, and observability tooling mean your product stays stable as it grows.",
+    metric: "99.9%",
+    metricLabel: "uptime target",
+  },
+  {
+    eyebrow: "Standards",
+    title: "Modern stack, proven patterns",
+    description:
+      "We use current best practices across TypeScript, React, Node.js, cloud infrastructure, and security — not legacy workarounds or technical debt by default.",
+    metric: "0",
+    metricLabel: "known CVEs shipped",
+  },
+];
+
+export const qualityCommitments = [
+  "TypeScript-first development across all services",
+  "Automated testing with meaningful coverage targets",
+  "CI/CD pipelines that catch issues before they reach production",
+  "Code reviews on every pull request, no exceptions",
+  "Accessibility and Core Web Vitals built in from the start",
+  "Dependency audits and security scanning as part of delivery",
+];
+
 export const caseStudies = [
   {
     title: "Operations automation platform",

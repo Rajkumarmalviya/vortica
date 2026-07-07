@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import CTASection from "@/components/sections/CTASection";
 import HeroSection from "@/components/sections/HeroSection";
+import QualitySection from "@/components/sections/QualitySection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TrustSection from "@/components/sections/TrustSection";
 import WorkPreviewSection from "@/components/sections/WorkPreviewSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       {/* <WorkPreviewSection /> */}
+      <QualitySection />
       <TrustSection />
       <CTASection />
     </main>
