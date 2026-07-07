@@ -30,9 +30,9 @@ const capabilityItems = [
 ];
 
 const techPartners = [
-  { name: "AWS", icon: Cloud, level: "Premier Partner" },
-  { name: "Microsoft Azure", icon: Database, level: "Gold Partner" },
-  { name: "Google Cloud", icon: Globe, level: "Partner" },
+  { name: "AWS", icon: Cloud, level: "Cloud Platform" },
+  { name: "Microsoft Azure", icon: Database, level: "Cloud Platform" },
+  { name: "Google Cloud", icon: Globe, level: "Cloud Platform" },
 ];
 
 export default function ServicesSection() {
@@ -71,7 +71,7 @@ export default function ServicesSection() {
                   <CheckCircle2 key={i} className="size-4 text-[#5B6BC4]" />
                 ))}
               </div>
-              <span className="text-sm text-white/40">Trusted by 500+ innovative companies</span>
+              <span className="text-sm text-white/40">Built for startups and growing businesses</span>
             </motion.div>
           </motion.div>
 
@@ -131,7 +131,7 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* Tech Partners */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={servicesInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6, duration: 0.6 }}
@@ -160,7 +160,7 @@ export default function ServicesSection() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* CTA Banner */}
         <motion.div

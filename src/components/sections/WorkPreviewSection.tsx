@@ -7,9 +7,6 @@ import {
   ArrowUpRight, 
   TrendingUp, 
   Clock, 
-  Users, 
-  BarChart3,
-  Rocket,
   Star,
   ChevronRight,
   Sparkles
@@ -53,44 +50,12 @@ const cardVariants = {
   }),
 };
 
-// Metrics icons mapping
-const getMetricIcon = (metricType?: string) => {
-  switch (metricType) {
-    case "revenue":
-      return TrendingUp;
-    case "time":
-      return Clock;
-    case "users":
-      return Users;
-    case "performance":
-      return BarChart3;
-    default:
-      return Rocket;
-  }
-};
-
 interface CaseStudy {
   category: string;
   title: string;
   summary: string;
-  metrics?: {
-    value: string;
-    label: string;
-    type?: string;
-  };
   tags?: string[];
-  image?: string;
   result?: string;
-}
-
-interface EnhancedCaseStudy extends CaseStudy {
-  metrics: {
-    value: string;
-    label: string;
-    type?: string;
-  };
-  tags: string[];
-  result: string;
 }
 
 export default function WorkPreviewSection() {
@@ -99,14 +64,6 @@ export default function WorkPreviewSection() {
     once: true,
     amount: 0.1,
   });
-
-  // Enhanced case studies with additional data
-  const enhancedCaseStudies: EnhancedCaseStudy[] = caseStudies.map((study, index) => ({
-    ...study,
-    metrics: (study as Partial<EnhancedCaseStudy>).metrics || getDefaultMetrics(index),
-    tags: (study as Partial<EnhancedCaseStudy>).tags || getDefaultTags(index),
-    result: (study as Partial<EnhancedCaseStudy>).result || "See how we transformed their business",
-  }));
 
   return (
     <section
@@ -175,10 +132,7 @@ export default function WorkPreviewSection() {
           animate={inView ? "visible" : "hidden"}
           className="mt-16 grid gap-6 lg:grid-cols-[1.1fr_0.9fr_0.9fr]"
         >
-          {enhancedCaseStudies.map((item, index) => {
-            const MetricIcon = item.metrics?.type ? getMetricIcon(item.metrics.type) : TrendingUp;
-            
-            return (
+          {caseStudies.map((item, index) => (
               <motion.article
                 key={item.title}
                 custom={index}
@@ -190,11 +144,9 @@ export default function WorkPreviewSection() {
                     : "bg-[#0D1824]"
                 }`}
               >
-                {/* Hover Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#5B6BC4]/0 via-[#5B6BC4]/5 to-[#5B6BC4]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                 <div className="relative p-7">
-                  {/* Category + Featured badge */}
                   <div className="flex items-center gap-2">
                     <div className="h-px flex-1 bg-gradient-to-r from-[#5B6BC4]/50 to-transparent" />
                     <p className="text-xs font-semibold uppercase tracking-wider text-[#5B6BC4]">
@@ -207,39 +159,14 @@ export default function WorkPreviewSection() {
                     )}
                   </div>
 
-                  {/* Title */}
                   <h3 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-[#5B6BC4] transition-colors">
                     {item.title}
                   </h3>
 
-                  {/* Summary */}
                   <p className="mt-3 text-sm leading-relaxed text-white/60">
                     {item.summary}
                   </p>
 
-                  {/* Metrics Card */}
-                  {item.metrics && (
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      className="mt-5 rounded-xl border border-[rgba(160,175,255,0.15)] bg-[#08111A] p-4"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="rounded-lg bg-[#5B6BC4]/10 p-2">
-                          <MetricIcon className="size-5 text-[#5B6BC4]" />
-                        </div>
-                        <div>
-                          <p className="text-2xl font-bold text-white">
-                            {item.metrics.value}
-                          </p>
-                          <p className="text-xs text-white/40">
-                            {item.metrics.label}
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-
-                  {/* Tags */}
                   {item.tags && item.tags.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.tags.map((tag) => (
@@ -253,23 +180,20 @@ export default function WorkPreviewSection() {
                     </div>
                   )}
 
-                  {/* Result Link */}
                   <Link
                     href={`/work/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                     className="group/link mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#5B6BC4] transition-all hover:gap-3"
                   >
-                    {item.result || "Read case study"}
+                    {item.result ?? "Read case study"}
                     <ChevronRight className="size-4 transition-transform group-hover/link:translate-x-1" />
                   </Link>
                 </div>
 
-                {/* Decorative Corner */}
                 <div className="absolute bottom-0 right-0 h-20 w-20 overflow-hidden">
                   <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-[#5B6BC4]/5 blur-2xl" />
                 </div>
               </motion.article>
-            );
-          })}
+            ))}
         </motion.div>
 
         {/* Trust Indicators */}
@@ -285,21 +209,21 @@ export default function WorkPreviewSection() {
                 <Star key={i} className="size-4 fill-[#5B6BC4] text-[#5B6BC4]" />
               ))}
             </div>
-            <span className="text-sm text-white/50">4.9/5 from 500+ reviews</span>
+            <span className="text-sm text-white/50">Highly rated by our clients</span>
           </div>
           
           <div className="h-8 w-px bg-white/10" />
           
           <div className="flex items-center gap-2">
             <TrendingUp className="size-5 text-[#5B6BC4]" />
-            <span className="text-sm text-white/50">98% client retention rate</span>
+            <span className="text-sm text-white/50">Long-term client partnerships</span>
           </div>
           
           <div className="h-8 w-px bg-white/10" />
           
           <div className="flex items-center gap-2">
             <Clock className="size-5 text-[#5B6BC4]" />
-            <span className="text-sm text-white/50">50+ successful deliveries in 2024</span>
+            <span className="text-sm text-white/50">Active delivery since 2024</span>
           </div>
         </motion.div>
 
@@ -324,20 +248,3 @@ export default function WorkPreviewSection() {
 }
 
 // Helper functions for default data
-function getDefaultMetrics(index: number) {
-  const metrics = [
-    { value: "3.5x", label: "Increase in operational efficiency", type: "performance" },
-    { value: "60%", label: "Reduction in deployment time", type: "time" },
-    { value: "2M+", label: "Active users impacted", type: "users" },
-  ];
-  return metrics[index % metrics.length];
-}
-
-function getDefaultTags(index: number) {
-  const tagsList = [
-    ["AI/ML", "Cloud Migration", "Enterprise"],
-    ["DevOps", "Automation", "Scale"],
-    ["Product Dev", "UX Design", "Analytics"],
-  ];
-  return tagsList[index % tagsList.length];
-}

@@ -71,9 +71,9 @@ const serviceIcons: Record<string, LucideIcon> = {
 const getIconComponent = (iconName: string) => serviceIcons[iconName] || Sparkles;
 
 const getServiceMetrics = () => [
+  { value: "5+", label: "Projects Delivered", icon: Briefcase },
   { value: "98%", label: "Client Satisfaction", icon: Users },
-  { value: "3x", label: "Faster Delivery", icon: Clock },
-  { value: "50+", label: "Successful Projects", icon: Briefcase },
+  { value: "2+", label: "Years Experience", icon: Award },
 ];
 
 export default function ServiceDetailClient({
@@ -120,7 +120,7 @@ export default function ServiceDetailClient({
 
             <div className="mt-6 flex items-center gap-2 rounded-full border border-[rgba(160,175,255,0.15)] bg-[#08111A] px-4 py-2">
               <Star className="size-4 text-[#5B6BC4]" />
-              <span className="text-sm text-white/50">Trusted by 50+ innovative companies</span>
+              <span className="text-sm text-white/50">Trusted by 5+ growing teams</span>
             </div>
           </div>
         </motion.div>
@@ -470,10 +470,10 @@ export default function ServiceDetailClient({
               Start a Conversation
               <MessageSquare className="ml-2 size-4" />
             </AnimatedButton>
-            <AnimatedButton href="/work" variant="secondary">
+            {/* <AnimatedButton href="/work" variant="secondary">
               View Case Studies
               <Briefcase className="ml-2 size-4" />
-            </AnimatedButton>
+            </AnimatedButton> */}
           </div>
           <div className="mt-4 flex items-center justify-center gap-2 text-sm text-white/35">
             <Clock className="size-4" />

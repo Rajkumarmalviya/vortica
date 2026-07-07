@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "rajkumar-malviya-portfolio.vercel.app",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
