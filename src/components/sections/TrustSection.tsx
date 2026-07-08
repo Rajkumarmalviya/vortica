@@ -117,8 +117,8 @@ const enhancedTrustPoints = [
     title: point,
     description: getTrustDescription(index),
     icon: getTrustIcon(index),
-    metric: getTrustMetric(index),
-    metricLabel: getTrustMetricLabel(index),
+    metric: getTrustMetric(),
+    metricLabel: getTrustMetricLabel(),
     color: "#5B6BC4",
   })),
 ];
@@ -140,11 +140,11 @@ function getTrustDescription(index: number) {
   return descriptions[index % descriptions.length];
 }
 
-function getTrustMetric(index: number) {
+function getTrustMetric() {
   return null;
 }
 
-function getTrustMetricLabel(index: number) {
+function getTrustMetricLabel() {
   return null;
 }
 

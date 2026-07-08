@@ -6,7 +6,6 @@ import HeroSection from "@/components/sections/HeroSection";
 import QualitySection from "@/components/sections/QualitySection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TrustSection from "@/components/sections/TrustSection";
-import WorkPreviewSection from "@/components/sections/WorkPreviewSection";
 import { AnalyticsEvents, trackEvent } from "@/lib/analytics";
 
 export default function Home() {

@@ -122,12 +122,12 @@ const milestones = [
   },
 ];
 
-// Clients
-const clients = [
-  { name: "RM Enterprise" },
-  { name: "Harshal Joshi" },
-  { name: "Vinay Gupta" },
-];
+// Clients (commented out until needed)
+// const clients = [
+//   { name: "RM Enterprise" },
+//   { name: "Harshal Joshi" },
+//   { name: "Vinay Gupta" },
+// ];
 
 // Statistics
 const stats = [

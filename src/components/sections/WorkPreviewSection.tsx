@@ -50,14 +50,6 @@ const cardVariants = {
   }),
 };
 
-interface CaseStudy {
-  category: string;
-  title: string;
-  summary: string;
-  tags?: string[];
-  result?: string;
-}
-
 export default function WorkPreviewSection() {
   const ref = useRef(null);
   const inView = useInView(ref, {

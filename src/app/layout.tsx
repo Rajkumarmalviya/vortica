@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
 import Script from "next/script";
-// Ignore missing type declarations for CSS side-effect import
-// @ts-ignore
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/layout/Navbar";

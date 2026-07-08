@@ -2,7 +2,7 @@
 
 import { motion, easeOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { ArrowRight, Cloud, Database, Sparkles, CheckCircle2, Globe, Code2, Brain, Rocket } from "lucide-react";
+import { ArrowRight, Sparkles, CheckCircle2, Code2, Brain, Rocket } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { services } from "@/content/services";
@@ -29,11 +29,12 @@ const capabilityItems = [
   { icon: Rocket, title: "Platform Scale", description: "Architecture, performance, observability, and security maturity." },
 ];
 
-const techPartners = [
-  { name: "AWS", icon: Cloud, level: "Cloud Platform" },
-  { name: "Microsoft Azure", icon: Database, level: "Cloud Platform" },
-  { name: "Google Cloud", icon: Globe, level: "Cloud Platform" },
-];
+// Tech partners (commented out until needed)
+// const techPartners = [
+//   { name: "AWS", icon: Cloud, level: "Cloud Platform" },
+//   { name: "Microsoft Azure", icon: Database, level: "Cloud Platform" },
+//   { name: "Google Cloud", icon: Globe, level: "Cloud Platform" },
+// ];
 
 export default function ServicesSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });

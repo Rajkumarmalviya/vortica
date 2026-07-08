@@ -16,7 +16,6 @@ import {
   Brain,
   Rocket,
   BarChart3,
-  Server,
   Users,
   Target,
   Award
